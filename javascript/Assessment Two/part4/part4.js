@@ -17,21 +17,53 @@ class Movie {
     this.rating = rating;
   }
 }
+//Step 02:
 // Create an array of at least 10 movies with mock values
-let movieList=[
-    new Movie("021", "The Shawshank Redemption",1994,9.3),
-    new Movie("020","The Godfather",1972,9.2),
-    new Movie("003","The Dark Knight",2008,9.0),
-    new Movie("104","The Godfather Part II",1974,9.0),
-    new Movie("005","12 Angry Men",1957,9.0),
-    new Movie("106","Schindler's List",1993,9.0),
-    new Movie("007","The Lord of the Rings: The Return of the King",2003,9.0),
-    new Movie("108","Pulp Fiction",1994,8.9),
-    new Movie("009","The Good, the Bad and the Ugly",1966,8.8),
-    new Movie("110", "Fight Club ",1999,8.81)
+let movieList = [
+  new Movie("A021", "The Shawshank Redemption", 1994, 9.3),
+  new Movie("C020", "The Godfather", 1972, 9.2),
+  new Movie("D003", "The Dark Knight", 2008, 9.0),
+  new Movie("A104", "The Godfather Part II", 1974, 9.0),
+  new Movie("B005", "12 Angry Men", 1957, 9.0),
+  new Movie("A106", "Schindler's List", 1993, 9.0),
+  new Movie("S007", "The Lord of the Rings", 2003, 9.0),
+  new Movie("D108", "Pulp Fiction", 1994, 8.9),
+  new Movie("L009", "The Good, the Bad and the Ugly", 1966, 8.8),
+  new Movie("B110", "Fight Club ", 1999, 8.81)
 ];
-document.getElementById('movieListResult').innerHTML = movieList.map(movie => `${movie.movieID}: ${movie.title}`).join("<br>");
+document.getElementById('movie-list').innerHTML = movieList.map(movie => `<span class="note bold">${movie.movieID}: ${movie.title}`).join("<br></span>");
 
-movieList.sort((a,b)=>a.movieID-b.movieID);
+//Step 03:
+// Use localeCompare() to sort the movie list by movieID (as a string)
+movieList.sort((a, b) => a.movieID.localeCompare(b.movieID));
+document.getElementById('sorted-movie-list').innerHTML = movieList.map(movie => `<span class="note bold">${movie.movieID}: ${movie.title}`).join("<br></span>");
 
-document.getElementById('sorted-movie-list').innerHTML = movieList.map(movie => `${movie.movieID}: ${movie.title}`).join("<br>");
+//Step 04:
+// Binary Search Implementation
+function binarySearch(movieList, movieID) {
+  let begin = 0;
+  let end = movieList.length - 1;
+  while (begin <= end) {
+    let mid = Math.floor((begin + end) / 2);
+    if (movieList[mid].movieID === movieID) {
+      return mid;
+    } else if (movieList[mid].movieID < movieID) {
+      begin = mid + 1;
+    } else {
+      end = mid - 1;
+    }
+  }
+  return -1;
+}
+
+// Sequential Search Implementation
+function sequentialSearch(movieList, movieID) {
+  for (let i = 0; i < movieList.length; i++) {
+    if (movieList[i].movieID === movieID) {
+      return i; // Return index of the movie found
+    }
+  }
+  return -1; // Return -1 if not found
+}
+console.log(binarySearch(movieList, "S007"));
+console.log(sequentialSearch(movieList,"S007"));

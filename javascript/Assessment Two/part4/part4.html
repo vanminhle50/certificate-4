@@ -58,7 +58,7 @@ class Movie {
     }
 }</code></pre>
                         </td>
-                        <td id="movieList-result">Not Found</td>
+                        <td id="movie-object">Not Found</td>
                     </tr>
                     <tr>
                         <td> <span class="note bold">Step 02:</span> Create an array of at least 10 movies with mock
@@ -84,14 +84,16 @@ let movieList=[
 ];</code></pre>
                         </td>
                         <td>
-                            <p id="movieListResult">Not Found</p>
+                            <p id="movie-list">Not Found</p>
                         </td>
                     </tr>
 
                     <tr>
                         <td><span class="note bold"> Step 03:</span> Sort array by Movie ID in ascending order</td>
                     <td>
-                        <pre><code class="language-javascript">movieList.sort((a,b)=>a.movieID-b.movieID);</code></pre>
+<pre><code class="language-javascript">
+// Use localeCompare() to sort the movie list by movieID (as a string)
+movieList.sort((a,b)=>a.movieID.localeCompare(b.movieID));</code></pre>
                     </td>
 
                     <td><p id="sorted-movie-list">Not Found</p></td>
