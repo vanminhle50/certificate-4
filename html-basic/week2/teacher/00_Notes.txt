@@ -1,0 +1,18 @@
+[B1] INTRODUCTORY CSS
+
+We now begin our journey into styling and designing the layout of webpages, using Cascading Style Sheets (CSS).  This is a big and at times, complex topic area, so today we will just go through the basics & fundamentals.  
+
+Core to our foundation will be to critically understand the roles of selectors (04)
+
+The following topics are covered, in the listed files:
+
+- 01: Basic rules, syntax & CSS incorporation methods
+- 02: Fonts  
+- 03: Colours
+- 04: Selectors
+
+-> CLASS EXERCISE 01: HEADER MANIPULATION [MAX 30 MINS]
+
+  Create a basic header with the following features:
+    - An imported Google font, Montserrat, applied to the heading element text & linked by way of external CSS stylesheet
+    - Paragraph text below the heading, with text coloured with RGB to an orange colour and linked by way of inline style

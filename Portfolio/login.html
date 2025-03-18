@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sign Up Page </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/login.css">
+    <!-- Link google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+<div class="mainContainer">
+    <div class="innerContainer row" id="innerContainer">
+        <div class="imageContainer col-12 col-md-7">
+            <img class="imgLogo" src="./img/login.webp" alt="Logo Login">
+        </div>
+
+        <div class="contentContainer col-12 col-md-5">
+            <div class="slideControls"> <!-- Create container to storage slide button -->
+                <input type="radio" name="slide" id="login" checked> <!-- Create Radio Sign In -->
+                <input type="radio" name="slide" id="signup"> <!-- Create Radio Sign Up -->
+                <label for="login" class="slide login">Sign In</label> <!-- Create Lable for Radio Sign In -->
+                <label for="signup" class="slide signup">Sign Up</label> <!-- Create Lable for Radio Sign Up -->
+                <div class="sliderTab"></div> <!-- Background for slide button -->
+            </div>
+            <div class="titleText"> 
+                <div class="title login">Login Form</div>
+                <div class="title signup">Signup Form</div>
+            </div>
+            <form action="#" class="login">
+                <div class="field">
+                    <input type="email" placeholder="Email Address" class="emailLogin" id="emailLogin" required autofocus>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" class="passwordLogin" id="passwordLogin" required>
+                </div>
+                <div class="aContainer">
+                    <a href="">Forgot Password?</a>
+                </div>
+                <div class="field submit">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">Not a member?&nbsp<a href="#"> Signup now </a></div>
+            </form>
+
+            <form action="#" class="signup">
+                <div class="field">
+                    <input type="email" placeholder="Email Address" class="emailSignup" id="emailSignup" required autofocus>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" class="passwordSignup" id="passwordSignup" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Confirm Password" class="passwordConfirm" id="passwordConfirm" required>
+                </div>
+                <div class="field submit">
+                    <input type="submit" value="Sign Up">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<script src="./js/login.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

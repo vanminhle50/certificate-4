@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let username = "Minh";
+        let costOfitem = 100;
+        let costOfitemwithtax;
+        costOfitemwithtax = costOfitem + costOfitem * (10 / 100);
+
+        //Function that calculatates the cost of items with tax
+        //What are the paramenter -costOfitem,tax
+        //What you are returning - 
+        console.log("Reciept");
+        console.log("Username" + username);
+        console.log("Cost of item $" + costOfitem);
+        console.log("Cost of item with Tax $" + costOfitemwithtax);
+        function withTax(itemsCost, tax) {
+            let result = itemsCost + (itemsCost * (tax / 100));
+            return result;
+        }
+
+        console.log(withTax(100, 10));
+    </script>
+</body>
+
+</html>

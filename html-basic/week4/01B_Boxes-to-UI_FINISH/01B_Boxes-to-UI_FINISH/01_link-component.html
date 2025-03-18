@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Component</title>
+  <!-- STYLING LINKS & BUTTONS -->
+
+  <!-- 1. LINKS -->
+  <!-- Links (and buttons) can be styled with any CSS property (e.g. color, font-family, background, etc.).  We can even make a link, look like a button, with sufficient styling! (see below) -->
+
+  <!-- 2. BUTTON -->
+  <!-- We can also call in an element, called button, which is clickable.  You need to specify what type of button: button, reset or submit.  
+    -> IMPORTANT DISTINCTION: It DOES NOT send to a link automatically like an anchor tag, as it is primarily to be used with JavaScript to fire-->
+
+  <!-- ADDITIONALLY - links/buttons can be styled differently depending on what STATE they are in, using pseudo-class selectors:
+      -> a:link - a normal, unvisited link
+      -> a:visited - a link the user has visited
+      -> a:hover - a link when the user mouses over it
+      -> a:active - a link the moment it is clicked
+  -->
+  <style>
+    /* BASE STYLING */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+    div {
+      margin: 80px auto;
+    }
+
+    /* [1A] LINK ELEMENT STYLES */
+    a {
+      color: #333333;
+      text-decoration: none;
+    }
+    a:link {
+      color: blue;
+    }
+    /* a:visited {
+      color: green;
+    } */
+
+    /* NOTE: Must come AFTER a:link & a:visited to work */
+    a:hover {
+      color: aqua;
+    }
+    /* NOTE: Must come AFTER the :hover to work */
+    a:active {
+      color: red;
+    }
+
+    /* [1B & 2] BUTTON CLASS STYLES */
+    .btn {
+      /* BOX SETTINGS */
+      display: inline-block; /* NOTE: This tends to help in the longrun, setting a/btns like this */
+      background: #333333;
+      color: #FFFFFF;
+      border: none;
+      padding: 13px 20px;
+
+      /* TEXT & OTHER */
+      font-size: 18px;
+      cursor: pointer;
+    }
+    /* PSEUDO-CLASS: HOVER */
+    .btn:hover {
+      background: #f7c08a;
+      color: #333333;
+    }
+  </style>
+</head>
+<body>
+  <!-- 1A. LINK with targeted link pseudo-classes -->
+  <div> 
+    <a href="#">My Link</a>
+  </div>
+
+  <!-- 1B. LINK overridden with Button pseudo-class -->
+  <!-- NOTE: In this case CLASS SPECIFICITY > ELEMENT SPECIFICITY -->
+  <div> 
+    <a class="btn" href="#">My Link</a>
+  </div>
+
+  <!-- 2. BUTTON (type of button) -->
+  <div>
+    <button class="btn" type="button">My Button</button>
+  </div>
+
+</body>
+</html>

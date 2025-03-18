@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieLand</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"
+        defer></script>
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container text-center mt-3">
+        <h1 class="display-4">
+            <i class="bi bi-card-image text-danger"></i>
+            <b class="text-danger">Movie</b>Land
+        </h1>
+        <p class="text-muted">Lets find the movie! 🍿🎬</p>
+    </div>
+    <!-- /Header -->
+    <!-- Search -->
+    <div class="container">
+        <div class="bg-light p-3 d-flex">
+            <label for="search" class="form-label visually-hidden">Search</label>
+            <input type="text" class="form-control me-2" id="searchBox" placeholder="Search">
+            <button type="button" id="searchButton" class="btn btn-danger">Search</button>
+        </div>
+        <div class="alert alert-danger mt-2" role="alert" id="errorMessage">
+            A simple danger alert—check it out!
+        </div>
+    </div>
+
+    <!-- /Search -->
+    <!-- Card -->
+    <div class="container mt-3" id="movieCard">
+        <div class="card" style="width: 18rem;">
+            <img id="movieImage" src="./img/placeholder.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" id="movieTitle">Card title</h5>
+                <p class="card-text" id="movieText">Some quick example text to build on the card title and make up the
+                    bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+    </div>
+    <!-- /Card -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basic</title>
+</head>
+<body>
+    <h1>AGE</h1>
+    Calculate your age in seconds
+    <div class="colourBox"></div>
+    <div id="nameBox1" style="border: 1px solid black; height: 20px; width: 80%;">Name box 1</div>
+    <div id="nameBox2" style="border: 1px solid black; height: 20px; width: 80%;">Name box 2</div>
+    <button type="button" onclick="myFunction()">Click me</button>
+    <div id="answerBox" style="border: 1px solid black; height: 20px; width: 80%;"> Answer Box of Simple Add</div>
+
+<!-- <script src="./js/index.js"></script> -->
+<script>
+    var myVariable;
+    var myVariable2;
+    const myVariable3=3.14;
+    myVariable="My name";
+    myVariable2="Minh";
+
+    function myFunction(){
+        document.getElementById("nameBox1").textContent = "My name is Minh"
+        document.getElementById("nameBox2").textContent = "My name is Ana"
+    }
+    console.log("Calculate your age in seconds");
+    console.log((2025-1993)*365*24*60*60);
+    // Letter and string 
+    console.log("This is a string of text");
+    console.log("This is another string");
+    console.log("He said 'I\'ll be back'");
+    console.log('My name is '+"Fred");  
+    console.log(myVariable);
+    console.log(myVariable2);
+    function functionName(variable1, variable2, variable3) {
+        alert(variable1+" "+variable2+" " +variable3);
+    }
+    function helloFunction(firstName, lastName, age) {
+        alert(firstName+" "+lastName+" " +age);
+    }
+    function simpleAdd(numberA,numberB){
+        let answer =numberA+numberB;
+        document.getElementById("answerBox").textContent=answer;
+        return answer;
+    }
+</script>
+<button type="button" onclick="simpleAdd(1,3)">Simple Add</button>
+<button type="button" onclick="functionName('paramenterOne','parameterTwo','parameterThree')">Conection</button>
+<button type="button" onclick="helloFunction('Minh','Le','31')">Hello Minh</button>
+
+</body>
+</html>

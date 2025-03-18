@@ -1,0 +1,39 @@
+[B3] BUILDING THE SITE
+
+7. WEBSITE COMPONENT CHALLENGES
+
+As referred to during our Week 4 topics, please refer to below for challenges on various aspects covered in HTML & CSS.
+
+To complete the challenges, please complete the challenges in the assigned files (01 to 03).  You will likely need to copy the completed work from the end of one challenge, to the start of the next challenge sheet!
+
+IMPORTANT: Attempt all challenges (if possible), zip this challenge folder up and submit progress to Class Work in Brightspace!
+
+
+01: CHALLENGE 1 - Adding the Navbar to the Website
+  - USING ANY of the previous challenges website builds (OR the blank 01_Challenge document), adapt the Home page design to show: 
+
+    (a) A list menu below the Header, showing links to "Home", "Our Pet" & "Feedback"
+
+    (b) The list now displayed as a horizontal menu/navbar, with the background set to a colour of your preference and the links having a different "hover" colour (pseudo-selector time!)
+
+
+02: CHALLENGE 2 - Style Sign Up Form to Match Final Version
+  - Using the theory learned - style the form to be as close to the finished version (as shown in class!)
+
+  (i) IMPORTANT: USE the CSS clues/hints and FOCUS on the declarations provided and try as best to get as close to the example form
+    - Feel free to add further styling to the form if you get close to the finished example, such as changing font
+    - Try not to look at the solution - we will go through in class! 
+
+  (ii) BONUS CHALLENGE: Try to add a basic navbar (as ul) to top of page to indicate this being a Sign Up page 
+    - Create 2-3 custom links (non-active)
+    - Keep the styling consistent with the form 
+
+  (iii) DOCUMENTS:
+    - 02a: Challenge File
+    - 02b: Preview of Finished Build (to help design challenge) 
+    - 02c: (Inside "solutions" folder): Solution and finished version with CSS
+
+
+03: HOTEL WEBSITE CHALLENGES 
+  - See 09_Hotel-Site_Challenges for CHALLENGES relating to the MAIN exemplar site in BT Hotels (focus from here on)!
+  - This will be your base working file, to mirror the build conducted in 08

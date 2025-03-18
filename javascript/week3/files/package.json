@@ -1,0 +1,17 @@
+{
+  "name": "06_files",
+  "version": "1.0.0",
+  "description": "Node files example, readFile and writeFile",
+  "main": "files.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "file": "node ./files.js"
+  },
+  "keywords": [
+    "Node",
+    "readFile",
+    "writeFile"
+  ],
+  "author": "Amberle",
+  "license": "ISC"
+}

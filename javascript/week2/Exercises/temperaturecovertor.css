@@ -1,0 +1,39 @@
+.container{
+    margin: auto;
+}
+.inputConvertor{
+width: 80%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto;
+}
+.inputTemp{
+    margin-right: 20px  ;
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    box-sizing: border-box;
+}
+.selectConvertor{
+width: 80%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto;
+
+}
+.selectTemp{
+    margin-right: 30px  ;
+    margin-left: 30px;
+    width: 300px;
+    box-sizing: border-box;
+    height: 20px;
+    background-color: aqua;
+}
+.buttonConvert{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

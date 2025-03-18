@@ -1,0 +1,20 @@
+[C1] WEB COMPONENTS
+
+1. BOXES INTO UI
+
+Having spent much of our time exploring a range of CSS techniques, we will deal with a few other major aspects of a website build - focusing on building actual components that make up parts of a website!
+
+------
+
+FIRST - this folder has included the combined CSS from the prior lessons into one external stylesheet:
+  -> *NEW*: 00_base.html + /images + style.css
+
+------
+
+SECOND - content for this portion will be SEPARATE from the build, as we will analyse the components separately as we build them!
+
+  - 01: LINK COMPONENT: Links having visual appearance of a button
+
+  - 02: NAVBAR COMPONENT: Inline-Float Navbar vs. Block-Float Navbar (& bonus vertical navbar)
+
+  - 03: FORM COMPONENT: Using input-groups to help select & affect CSS with opinionated elements

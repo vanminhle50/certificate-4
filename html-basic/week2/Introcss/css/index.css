@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+body{
+/*     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    background-color: bisque;
+    font-family: "Oswald", serif;
+    
+}
+
+h1{
+    color: red;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+h2 {
+    color: rgb(58, 134, 23);
+    text-align: center;
+    transition: 0.5s ease-in-out;
+  }
+  h3 {
+    color: #4f46e5;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+  }
+  h4 {
+    color: hsl(279, 67%, 38%);
+    text-align: center;
+    transition: 0.5s ease-in-out;
+  }
+  h5 {
+    color: color-mix(in lch, blue 50%, pink 50%);
+    text-align: center;
+    transition: 0.5s ease-in-out;
+  }
+
+.imgContainer {
+    width: 500px; 
+    height: 500px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width: 250px;
+    height: auto;
+    border-radius: 50px;
+    position: absolute;
+    transition: 1s ease-in-out;
+}
+
+.img:nth-child(1) {
+    top: 0px;
+    left: -100px;
+    transform: rotate(-43deg) ;
+
+}
+.img:nth-child(1):hover{
+    transform: scale(1.5);
+
+}
+
+.img:nth-child(2) {
+    top: 150px;
+    left: 120px;
+    transform: rotate(0deg);
+}
+.img:nth-child(2):hover{
+    transform: scale(1.5) ;
+}
+
+.img:nth-child(3) {
+    top: 30px;
+    left: 350px;
+    transform: rotate(30deg);
+}
+.img:nth-child(3):hover{
+    transform: scale(1.5);
+}
+.contentContainer{
+    border-radius: 50px;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    border: white 1px solid;
+    box-shadow: white 10px 30px;
+}
+.loveDiv{
+    width: 50%;
+    display: flex;
+    flex-direction: column;  /* Sử dụng column để các phần tử xếp chồng lên nhau */
+    align-items: center;     /* Căn giữa các phần tử theo chiều ngang */
+    text-align: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 10px;  
+    border: red 1px solid ;
+    background-color: red; 
+}
+.loveDiv button{
+    margin: 10px;           /* Khoảng cách giữa các button */
+    padding: 12px 25px;     /* Thêm padding để button rộng hơn */
+    font-size: 16px;
+    cursor: pointer;        /* Thêm con trỏ chuột dạng tay khi hover */
+    border: none;           /* Xóa bỏ viền mặc định */
+    border-radius: 25px;    /* Bo tròn góc button */
+    transition: all 0.3s ease-in-out; /* Thêm hiệu ứng chuyển tiếp mượt mà */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho button */
+    background: linear-gradient(45deg, red, yellow); /* Màu nền gradient */
+    color: white;           /* Màu chữ trắng */
+    font-weight: bold;      /* Chữ đậm */
+}
+.loveDiv .buttonYes:hover {
+    background: linear-gradient(45deg, yellow, #ff4b2b); /* Hiệu ứng gradient hover */
+    transform: scale(1.5);    /* Phóng to button khi hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Tăng cường bóng đổ khi hover */
+    
+}
+.loveDiv .buttonNo:hover {
+    background-color: #d1d5db; /* Màu nền khi button vô hiệu hóa */
+    color: #9ca3af;            /* Màu chữ khi button vô hiệu hóa */
+    cursor: not-allowed;       /* Thay đổi con trỏ chuột khi vô hiệu hóa */
+    box-shadow: none;          /* Xóa bóng đổ khi button vô hiệu hóa */
+    transform: scale(0.1); 
+}

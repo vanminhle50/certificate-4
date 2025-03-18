@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //-----------------------------------------------------------------------------
+        function ex1(a, b) {
+            console.log("number a= " + a);
+            console.log("number a= " + b);
+            let c = a;
+            a = b;
+            b = c;
+            console.log("After swaps both values");
+            console.log("number a= " + a);
+            console.log("number a= " + b);
+            return c;
+        }
+ex1(10, 20);
+        //-----------------------------------------------------------------------------
+        function ex2(geometry,algebra,physics){
+            console.log("Grade of Geometry: " + geometry); 
+            console.log("Grade of Algebra: " + algebra);
+            console.log("Grade of Physics: " + physics);
+            let gradeAverage =(geometry+algebra+physics)/3;
+            let rank;
+            if (gradeAverage>7){
+                rank="Good job!";
+            }
+            else if (gradeAverage>=4){
+                rank = " You need to work harder!"
+            } else rank ="Failed, you really need to work harder!"
+            console.log("Grade Average: "+gradeAverage +" "+rank);
+            return gradeAverage;
+        }
+ex2(4,3,2);
+        //-----------------------------------------------------------------------------
+        function ex3(bitcoinValue,percentIncrease){
+            console.log("Bitcoin value " + bitcoinValue); 
+            if (percentIncrease>0){
+                console.log("Increase: "+Math.abs(percentIncrease)+"%");
+            }
+            else console.log("Decrease: "+Math.abs(percentIncrease)+"%");
+            let totalValue = bitcoinValue+bitcoinValue*(percentIncrease/100);
+            console.log("Total Bitcoin Value:  "+totalValue);
+            return totalValue;
+        }
+ex3(1000,-10);
+        //-----------------------------------------------------------------------------
+        function ex4(width,height){
+            console.log("Width of the property: " + width+" m"); 
+            console.log("Height of the property: " + height+" m"); 
+            let totalArea = width*height;
+            console.log("Area of the property: " + totalArea+" m2"); 
+            return totalArea;
+        }
+ex4(1000,50);
+        //-----------------------------------------------------------------------------
+        function ex5(money,bitcoinPrice,ethereumPrice,litecoinPrice){
+            console.log("The current amount of money you have:  $" +money);
+            console.log("Bitcoin Price:  $" +bitcoinPrice);
+            console.log("Ethereum Price:  $" +ethereumPrice);
+            console.log("Litecoin Price:  $" +litecoinPrice);
+            console.log("With: $"+money+" You can buy:" +Math.floor(money/bitcoinPrice)+" Bitcoin or " + Math.floor(money/ethereumPrice)+" Ethereum or "+ Math.floor(money/litecoinPrice)+" Litecoin");
+            return ex5;
+        }
+        ex5(500,50,25,10);
+        //-----------------------------------------------------------------------------
+        function ex6(laptopPrice,tax){
+            console.log("The price of the laptop without tax:  $" +laptopPrice);
+            console.log("Tax: " +tax+"%");
+            console.log("The total price of the laptop with tax: $"+(laptopPrice+laptopPrice*(tax/100)));
+            return ex6;
+        }
+        ex6(300,10);
+        //-----------------------------------------------------------------------------
+        function ex7(experienceYearnumber,kidsNumber){
+            console.log("The number of years experience: " +experienceYearnumber);
+            console.log("The number of kids you have: " +kidsNumber);
+            let totalAmount=400+20*experienceYearnumber+30*kidsNumber;
+            console.log("The total amount is $"+totalAmount+". $400 minimum wage,  $" + 20*experienceYearnumber +" for "+experienceYearnumber+ " years experience, and $"+30*kidsNumber+ " for "+kidsNumber+" kids");
+            return totalAmount;
+        }
+        ex7(5,2);
+        //-----------------------------------------------------------------------------
+        function ex8(experienceYearnumber,kidsNumber,missAday){
+            console.log("The number of years experience: " +experienceYearnumber);
+            console.log("The number of kids you have: " +kidsNumber);
+            console.log("The employee didn't miss 1 day of work." +missAday);
+            let totalAmount=400+20*experienceYearnumber+30*kidsNumber;
+            if(missAday==true) {
+            totalAmount=totalAmount+100;
+            console.log("The total amount is $"+totalAmount+". $400 minimum wage,  $" + 20*experienceYearnumber +" for "+experienceYearnumber+ " years experience,  $"+30*kidsNumber+ " for "+kidsNumber+" kids and $100 for not missing a day at work");}
+            else
+            console.log("The total amount is $"+totalAmount+". $400 minimum wage,  $" + 20*experienceYearnumber +" for "+experienceYearnumber+ " years experience, and $"+30*kidsNumber+ " for "+kidsNumber+" kids");
+            return totalAmount;
+        }
+        ex8(5,2,true);
+        //-----------------------------------------------------------------------------
+        function ex10(integerNumber){
+            console.log("The integer number: "+integerNumber);
+            console.log("The last number of integer number is : "+integerNumber%10);
+            return ex10;
+        } 
+        ex10(557777775661215);
+        //-----------------------------------------------------------------------------
+        function ex11(hoursworknumber, hourlyincome){
+            console.log("The number of hours you\'ve worked: "+hoursworknumber);
+            console.log("Your hourly income: $"+hourlyincome);
+            let totalIcome = hourlyincome*hoursworknumber;
+            console.log("I can buy "+Math.floor(totalIcome/200)+"PS4, "+Math.floor(totalIcome/900)+ "Samsung phone",+ Math.floor(totalIcome/500) +"TV and ", +Mat.floor(totalIcome/10) +"skin");
+            return totalIcome;
+        }        
+        ex11(40,35);
+    </script>
+</body>
+
+</html>

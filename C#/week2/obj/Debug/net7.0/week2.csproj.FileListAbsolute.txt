@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\bin\Debug\net7.0\week2.exe
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\bin\Debug\net7.0\week2.deps.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\bin\Debug\net7.0\week2.runtimeconfig.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\bin\Debug\net7.0\week2.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\bin\Debug\net7.0\week2.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\obj\Debug\net7.0\week2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\obj\Debug\net7.0\week2.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\obj\Debug\net7.0\week2.AssemblyInfo.cs
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\obj\Debug\net7.0\week2.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\obj\Debug\net7.0\week2.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\obj\Debug\net7.0\refint\week2.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\obj\Debug\net7.0\week2.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\obj\Debug\net7.0\week2.genruntimeconfig.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week2\obj\Debug\net7.0\ref\week2.dll

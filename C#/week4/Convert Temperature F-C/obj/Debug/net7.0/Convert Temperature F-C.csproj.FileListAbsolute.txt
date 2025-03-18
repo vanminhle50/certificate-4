@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\bin\Debug\net7.0\Convert Temperature F-C.exe
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\bin\Debug\net7.0\Convert Temperature F-C.deps.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\bin\Debug\net7.0\Convert Temperature F-C.runtimeconfig.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\bin\Debug\net7.0\Convert Temperature F-C.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\bin\Debug\net7.0\Convert Temperature F-C.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\obj\Debug\net7.0\Convert Temperature F-C.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\obj\Debug\net7.0\Convert Temperature F-C.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\obj\Debug\net7.0\Convert Temperature F-C.AssemblyInfo.cs
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\obj\Debug\net7.0\Convert Temperature F-C.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\obj\Debug\net7.0\Convert Temperature F-C.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\obj\Debug\net7.0\refint\Convert Temperature F-C.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\obj\Debug\net7.0\Convert Temperature F-C.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\obj\Debug\net7.0\Convert Temperature F-C.genruntimeconfig.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week4\Convert Temperature F-C\obj\Debug\net7.0\ref\Convert Temperature F-C.dll

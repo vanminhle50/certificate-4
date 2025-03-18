@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myObject ={
+            'name' : 'Daniel',
+            'age' : 28
+        };
+        let webSiteOne={
+            'name' : 'Holmesglen',
+            'description' : 'holmesglen remains a leader in vocational and higher education',
+            'url' : 'http://holmesglen.edu.au',
+            'phone': '+61 3 9564 1555',
+            'email': 'info@holmesglen.edu.au',
+            'myFunction' : function myFunction(){
+                console.log('myFunction!!');
+            },
+        }
+console.log(webSiteOne.email);
+webSiteOne.email="vanminhlee@gmail.com"
+webSiteOne.address ="448 South Road";
+delete webSiteOne.email;
+console.log(webSiteOne);
+//delete webSiteOne.email;
+webSiteOne.myFunction();
+    </script>
+</body>
+</html>

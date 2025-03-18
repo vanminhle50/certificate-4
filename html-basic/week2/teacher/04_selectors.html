@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Syntax, Selectors & Specificity</title>
+    <!-- 1. SYNTAX (more: https://www.w3schools.com/css/css_syntax.asp)-->
+    <!-- We have now had a small taste of setting up basic CSS rules in our web document.  As shown below (and in 04_HTML&CSS-Week 2 Review Slides) CSS declarations have set syntax in order for the style to apply -->
+
+    <!-- DECLARATION ORDER: 
+      (i) The Selector - the tagname/class/id that identifies the section/component/element we want to apply styling to
+      (ii) The CSS Property - the specific CSS default property we are adjusting
+      (iii) The Value - the new adjusted value, can be combinations of letters, numbers & units of measurement
+
+      This then repeats for how many different properties we want to adjust for the set block of code!
+    -->
+    <style>
+      /* (a) Universal Selector  */
+      * {
+        font-family:'Courier New', Courier, monospace
+      }
+
+      /* (b) Element/Tag Selectors */
+      /* NOTE: Can also use this to build in CSS resets, as body has default margins */
+      body {
+        background-color: #333;
+        margin: 0;
+      }
+      /* (c) Class Selector, with the . the code for class */
+      .primary-heading {
+        color: green;
+      }
+
+      /* (d) ID Selector, with the # the code for class */
+      #welcome {
+        background-color: #f4f4f4;
+      }
+
+      /* (e) Grouping/Multiple Selectors */
+      #welcome, #about {
+        border: 1px solid red;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
+      /* (f) Nested Selectors */
+      #welcome p {
+        font-size: 20px;
+      }
+
+      #about {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 2. SELECTORS -->
+    <!-- CSS selectors select the HTML element(s) you want to style.  This area of knowledge can grow quite substantially once you go into detail  but there are FIVE core Selector Categories:
+
+      (i) Simple selectors (select elements based on name, id, class)
+      (ii) Combinator selectors (select elements based on a specific relationship between them)
+      (iii) Pseudo-class selectors (select elements based on a certain state)
+      (iv) Pseudo-elements selectors (select and style a part of an element)
+      (v) Attribute selectors (select elements based on an attribute or attribute value)
+    
+      We will JUST look at Simple Selectors for the moment (SEE a to e above in <style>!)  
+      
+      For examples of more categories, practice CSS Selectors here: https://flukeout.github.io/
+    -->
+
+    <!-- 3. SPECIFICITY (we will revisit - core concept of CSS selectors!) -->
+    
+    <!-- HOW CONFLICTS OF TWO SELECTORS ARE FIXED: If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element -->
+
+    <!-- ORDER OF SPECIFICITY (lowest to highest): Elements -> Classes -> IDs -> Inline Styles -> !important -->
+
+    <div id="welcome">
+      <h2 class="primary-heading">Welcome</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sequi
+        asperiores voluptas ipsam error alias temporibus atque fugit
+        perspiciatis tempora eos ipsum, aspernatur magnam iure minima explicabo
+        facere! Nisi, neque?
+      </p>
+    </div>
+    <div id="about">
+      <h3>About</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias unde
+        quaerat error impedit, magni numquam eveniet quia nisi?
+      </p>
+    </div>
+  </body>
+</html>

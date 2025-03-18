@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\bin\Debug\net7.0\Rock-Paper-Scissors-Game.exe
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\bin\Debug\net7.0\Rock-Paper-Scissors-Game.deps.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\bin\Debug\net7.0\Rock-Paper-Scissors-Game.runtimeconfig.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\bin\Debug\net7.0\Rock-Paper-Scissors-Game.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\bin\Debug\net7.0\Rock-Paper-Scissors-Game.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\obj\Debug\net7.0\Rock-Paper-Scissors-Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\obj\Debug\net7.0\Rock-Paper-Scissors-Game.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\obj\Debug\net7.0\Rock-Paper-Scissors-Game.AssemblyInfo.cs
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\obj\Debug\net7.0\Rock-Paper-Scissors-Game.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\obj\Debug\net7.0\Rock-Paper-Scissors-Game.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\obj\Debug\net7.0\refint\Rock-Paper-Scissors-Game.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\obj\Debug\net7.0\Rock-Paper-Scissors-Game.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\obj\Debug\net7.0\Rock-Paper-Scissors-Game.genruntimeconfig.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Rock-Paper-Scissors-Game\obj\Debug\net7.0\ref\Rock-Paper-Scissors-Game.dll

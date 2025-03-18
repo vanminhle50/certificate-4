@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 4. INCLUDING GOOGLE FONTS -->
+    <!-- We can either (a) use the <link> and pass into the head OR (b) use the import in our CSS internal/external stylesheet (see below) -->
+    <!-- LINK TO RUBUK GOOGLE FONT - https://fonts.google.com/specimen/Rubik -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <title>Fonts</title>
+    <!-- ADDITIONAL - LIST OF WEBSAFE FONTS: Arial (sans-serif), Verdana (sans-serif), Helvetica (sans-serif), Tahoma (sans-serif), Trebuchet MS (sans-serif), Times New Roman (serif), Georgia (serif), Garamond (serif), Courier New (monospace) & Brush Script MT (cursive) -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+
+      body {
+        /* EXAMPLE: Non-websafe font, with BOTH a fallback (tahoma) & imported font above with the link tag */
+        font-family: 'Rubik', 'Tahoma', sans-serif;
+        font-size: 20px;
+        line-height: 1.6em;
+
+      }
+      /* 5. ADJUSTING FONT */
+      /* We can adjust font-size (absolute px or relative em), font-style (normal, italic, etc.), font-weight (bold, etc.) */
+      #about {
+        font-size: 0.75em; /* Equivalent to 0.75 * 16px = 12px */
+        font-style: italic;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FONTS & WEB FONTS -->
+
+    <!-- 1. OVERVIEW (see more: https://www.w3schools.com/css/css_font.asp)-->
+    <!-- Font will be one of the first items to adjust for your website.  There are five generic font families: serif (formal/elegant), sans-serif(modern/minimalist), monospace (mechanical), cursive (handwriting) & fantasy (decorative/playful) -->
+
+    <!-- 2. CSS FONT-FAMILY PROPERTY -->
+    <!-- CSS uses the "font-family" CSS property to specify a font of text for a web document (see above under the internal style tag for correct syntax)-->
+
+    <!-- 3. WEB SAFE FONTS -->
+    <!-- Web safe fonts are fonts that are installed UNIVERSALLY across all browsers and devices - this is a SMALL number! As our chosen font, especially from Google Fonts, will likely not be websafe, we will need to either (a) have a fallback font OR (b) import the font into our document! -->
+
+    <div id="welcome">
+      <h2 class="primary-heading">Welcome</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sequi
+        asperiores voluptas ipsam error alias temporibus atque fugit
+        perspiciatis tempora eos ipsum, aspernatur magnam iure minima explicabo
+        facere! Nisi, neque?
+      </p>
+    </div>
+    <div id="about">
+      <h3>About</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias unde
+        quaerat error impedit, magni numquam eveniet quia nisi?
+      </p>
+    </div>
+  </body>
+</html>

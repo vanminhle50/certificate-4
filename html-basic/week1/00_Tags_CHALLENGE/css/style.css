@@ -1,0 +1,65 @@
+/* NON-WEB SAFE FONT IMPORT */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+/* ALL BODY */
+body {
+  margin: 0px;
+  font-family: 'Source Sans Pro';
+  background: #202c44;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* HEADER SECTION */
+header {
+  text-align: center;
+  overflow: hidden;
+  background-color: #202c44;
+}
+
+header h2 {
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 70%;
+  font-style: italic;
+  margin-top: 0rem;
+}
+
+/* IMAGE SECTION */
+div {
+  text-align: center;
+}
+
+div img {
+  margin-top: 1rem;
+  border-radius: 5px;
+  box-shadow: 5px 10px #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* MAIN ARTICLE SECTIONS */
+section, article {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 80vw;
+  background-color: #32415f;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+  color: #81c5f8;
+}
+
+/* FOOTER & LINKS */
+footer {
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+a {
+  color: #5d88f3;
+}

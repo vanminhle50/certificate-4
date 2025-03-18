@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convert Temperature F-C", "Convert Temperature F-C.csproj", "{41A42B59-1261-4508-8D9B-B68E7054247A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41A42B59-1261-4508-8D9B-B68E7054247A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A42B59-1261-4508-8D9B-B68E7054247A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A42B59-1261-4508-8D9B-B68E7054247A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A42B59-1261-4508-8D9B-B68E7054247A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27244059-AC17-4658-B349-9BCE38A7DC2B}
+	EndGlobalSection
+EndGlobal

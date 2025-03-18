@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\bin\Debug\net7.0\guessANumberGame.exe
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\bin\Debug\net7.0\guessANumberGame.deps.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\bin\Debug\net7.0\guessANumberGame.runtimeconfig.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\bin\Debug\net7.0\guessANumberGame.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\bin\Debug\net7.0\guessANumberGame.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\obj\Debug\net7.0\guessANumberGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\obj\Debug\net7.0\guessANumberGame.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\obj\Debug\net7.0\guessANumberGame.AssemblyInfo.cs
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\obj\Debug\net7.0\guessANumberGame.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\obj\Debug\net7.0\guessANumberGame.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\obj\Debug\net7.0\refint\guessANumberGame.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\obj\Debug\net7.0\guessANumberGame.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\obj\Debug\net7.0\guessANumberGame.genruntimeconfig.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\guessANumberGame\obj\Debug\net7.0\ref\guessANumberGame.dll

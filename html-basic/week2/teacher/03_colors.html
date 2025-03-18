@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors</title>
+    <style>
+      /* 1. COLOUR NAMES */
+      h1 {
+        color: blue;
+      }
+
+      /* 2. RGB CODES ("red-green-blue") */
+      h2 {
+        color: rgb(255, 99, 71);
+      }
+
+      /* 3. HEX CODES */
+      /* #rrggbb  - values between 00 and ff */
+      h3 {
+        color: #ffa500;
+      }
+
+      /* 4. HSL ("Hue-Saturation-Lightness") (& HSLA for alpha) */
+      h4 {
+        color: hsl(800, 100%, 30%)
+      }
+
+      /* 5. "CSS Color Module Level 5" */
+      /* NOTE: This is pretty new BUT arguably incorporates features that have been around in tools to assist CSS for years!  */
+      h5 {
+        color: color-mix(in lch, purple 50%, plum 50%);
+      }
+
+      /* HOWEVER - no browsers really can support them yet, but these should be enabled soon! */
+
+      /* MORE ON CSS5: https://blog.logrocket.com/exploring-css-color-module-level-5/ */
+    </style>
+  </head>
+  <body>
+    <!-- COLOURS (see more: https://www.w3schools.com/css/css_colors.asp) -->
+    <!-- Colours ("color") can be brought in by four methods: predefined names (limited), RGB, HEX codes or HSL -->
+    <h1>Color Name</h1>
+    <h2>RGB Colors</h2>
+    <h3>Hex Colors</h3>
+    <h4>HSL Colors</h4>
+    <h5>CSS 5 Color Functions</h5>
+  </body>
+</html>

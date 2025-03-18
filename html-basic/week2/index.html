@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro CSS</title>
+    <link rel="stylesheet" href="./Introcss/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1> Intro to CSS - Including Styling</h1>
+        <div class="imgContainer">
+            <img src="./Introcss/img/Natra.jpeg"alt="Natra2" class="img">
+            <img src="./Introcss/img/Natra-face.jpg" alt="" class="img">
+            <img src="./Introcss/img/NATRA-BODY.jpg" alt="" class="img">
+        </div>
+        <div class="loveDiv" id="loveDiv">
+            <h1 style="color: white;">Do you love me?</h1>
+            <div>
+                <button type="button" class="buttonYes" onclick="alert('I love you too!' )" onmouseenter="changeLove(this)" onmouseleave="resetLove(this)">Yes</button>
+                <button type="button" class="buttonNo">No</button>
+            </div>
+        </div>
+        <div class="contentContainer" id="contentContainer" >
+            <h1 id ="colour1" onmouseenter="changeBackground(this)" onmouseleave="resetBackgound(this)">Color Name</h1>
+            <h2 id ="colour2" onmouseenter="changeBackground(this)" onmouseleave="resetBackgound(this)">RGB Colors</h2>
+            <h3 id ="colour3" onmouseenter="changeBackground(this)" onmouseleave="resetBackgound(this)">Hex Colors</h3>
+            <h4 id ="colour4" onmouseenter="changeBackground(this)" onmouseleave="resetBackgound(this)">HSL Colors</h4>
+            <h5 id ="colour5" onmouseenter="changeBackground(this)" onmouseleave="resetBackgound(this)">CSS 5 Color Functions</h5>
+        </div>
+
+<script src="./Introcss/js/index.js"></script>
+</body>
+</html>

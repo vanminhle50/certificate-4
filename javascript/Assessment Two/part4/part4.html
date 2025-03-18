@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 4 || Assessment 2 - JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Add CSS library of Prism.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <h1><span class="highlight-text">Assessment 2:</span> Part 4</h1>
+        <div class="header-content-wrap">
+            <div style="min-width: 500px;">
+                <p>// Certificate IV in Information Technology<br>
+                    // Holmesglen Institute, VIC, Australia<br>
+                    // Student Name: Van Minh Le<br>
+                    // Student ID: 100693330</p>
+            </div>
+            <div style="width: 60%;">
+                <p>In this part, you are required to design and implement a range of algorithms to operate an array of
+                    objects. The following operations need to be done using JavaScript programming language and the
+                    result need to be verified using browser.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Javascript Code</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="note bold">Step 01:</span> Define a movie class with the following properties.
+                            <ul>
+                                <li>Movie ID</li>
+                                <li>Title</li>
+                                <li>Year</li>
+                                <li>Rating</li>
+                            </ul>
+                        <td>
+                            <pre><code class="language-javascript">// Define the Movie class
+class Movie {
+    constructor(movieID, title, year, rating) {
+    this.movieID = movieID;
+    this.title = title;
+    this.year = year;
+    this.rating = rating;
+    }
+}</code></pre>
+                        </td>
+                        <td id="movieList-result">Not Found</td>
+                    </tr>
+                    <tr>
+                        <td> <span class="note bold">Step 02:</span> Create an array of at least 10 movies with mock
+                            values
+                            <ul>
+                                <li>Movie ID must be unique for each movie.</li>
+                                <li>Movie ID must not be sorted in the array</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <pre><code class="language-javascript">// Create an array of at least 10 movies with mock values
+let movieList=[
+    new Movie("C021", "The Shawshank Redemption",1994,9.3),
+    new Movie("A020","The Godfather",1972,9.2),
+    new Movie("A003","The Dark Knight",2008,9.0),
+    new Movie("B104","The Godfather Part II",1974,9.0),
+    new Movie("A005","12 Angry Men",1957,9.0),
+    new Movie("D106","Schindler's List",1993,9.0),
+    new Movie("A007","The Lord of the Rings: The Return of the King",2003,9.0),
+    new Movie("R108","Pulp Fiction",1994,8.9),
+    new Movie("T009","The Good, the Bad and the Ugly",1966,8.8),
+    new Movie("A110", "Fight Club ",1999,8.81)
+];</code></pre>
+                        </td>
+                        <td>
+                            <p id="movieListResult">Not Found</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="note bold"> Step 03:</span> Sort array by Movie ID in ascending order</td>
+                    <td>
+                        <pre><code class="language-javascript">movieList.sort((a,b)=>a.movieID-b.movieID);</code></pre>
+                    </td>
+
+                    <td><p id="sorted-movie-list">Not Found</p></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+    </main>
+    <!-- Add JavaScript library of Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="./part4.js"></script>
+</body>
+
+</html>

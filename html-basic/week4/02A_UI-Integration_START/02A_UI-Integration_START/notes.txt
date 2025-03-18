@@ -1,0 +1,93 @@
+[C1] WEB COMPONENTS
+
+2. UI INTEGRATION
+
+With our components in hand, we will now fuse them into our application:
+
+- navbar component
+- form component
+- button/link component
+
+------
+
+[A]: SPLITTING COMPONENTS INTO SEPARATE PAGES
+
+Our home page is getting a bit too packed, so we might move things around to fit better & address UX:
+
+  - (a) Create a new "contact.html" & rename 00_base to "index.html" (OUR HOME PAGE!)
+
+  - (b) Setup standard boilerplate preamble & rename titles to "Hotel BT | Welcome" & "Hotel BT | Contact"
+
+  - (c) Link the stylesheet on this new page using relative paths
+
+  - (d) MOVE TO CONTACT: Contact Section (cut), Features section (copy), Footer (copy)
+
+  - (e) RE-ORDER: Flip the Features with Testimonials on HOMEPAGE for better UX
+
+  - (f) ADD COMMENTS: For navbar space on each page + form on contact page 
+
+------
+
+[B] INTEGRATING COMPONENTS:
+
+The base CSS we wrote in the previous parts, has already been included in the css stylesheet:
+
+  - We need to add the relevant markup to match the CSS, for the component to spring to life!
+
+  - Adjust the CSS for each component so it meshes with the webpage
+
+  - Re-use components where there is a good use (buttons, navbar & features!)
+
+------
+
+[B1] INTEGRATING NAVBAR
+
+  - (a) MARKUP: 
+    - Set the h2 with an anchor tag, of "HBT"
+    - Add relative paths for the home page & contact page anchors
+
+  - (b) CSS:
+    - Adjust the background-color & color to colours that reflect the site (see style.css, line 76 on)
+      -> background-color: #333333
+      -> color: #FFFFFF
+      -> hover background: #444444
+      -> hover color: #f7c08a
+
+    - Adjust li a padding, as our box-sizing property is applied here, making it easier to make our navbar scale! (to 20px)
+
+    - TRICK: Without JS, we can make our navlinks look clicked on, by adding a class of "current" & attaching this to our hover declaration! (Just make sure to adjust the link on each page!)
+
+
+[B2] INTEGRATING FORM 
+
+  - (a) MARKUP: 
+    - Move the list contents into our features-card bar (like address, phone & email) THEN delete the element
+    - Replace element with the form component markup but change opening div -> section
+    
+  - (b) CSS:
+    - Insert a div after the section, with a container class, to scale the form element
+    - Add "text-heading" class to the h1
+    - Wrap "Contact" in a span & attach "text-primary" color to it
+    - Attach "py-1" spacing utility to section as a class
+
+
+[B3] INTEGRATING BUTTON
+
+  - (a) MARKUP: 
+    - BUTTON-ANCHOR 1: Add to our Hero below the text!
+    - BUTTON-ANCHOR 2: Add the "btn" class to our anchor in "About" section
+
+  - (b) CSS:
+    - Add "text-decoration: none" declaration as a general CSS reset for anchors + a base color (preferred!)
+
+
+[B4] CLEANUP HERO 
+
+  - (a) MARKUP:
+    - Change to say: "Enjoy Your Stay"
+    - Wrap the "Enjoy" text in a span
+
+  - (b) CSS:
+    - H1: Target element & scale to 60px + line-height of 1.2em
+    - P: Target element & add padding-bottom of 20px & line-height of 1.7em
+    - SPAN: Add the class of "text-primary" to the span tag, to add highlighting

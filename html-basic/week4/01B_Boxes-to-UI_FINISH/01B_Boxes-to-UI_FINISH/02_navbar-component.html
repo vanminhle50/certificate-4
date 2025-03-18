@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Component</title>
+  <!-- SUMMARY: With our knowledge now of the box-model, backgrounds, floating/alignment, pseudo-classes & display properties - we can tie it together to make some beautfiul navigation systems! -->
+  <style>
+    /* BASE STYLING */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    nav {
+      margin: 60px auto;
+    }
+
+    /* 1. INLINE NAVBAR: This is the simplest type of navbar, but it loses a bit of flexibility and flair, as the user can only hover over the content to indicate navigation */
+    .inline-navbar li {
+      display: inline;
+    }
+    .inline-navbar li a {
+      color: black;
+      padding-right: 20px;
+      text-decoration: none;
+
+      /* NEW - Nested styling - only for pseudo-classes */
+      &:hover {
+        color: blue;
+      }
+    }
+    /* ADDITIONAL: To style the box holding the navlinks, like a normal navbar! */
+    .inline-navbar ul {
+      margin-top: 30px;
+      background-color: lightblue;
+      box-sizing: border-box;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* 2. BLOCK NAVBAR: More complex, but far more UX.  We will build in following way::after
+      (a) Box model
+      (b) Individual list items & nested items (combo-selectors)
+      (c) NEW: Structural Pseudo-class -> used to style content based on its relationship with parent and sibling content (:hover)
+    */
+    /* (a) Box-Model Styles */
+    .block-navbar {
+      background: #4c6ca0;
+      color: #FFFFFF;
+      overflow: auto;
+    }    
+    /* (b) Combo Selectors: Target list items & nested links */
+  .block-navbar a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }   
+    .block-navbar h2 {
+      float: left;
+      padding: 20px;
+      margin: 0;
+    }
+    .block-navbar ul {
+      list-style: none;
+      float: right;
+      margin: 0;
+      padding: 0;
+    }
+    .block-navbar ul li {
+      float: left;      
+    } 
+    /* (c) Pseudo-class (:hover) */
+     .block-navbar ul li a {
+      display: block;
+      padding: 26px;
+
+      &:hover {
+        background-color: #446190;
+        color: aquamarine;
+      }
+    } */
+
+    /* 3. BONUS: Vertical menu (less used) */
+    /* (a) Box-Model Styles */
+    .side-menu ul {
+      list-style: none;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+    }
+    /* (b1) Combo Selectors: Target list items */
+    .side-menu li {
+      font-size: 18px;
+      line-height: 2.4em;
+      border-bottom: dotted 1px #ddd;
+    }
+    /* (b2) Combo Selectors: Target the nested links */
+    .side-menu li a {
+      color: #333;
+      text-decoration: none;
+    }
+    /* (c) Structural Pseudo-class - Target li: last child  */
+    .side-menu li:last-child {
+      border: none;
+    }
+
+    /* (d) Pseudo-class (:hover) */
+    .side-menu li a:hover {
+      color: coral;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. NAVBAR COMPONENT: Inline Version -->
+  <nav class="inline-navbar">
+    <ul>
+      <li><a href="#">Technology</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">Fashion</a></li>
+    </ul>
+  </nav>
+
+  <!-- 2. NAVBAR COMPONENT: Block Version -->
+  <nav class="block-navbar">
+    <h2><a href="#">Logo</a></h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 3. NAVBAR COMPONENT: Vertical Version -->
+  <nav class="side-menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

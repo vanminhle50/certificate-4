@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\bin\Debug\net7.0\week3ClassActivity.exe
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\bin\Debug\net7.0\week3ClassActivity.deps.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\bin\Debug\net7.0\week3ClassActivity.runtimeconfig.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\bin\Debug\net7.0\week3ClassActivity.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\bin\Debug\net7.0\week3ClassActivity.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\obj\Debug\net7.0\week3ClassActivity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\obj\Debug\net7.0\week3ClassActivity.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\obj\Debug\net7.0\week3ClassActivity.AssemblyInfo.cs
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\obj\Debug\net7.0\week3ClassActivity.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\obj\Debug\net7.0\week3ClassActivity.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\obj\Debug\net7.0\refint\week3ClassActivity.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\obj\Debug\net7.0\week3ClassActivity.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\obj\Debug\net7.0\week3ClassActivity.genruntimeconfig.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\week3ClassActivity\obj\Debug\net7.0\ref\week3ClassActivity.dll

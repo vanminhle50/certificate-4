@@ -1,0 +1,15 @@
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\bin\Debug\net5.0\week1Project.exe
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\bin\Debug\net5.0\week1Project.deps.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\bin\Debug\net5.0\week1Project.runtimeconfig.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\bin\Debug\net5.0\week1Project.runtimeconfig.dev.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\bin\Debug\net5.0\week1Project.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\bin\Debug\net5.0\week1Project.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\week1Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\week1Project.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\week1Project.AssemblyInfo.cs
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\week1Project.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\week1Project.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\refint\week1Project.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\week1Project.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\week1Project.genruntimeconfig.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\ref\week1Project.dll

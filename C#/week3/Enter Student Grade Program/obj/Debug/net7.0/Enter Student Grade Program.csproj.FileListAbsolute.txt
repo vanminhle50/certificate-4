@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\bin\Debug\net7.0\Enter Student Grade Program.exe
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\bin\Debug\net7.0\Enter Student Grade Program.deps.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\bin\Debug\net7.0\Enter Student Grade Program.runtimeconfig.json
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\bin\Debug\net7.0\Enter Student Grade Program.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\bin\Debug\net7.0\Enter Student Grade Program.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\obj\Debug\net7.0\Enter Student Grade Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\obj\Debug\net7.0\Enter Student Grade Program.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\obj\Debug\net7.0\Enter Student Grade Program.AssemblyInfo.cs
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\obj\Debug\net7.0\Enter Student Grade Program.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\obj\Debug\net7.0\Enter Student Grade Program.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\obj\Debug\net7.0\refint\Enter Student Grade Program.dll
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\obj\Debug\net7.0\Enter Student Grade Program.pdb
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\obj\Debug\net7.0\Enter Student Grade Program.genruntimeconfig.cache
+C:\Users\Student\Desktop\HolmesglenIT\C#\week3\Enter Student Grade Program\obj\Debug\net7.0\ref\Enter Student Grade Program.dll

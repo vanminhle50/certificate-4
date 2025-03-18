@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<button type="button"  id="myButton">myButton</button>
+	<script>
+		//Numbers
+		var intNumber = 10; //Int
+		var floatNumber = 25.5; //Float
+
+		//Strings
+		var string1 = "This is a string";
+
+		//Console log
+		console.log("Output this to the console");
+		console.log("Integer Number: " + intNumber);
+		console.log("Float number: " + floatNumber);
+		console.log("String: " + floatNumber);
+		//Statements
+		document.write("<h1>This is a header</h1>");
+		//Variables
+		var humanName;
+		humanName = "Daniel";
+		console.log(humanName);
+		document.write();
+		//Functions
+		function simpleAdd(numberOne, numberTwo) {
+			var answer = numberOne + numberTwo;
+			return answer;
+		}
+		simpleAdd(5, 5);
+
+		/* Operators
+	
+		+= increments
+		-= decrements
+		++ increment by 1
+		-- decrement by 1
+		== equal
+		!= not equal
+		> greater than
+		< less than
+		>= greater than or equal to
+		<= less than or equal to
+		&& and
+		|| or
+		! not
+	
+		*/
+
+		//If Statments
+		var age = 22;
+		if (age < 18) {
+			console.log("Age is less than 18");
+		}
+		else {
+			console.log("Age is greater than 18");
+		}
+
+		//Arrays
+		var myArray = ['one', 'two', 'three', 'four', 'five', 10, [1, 2, 3]];
+		console.log(myArray);
+		console.log(myArray.length);
+		myArray[1];
+
+		//Loops
+		var i = 0;
+		while (i < 10) {
+			console.log("i is = to " + i);
+
+			i++;
+		}
+
+		//Objects
+		var webSiteOne = {
+			'name': 'holmesglen',
+			'description': 'Holmesglen remains a leader in vocational and higher education.',
+			'url': 'http://www.holmesglen.edu.au',
+			'email': 'info@holmesglen.edu.au',
+			'phone': '+61 3 9564 1555'
+		}
+		console.log(webSiteOne.url);
+
+		//Fetch
+		/* 		const response = await fetch('https://http://127.0.0.1:5500');
+				const data = await response.json();
+				console.log(data); */
+		async function fetchData() {
+			try {
+				// Gửi yêu cầu tới API giả lập JSON Placeholder
+				const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+
+				// Kiểm tra nếu có lỗi HTTP
+				if (!response.ok) {
+					throw new Error(`HTTP error! Status: ${response.status}`);
+				}
+
+				// Chuyển đổi dữ liệu JSON từ phản hồi
+				const data = await response.json();
+
+				// In dữ liệu JSON ra console
+				console.log(data);
+			} catch (error) {
+				// Xử lý lỗi
+				console.error('Có lỗi xảy ra:', error);
+			}
+		}
+
+		// Gọi hàm để thực hiện yêu cầu
+		fetchData();
+
+		//DOM
+		var myButton = document.getElementById("myButton");
+		myButton.addEventListener("click", myFunction)
+		function myFunction() {
+			console.log("Run some code");
+		}
+		document.getElementById("myDiv").innerHTML = "some text"; 
+	</script>
+</body>
+
+</html>

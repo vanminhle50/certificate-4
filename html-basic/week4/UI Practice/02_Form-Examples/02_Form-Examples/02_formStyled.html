@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='./css/style.css'>
+  <title>Form Example with CSS</title>
+  <!-- This was a free-form replica of the Stripe login form - showing with just HTML & CSS, we can replicate forms built with more complex frameworks: https://dashboard.stripe.com/login -->
+</head>
+<body>
+  <form>
+    <div>
+      <h1>Sign into your account</h1>
+      <!-- 1. Email Section -->
+      <section>
+        <label for="login-email">Email</label>
+        <input id="login-email" type="email" name="email" />
+      </section>      
+      <!-- 2. Password Section -->
+      <section>
+        <label for="login-pwd">Password</label>
+        <input id="login-pwd" type="password" name="pwd" />
+      </section>     
+      <!-- 3. User Prefs Radio -->
+      <section>
+        <label for="login-prefs">
+          <input id="login-prefs" type="checkbox" name="prefs">
+          Stay signed in for a week
+        </label>
+      </section>
+      <!-- 4. Submit button -->
+      <section>
+        <input id="button" type="submit" value="Continue" />
+      </section>
+      </div>
+    </form>
+  
+</body>
+</html>

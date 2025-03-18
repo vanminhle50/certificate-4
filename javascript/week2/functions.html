@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="console.log('this is a test')">
+    <p some-event="some Javascript"> Content </p>
+    <button onclick="displayDate('date')">Click me</button>
+<div id="date"> Date </div>
+    <script>
+
+function displayDate(id){
+    document.getElementById(id).textContent=Date();
+}
+
+
+
+
+     /*    let n1;
+        let n2;
+        let sum;
+        sum = n1+ n2;
+        console.log(sum);
+        console.log(5+6);
+        function addTwo(number1, number2 ){
+            let result=number1+number2;
+            return result;
+        }
+        sum = result(n1,n2);
+        function addThree(num1,num2,num3){
+            return num1+num2+num3;
+        } */
+    </script>
+</body>
+</html>

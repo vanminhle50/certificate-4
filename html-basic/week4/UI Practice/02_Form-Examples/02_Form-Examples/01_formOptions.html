@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms & Input</title>
+</head>
+<body>
+  <!-- m. Forms, labels & inputs for fields -->
+  <!-- NOTE: The "action" calls when submitting the form, and goes to the server (we will go through this in DWD)-->
+  <form action="/02_basic-layout.html">
+
+    <!-- 1. First Name Row -->
+    <div>
+      <!-- Label for Row of Form (user cannot change this!)-->
+      <label for="fname">First name:</label>
+      <!-- Input for Row of Form, to take user input -->
+      <input type="text" id="fname" name="fname">
+    </div>
+
+    <!-- 2. Last Name Row -->
+    <!-- NOTE: Can add a default value, using the "value" attribute -->
+    <div>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" value="Default Last Name">
+    </div>
+
+    <!-- 3. Email Row -->
+    <!-- NOTE: Can add a placeholder attribute to help user-->
+    <div>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="Please enter your email">
+    </div>
+
+    <!-- 4. Text Input Area - needs NEW tag -->
+    <div>
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    </div>
+
+    <!-- 5. Select Dropdown Box -->
+    <div>
+      <label for="color">Favourite Colour:</label>
+      <select name="color" id="color">
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+      </select>
+    </div>
+
+    <!-- 6. Enter ONLY Numbers using Input - note the type attribute change to "number"-->
+    <div>
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age">
+    </div>
+
+    <!-- 7. Enter ONLY Date Input -->
+    <div>
+      <label for="date">Date:</label>
+      <input type="date" name="birthdate" id="birthdate">
+    </div>
+
+    <!-- 8. Radio Menu -->
+    <!-- NOTE: Checked changes default radio box ticked -->
+    <div>
+      <label for="membership">Membership</label>
+      <input type="radio" name="membership" id="membership">Simple
+      <input type="radio" name="membership" id="membership" checked>Standard
+      <input type="radio" name="membership" id="membership">Super
+    </div>
+
+    <!-- 9. Checkbox -->
+    <!-- SHORTCUT: CTRL + D after highlighting, highlights next row and so on - can help avoid errors in repeating code -->
+    <div>
+      <label for="prefs">I like this as a pet:</label>
+      <input type="checkbox" name="prefs" id="prefs">Cat
+      <input type="checkbox" name="prefs" id="prefs" checked>Dog
+      <input type="checkbox" name="prefs" id="prefs">Elephant
+    </div>
+
+    <!-- 10. Submit Button Row -->
+    <input type="submit" value="Submit">
+    
+    <!-- To code it, so on submit, it will go back to our Hello World page (could be your own custom page!)
+      - GO UP to <form> action attribute and list the page you want the action to go to on submit -->
+  </form>
+
+</body>
+</html>

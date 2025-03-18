@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Random Word</h1>
+    <p id ="p1"> Random Word Here</p>
+    <script>
+        let myArray=['fish', 'USB', 'desk', 'JavaScript', 'Phone', 'Tardis', 'X-wing', 'Darth Vader'];
+        let min =0;
+        let max = myArray.length-1;
+        let random = Math.floor(Math.random()*(max-min))+min;
+        document.getElementById('p1').textContent=myArray[random];
+/*         let myArray =['one', 'two' ,'three','four','five','six',10, [1,2,3]];
+        console.log(myArray);
+        console.log(myArray[3]);
+        console.log(myArray.length);
+        console.log(myArray[myArray.length-1]); */
+    </script>
+</body>
+</html>

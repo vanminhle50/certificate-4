@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let result;
+        let day = new Date().getDay();
+        console.log(day);
+        switch (day) {
+            case 0: result="Sunday";
+            break;
+            case 1: result="Monday";
+            break;
+            case 2: result="Tuesday";
+            break;
+            case 3: result="Wednesday";
+            break;
+            case 4: result="Thursday";
+            break;
+            case 5: result="Friday";
+            break;
+            default: result="Saturday";
+        }
+        console.log(result);
+    </script>
+<!-- 
+<script>
+    let result;
+    let day = new Date().getDay(); // Use getDay() to get the day of the week
+    console.log(day);
+    console.log(new Date());
+    switch (day) {
+        case 0: result = "Sunday";
+        break;
+        case 1: result = "Monday";
+        break;
+        case 2: result = "Tuesday";
+        break;
+        case 3: result = "Wednesday";
+        break;
+        case 4: result = "Thursday";
+        break;
+        case 5: result = "Friday";
+        break;
+        case 6: result = "Saturday";
+        break;
+    }
+    console.log(result);
+</script> -->
+</body>
+</html>
