@@ -13,7 +13,6 @@
 <body>
     <header>
         <h1><span class="highlight-text">Assessment 2:</span> Part 1</h1>
-<<<<<<< HEAD
         <div class="header-content-wrap">
             <div style="min-width: 500px;">
                 <p>// Certificate IV in Information Technology<br>
@@ -53,57 +52,17 @@
                     <tr>
                         <td><span class="note bold">Step 02:</span> Sorted Array (Ascending Order)</td>
                         <td>
-                            <pre><code class="language-javascript">function ascendingSort(inputArray) {
-=======
-        <p class="paragraph">
-            In this part, we are required to design and implement a range of algorithms to operate on an array with the
-            given input. The following operations need to be done using JavaScript programming language, and the results
-            need to be verified using the browser.
-        </p>
-    </header>
-<main>
-<section>
-    <table>
-        <thead>
-            <tr>
-                <th>Task</th>
-                <th>Javascript Code</th>
-                <th>Result</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><span class="note bold">Step 01:</span> Build an array with the following numbers<br>11, 5, 8, 3, 25, 16, 31, 45, 14, 20</td>
-                <td>
-                    <pre><code class="language-javascript">let inputArray = [11, 5, 8, 3, 25, 16, 31, 45, 14, 20];</code></pre>
-                </td>
-                <td id="original-array">Not Found</td>
-            </tr>
-            <tr>
-                <td><span class="note bold">Step 02:</span> Sorted Array (Ascending Order)</td>
-<td><pre><code class="language-javascript">function ascendingSort(inputArray) {
->>>>>>> 108a455390e3718527839808d46633ab69209364
-    // Sorts in ascending order using comparison function.
+<pre><code class="language-javascript">// Sorts in ascending order using comparison function.
+function ascendingSort(inputArray) {
     return inputArray.sort((a, b) => a - b); 
-}
-</code></pre>
-
-<<<<<<< HEAD
+}</code></pre>
                         </td>
                         <td id="sorted-array">Not Found</td>
                     </tr>
                     <tr>
                         <td> <span class="bold note">Step 03:</span> Inserted Numbers (19, 23, 30) in the array </td>
                         <td>
-                            <pre><code class="language-javascript">function insertNumber(inputArray, number) {
-=======
-                </td>
-                <td id="sorted-array">Not Found</td>
-            </tr>
-            <tr>
-                <td> <span class="bold note">Step 03:</span> Inserted Numbers (19, 23, 30) in the array </td>
-<td><pre><code class="language-javascript">function insertNumber(inputArray, number) {
->>>>>>> 108a455390e3718527839808d46633ab69209364
+                            <pre><code class="language-javascript">function 
     let begin = 0, end = inputArray.length - 1;
     // Perform binary search to find the correct insertion index
     while (begin <= end) {
@@ -117,7 +76,6 @@
     // Insert the number at the correct position
     inputArray.splice(begin, 0, number);
     return inputArray; // Return the updated array
-<<<<<<< HEAD
 }</code></pre>
                         </td>
                         <td id="inserted-array">Not Found</td>
@@ -126,16 +84,7 @@
                         <td><span class="note bold">Step 04:</span> Removal (8 and 31) in the array.</td>
                         <td>
                             <pre><code class="language-javascript">function insertNumber(inputArray, number) {
-=======
-}</code></pre></td>
-                <td id="inserted-array">Not Found</td>
-            </tr>
-            <tr>
-                <td><span class="note bold">Step 04:</span> Removal (8 and 31) in the array.</td>
-<td><pre><code class="language-javascript">function insertNumber(inputArray, number) {
->>>>>>> 108a455390e3718527839808d46633ab69209364
     let begin = 0, end = inputArray.length - 1;
-
     // Perform binary search to find the correct insertion index
     while (begin <= end) {
         let middle = Math.floor((begin + end) / 2); // Find the middle index
@@ -150,7 +99,6 @@
     // Insert the number at the correct position
     inputArray.splice(begin, 0, number);
     return inputArray; // Return the updated array
-<<<<<<< HEAD
 }</code></pre>
                         </td>
                         <td id="removed-array">Not Found</td>
@@ -159,21 +107,12 @@
                         <td><span class="note bold">Step 05:</span> Sequential Search</td>
                         <td>
                             <pre><code class="language-javascript">function sequentialSearch(inputArray, number) {
-=======
-}</code></pre></td>
-                <td id="removed-array">Not Found</td>
-            </tr>
-            <tr>
-                <td><span class="note bold">Step 05:</span> Sequential Search</td>
-<td><pre><code class="language-javascript">function sequentialSearch(inputArray, number) {
->>>>>>> 108a455390e3718527839808d46633ab69209364
     for (let i = 0; i < inputArray.length; i++) { // Loop through the array
         if (inputArray[i] === number) { // Check if the current element matches the number
             return i; // Return the index if found
         }
     }
     return -1; // Return -1 if the number is not found
-<<<<<<< HEAD
 }</code></pre>
                         </td>
                         <td>
@@ -187,19 +126,6 @@
                         <td><span class="note bold">Step 06:</span> Binary Search</td>
                         <td>
                             <pre><code class="language-javascript">function binarySearch(inputArray, number) {
-=======
-}</code></pre></td>
-                <td> 
-                    <p class="show-array">Not Found</p>
-                    <p id="index-sequential-search-1">Not Found </p>
-                    <p id="index-sequential-search-2">Not Found </p>
-                </td>
-                
-            </tr>
-            <tr>
-                <td><span class="note bold">Step 06:</span> Binary Search</td>
-<td><pre><code class="language-javascript">function binarySearch(inputArray, number) {
->>>>>>> 108a455390e3718527839808d46633ab69209364
     let begin = 0, end = inputArray.length - 1;
 
     // Perform binary search
@@ -214,7 +140,6 @@
         }
     }
     return -1; // Return -1 if the number is not found
-<<<<<<< HEAD
 }</code></pre>
                         </td>
                         <td>
@@ -230,20 +155,6 @@
             </table>
         </section>
     </main>
-=======
-}</code></pre></td>
-                <td>
-                    <p class="show-array">Not Found</p>
-                    <p id="index-binary-search-1">Not Found<p>
-                    <p id="index-binary-search-2">Not Found<p>
-                </td>
-                
-            </tr>
-        </tbody>
-    </table>
-</section>
-</main>
->>>>>>> 108a455390e3718527839808d46633ab69209364
     <script src="./part1.js"></script>
     <!-- Add JavaScript library of Prism.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>

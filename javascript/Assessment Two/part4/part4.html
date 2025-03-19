@@ -91,15 +91,66 @@ let movieList=[
                     <tr>
                         <td><span class="note bold"> Step 03:</span> Sort array by Movie ID in ascending order</td>
                     <td>
-<pre><code class="language-javascript">
-// Use localeCompare() to sort the movie list by movieID (as a string)
-movieList.sort((a,b)=>a.movieID.localeCompare(b.movieID));</code></pre>
+<pre><code class="language-javascript">// Use localeCompare() to sort the movie list by movieID (as a string)
+    function sortMovie() {
+      return movieList.sort((a, b) => a.movieID.localeCompare(b.movieID));
+    }
+sortMovie();</code></pre>
                     </td>
-
                     <td><p id="sorted-movie-list">Not Found</p></td>
                     </tr>
-                </tbody>
+                    <tr>
+                        <td>
+                        <p><span class="note bold">Step 04:</span>	Implement at least one search algorithm (sequential search or binary search)
+                            <ul>
+                                <li>This function accepts two parameters: an array and a movie ID</li>
+                                <li>This function searches the input array for the input movie ID using selected searching algorithm</li>
+                                <li>You cannot use the JavaScript build-in “find” function. You must implement the algorithm with your own code.</li>
+                                <li>This function returns the movie object found or return “null” if not found</li>
+                            </ul>
+                            </p>
+                        </td>
+                        <td>
+<pre><code class="language-javascript">//Step 04:
+// Binary Search Implementation
+function binarySearch(movieList, movieID) {
+    let begin = 0;
+    let end = movieList.length - 1;
+    while (begin <= end) {
+    let mid = Math.floor((begin + end) / 2);
+    if (movieList[mid].movieID === movieID) {
+        return mid;
+    } else if (movieList[mid].movieID < movieID) {
+        begin = mid + 1;
+    } else {
+        end = mid - 1;
+    }
+    }
+    return -1;
+}
 
+// Sequential Search Implementation
+function sequentialSearch(movieList, movieID) {
+    for (let i = 0; i < movieList.length; i++) {
+    if (movieList[i].movieID === movieID) {
+        return i; // Return index of the movie found
+    }
+    }
+    return -1; // Return -1 if not found
+}</code></pre>
+                        </td>
+                        <td>
+                            <ul>Binary Search Test:
+                                <li>Case 01:<p id="binarySearchResult">Not Found</p></li>
+                                <li>Case 02:<p id="binarySearchResult1">Not Found</p></li>
+                            </ul>
+                            <ul>Sequential Search Test:
+                                <li>Case 01:<p id="sequentialSearchResult">Not Found</p></li>
+                                <li>Case 02:<p id="sequentialSearchResult1">Not Found</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </section>
     </main>

@@ -2,7 +2,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 20px;
 }
-<<<<<<< HEAD
 .header-content-wrap{
     display: flex;
     justify-content: space-between;
@@ -10,8 +9,6 @@ body {
     font-size: 1.2em;
     background-color: #f5f2f0;
 }
-=======
->>>>>>> 108a455390e3718527839808d46633ab69209364
 h1 {
     text-align: center;
     color: white;

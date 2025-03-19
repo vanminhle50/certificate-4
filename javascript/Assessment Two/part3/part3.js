@@ -30,19 +30,11 @@ document.getElementById("eleventh-character").innerHTML = `11th Character of myS
 let sliceString = myString.slice(5, 9);
 console.log(sliceString);
 //Display the sliced string
-<<<<<<< HEAD
 document.getElementById("slice-string").innerHTML = `Create sliceString by slice “is a” from myString : <span class="note"> ${sliceString}</span>`;
 //Use substring to get “the” from anotherString
 let substringString = anotherString.substring(6, 9);
 //Display the substring string
 document.getElementById("substring-string").innerHTML = `Create substringString by substring “the” from anotherString : <span class="note"> ${substringString}</span>`;
-=======
-document.getElementById("slice-string").innerHTML = `Slice “is a” from myString : <span class="note"> ${sliceString}</span>`;
-//Use substring to get “the” from anotherString
-let substringString = anotherString.substring(6, 9);
-//Display the substring string
-document.getElementById("substring-string").innerHTML = `Substring “the” from anotherString : <span class="note"> ${substringString}</span>`;
->>>>>>> 108a455390e3718527839808d46633ab69209364
 //Step 4: Change the case of the myName string
 // Use the toUpperCase
 myName.toUpperCase();
@@ -81,14 +73,6 @@ document.getElementById("split-string").innerHTML = `Split myString on the space
 2. Open the file and read its contents.
 3. Print the content to the screen.
  */
-
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 108a455390e3718527839808d46633ab69209364
 // Ensure 'fs' is declared only once at the top
 /* const fs = require('node:fs');
 const data ="This is a string that we are going in to write to file";
