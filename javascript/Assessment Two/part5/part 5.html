@@ -29,44 +29,6 @@
         </div>
     </header>
     <section>
-        <h2>Add Data</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Movie ID</th>
-                    <th class="title">Title</th>
-                    <th>Year</th>
-                    <th>Rating</th>
-                </tr>
-            <tbody>
-                <tr>
-                    <td><input class="input" type="text" id="movieIDInput" placeholder="Movie ID: Example A001"
-                            required></td>
-                    <td> <input class="input" type="text" id="movieTitleInput" placeholder="Movie Title" required></td>
-                    <td> <input class="input" type="number" id="movieYearInput" min="1900" max="2100" step="1"
-                            placeholder="Year of production" required></td>
-                    <td>
-                        <input class="input" type="number" id="movieRatingInput" min="0.01" max="10.00" step="1"
-                            placeholder="Rating" required>
-                    </td>
-                </tr>
-            </tbody>
-            </thead>
-        </table>
-        <button type="submit" id="addMovieBtn">Add data</button>
-    </section>
-    <section class="tool-section">
-        <fieldset>
-            <legend>
-                <h2>Tools</h2>
-            </legend>
-            <div>
-                <button id="refreshData" type="button">Refresh Data</button>
-                <button id="sortByID" type="button">Sort by ID</button>
-            </div>
-        </fieldset>
-    </section>
-    <section>
         <div class="main-wrap">
             <div class="movie-list-container">
                 <table class="movie-list-table">
@@ -82,30 +44,73 @@
                 </table>
             </div>
         </div>
-
+    </section>
+    <section>
+        <hr style=" height: 5px; background-color: seagreen; margin-top: 20px;">
+       <fieldset>
+        <legend><h2>Add Movies</h2></legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Movie ID</th>
+                    <th class="title">Title</th>
+                    <th>Year</th>
+                    <th>Rating</th>
+                </tr>
+            <tbody>
+                <tr>
+                    <td><input class="input" type="text" id="movieIDInput" placeholder="Movie ID: Example A001"
+                            required></td>
+                    <td> <input class="input" type="text" id="movieTitleInput" placeholder="Movie Title" required></td>
+                    <td> <input class="input" type="number" id="movieYearInput" min="1895" max="2100" step="1"
+                            placeholder="Year of production" required></td>
+                    <td>
+                        <input class="input" type="number" id="movieRatingInput" min="0.01" max="10.00" step="1"
+                            placeholder="Rating" required>
+                    </td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+        <button type="submit" id="addMovieBtn">Add Movies</button>
+       </fieldset>
+    </section>
+    <section class="tool-section">
+        <fieldset>
+            <legend>
+                <h2>Tools</h2>
+            </legend>
+            <div>
+                <button id="refreshData" type="button">Refresh Data</button>
+                <button id="sortByID" type="button">Sort by ID Ascending</button>
+                <button id="sortDescendingByID" type="button">Sort by ID Descending</button>
+                <button id="sortAscendingByName" type="button">Sort by Name Ascending</button>
+                <button id="sortDescendingByName" type="button">Sort by Name Descending</button>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend> <h2>Search Film</h2> </legend>
+            <input id="movieSearchInput" style="width: 300px; height: 30px;" type="text" placeholder="Please fill movieID to search">
+            <button type="submit" id="searchBtn">Search by ID</button>
+            <button type="submit" id="searchByTitleBtn">Search by Title</button>
+            <label id="searchResultlabel"></label>
+            <table id="searchResultTable"  style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Movie ID</th>
+                        <th class="title">Title</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                    </tr>
+                <tbody id="searchResultTbody"></tbody>
+            </table>
+        </fieldset>
     </section>
     <script type="module" src="part5.js"></script>
 </body>
-
 </html>
 
 <!-- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="container">
         <div class="section">
             <h2>Add Movie</h2>

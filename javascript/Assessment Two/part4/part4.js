@@ -58,7 +58,7 @@ export function binarySearch(movieList, movieID) {
       end = mid - 1;
     }
   }
-  return null;
+  return -1;
 }
 
 // Sequential Search Implementation
@@ -68,12 +68,12 @@ export function sequentialSearch(movieList, movieID) {
       return i; 
     }
   }
-  return null;
+  return -1;
 }
 
 
 // Test Binary Search Implementation
-let movieIDTest ="D003";
+let movieIDTest ="A021";
 //Display the result to table with case 1
 if (binarySearch(movieList,movieIDTest)!=null){
   document.getElementById('binarySearchResult').innerHTML=`Search the movie with ID: <span class="bold">${movieIDTest}</span> in movie list: <br> <span class="note bold">Found it at the index: ${binarySearch(movieList, movieIDTest)}`

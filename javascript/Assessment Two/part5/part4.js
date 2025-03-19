@@ -29,11 +29,11 @@ export let movieList = [
   new Movie("S007", "The Lord of the Rings", 2003, 9.0),
   new Movie("D108", "Pulp Fiction", 1994, 8.9),
   new Movie("L009", "The Good, the Bad and the Ugly", 1966, 8.8),
-  new Movie("B110", "Fight Club ", 1999, 8.81)
+  new Movie("B110", "Fight Club", 1999, 8.81)
 ];
 //Step 03:
 // Use localeCompare() to sort the movie list by movieID (as a string)
-export function sortMovie() {
+export function sortMovie(movieList) {
   movieList.sort((a, b) => a.movieID.localeCompare(b.movieID));
 }
 
@@ -42,25 +42,30 @@ export function sortMovie() {
 export function binarySearch(movieList, movieID) {
   let begin = 0;
   let end = movieList.length - 1;
+  
   while (begin <= end) {
     let mid = Math.floor((begin + end) / 2);
-    if (movieList[mid].movieID === movieID) {
+    let comparison = movieList[mid].movieID.localeCompare(movieID);
+
+    if (comparison === 0) {
       return mid;
-    } else if (movieList[mid].movieID < movieID) {
+    } else if (comparison < 0) {
       begin = mid + 1;
     } else {
       end = mid - 1;
     }
   }
-  return null;
+  
+  return -1; // Nếu không tìm thấy
 }
 
 // Sequential Search Implementation
 export function sequentialSearch(movieList, movieID) {
   for (let i = 0; i < movieList.length; i++) {
-    if (movieList[i].movieID === movieID) {
+    if (movieList[i].movieID.localeCompare(movieID) === 0) {  // Sử dụng localeCompare để so sánh chuỗi
       return i; 
     }
   }
-  return null;
+  return -1;
 }
+
