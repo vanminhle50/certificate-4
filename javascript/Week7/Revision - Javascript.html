@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript Revision</title>
+</head>
+<body>
+	<h1>JavaScript Revision</h1>
+	<button id="myButton">Button to run a function!</button>
+	<div id="myDiv"></div>
+	<script>
+		//Numbers
+		10 //Int
+		25.5 //Float
+	
+		//Strings
+		"This is a string"
+	
+		//Console log
+		console.log("Output this to the console");
+	
+		//Statements
+		document.write("<h2>This is a header</h2>");
+	
+	
+		//Variables
+		let humanName;
+		humanName = "Daniel";
+		console.log(humanName)
+	
+		document.write()
+	
+		//Functions
+		function simpleAdd(numberOne, numberTwo) {
+			let answer = numberOne + numberTwo;
+			return answer;
+		}
+		simpleAdd(5, 5);
+	
+		/* Operators
+		
+		+= increments 
+		-= decrements 
+		++ increment by 1
+		-- decrement by 1	
+		== equal
+		!= not equal
+		> greater than
+		< less than
+		>= greater than or equal to
+		<= less than or equal to
+		&& and
+		|| or
+		! not
+		
+		*/
+	
+		//If Statments
+		let age = 22;
+		if (age < 18) {
+			console.log("Age is less than 18");
+		}
+		else {
+			console.log("Age is greater than 18");
+		}
+	
+		//Arrays
+		let myArray = ['one', 'two', 'three', 'four', 'five', 10, [1, 2, 3]];
+		console.log(myArray);
+		console.log(myArray.length);
+		myArray[1];
+	
+		//Loops
+		let i = 0;
+		while (i < 5) {
+			console.log("i is = to " + i);
+			i++;
+		}
+
+		for (let j = 0; j < 5; j++){
+			console.log("j is = to " + j);
+		}
+	
+		//Objects
+		let webSiteOne = {
+			'name': 'holmesglen',
+			'description': 'Holmesglen remains a leader in vocational and higher education.',
+			'url': 'http://www.holmesglen.edu.au',
+			'email': 'info@holmesglen.edu.au',
+			'phone': '+61 3 9564 1555'
+		}
+		console.log(webSiteOne.url);
+
+		// String literals - using backticks
+		console.log(`
+			Website Name: ${webSiteOne.name}
+			Website url: ${webSiteOne.url}
+			Website description: ${webSiteOne.description}
+			Email: ${webSiteOne.email}
+			Phone: ${webSiteOne.phone}`
+		);
+	
+		// //Fetch
+		// //We haven't looked at this, but this is how you would get
+		// // data from an API / Server.
+		// const response = await fetch('http://API_URL')
+		// const data = await response.json()
+		// console.log(data)
+	
+		//DOM
+		let myButton = document.getElementById("myButton");
+		myButton.addEventListener("click", myFunction)
+		function myFunction() {
+			console.log("Run some code");
+			document.getElementById("myDiv").textContent = "some text, added by a function";
+		}
+	
+
+
+	</script>
+</body>
+</html>

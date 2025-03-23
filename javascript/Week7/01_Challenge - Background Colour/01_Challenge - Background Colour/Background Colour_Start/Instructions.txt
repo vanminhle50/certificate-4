@@ -1,0 +1,4 @@
+Instructions
+1. Create a applications that randomly selects a colour from a array list
+2. Add a button that runs the code to randomly select a colour from the array
+3. When the button is clicked change the background colour to the random colour

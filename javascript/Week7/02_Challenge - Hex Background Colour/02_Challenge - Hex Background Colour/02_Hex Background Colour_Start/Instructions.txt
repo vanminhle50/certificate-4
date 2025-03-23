@@ -1,0 +1,7 @@
+Instructions
+1. Create a applications that randomly generates a Hex value
+You could simple do this by extending the lass challenge. Create an array that holds all the values that can be in HEX 0-9 A-f and then randomly select a value.
+Use a loop to relate this 6 times to create a random hex value
+2. Generate a new random Hex every time someone clicks the button 
+3. Assign the random hex value to the background when someone click a button
+4. Display the random Hex value on the page

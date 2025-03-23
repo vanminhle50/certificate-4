@@ -43,10 +43,10 @@ export function binarySearch(movieList, movieID) {
   let begin = 0;
   let end = movieList.length - 1;
   
-  while (begin <= end) {
+  while (begin <= end) 
+  {
     let mid = Math.floor((begin + end) / 2);
     let comparison = movieList[mid].movieID.localeCompare(movieID);
-
     if (comparison === 0) {
       return mid;
     } else if (comparison < 0) {
@@ -55,8 +55,7 @@ export function binarySearch(movieList, movieID) {
       end = mid - 1;
     }
   }
-  
-  return -1; // Nếu không tìm thấy
+  return -1;
 }
 
 // Sequential Search Implementation
