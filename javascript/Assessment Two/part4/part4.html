@@ -92,9 +92,9 @@ let movieList=[
                         <td><span class="note bold"> Step 03:</span> Sort array by Movie ID in ascending order</td>
                     <td>
 <pre><code class="language-javascript">// Use localeCompare() to sort the movie list by movieID (as a string)
-    function sortMovie() {
-      return movieList.sort((a, b) => a.movieID.localeCompare(b.movieID));
-    }
+function sortMovie() {
+    return movieList.sort((a, b) => a.movieID.localeCompare(b.movieID));
+}
 sortMovie();</code></pre>
                     </td>
                     <td><p id="sorted-movie-list">Not Found</p></td>
@@ -116,27 +116,31 @@ sortMovie();</code></pre>
 function binarySearch(movieList, movieID) {
     let begin = 0;
     let end = movieList.length - 1;
+    
     while (begin <= end) {
     let mid = Math.floor((begin + end) / 2);
-    if (movieList[mid].movieID === movieID) {
+    let comparison = movieList[mid].movieID.localeCompare(movieID);
+
+    if (comparison === 0) {
         return mid;
-    } else if (movieList[mid].movieID < movieID) {
+    } else if (comparison < 0) {
         begin = mid + 1;
     } else {
         end = mid - 1;
     }
     }
+    
     return -1;
 }
 
 // Sequential Search Implementation
 function sequentialSearch(movieList, movieID) {
     for (let i = 0; i < movieList.length; i++) {
-    if (movieList[i].movieID === movieID) {
-        return i; // Return index of the movie found
+    if (movieList[i].movieID.localeCompare(movieID) === 0) {
+        return i; 
     }
     }
-    return -1; // Return -1 if not found
+    return -1;
 }</code></pre>
                         </td>
                         <td>

@@ -98,23 +98,29 @@ document.getElementById('searchBtn').addEventListener('click', function () {
 
 
 // Function and display sort Ascending by Name
-document.getElementById('sortAscendingByName').addEventListener('click', function () {
-    sortAscendingByName(movieList);
+document.getElementById('sortAscendingByTitle').addEventListener('click', function () {
+    sortAscendingByTitle(movieList);
 });
-function sortAscendingByName(movieList) {
-    movieList.sort((a, b) => a.title.charAt(0).localeCompare(b.title.charAt(0)));
+function sortAscendingByTitle(movieList) {
+    movieList.sort((a, b) => a.title.localeCompare(b.title));
     showMovieList(movieList);
 }
 
 // Function and display sort Decending by Name
-document.getElementById('sortDescendingByName').addEventListener('click', function () {
-    sortDescendingByName(movieList);
+document.getElementById('sortDescendingByTitle').addEventListener('click', function () {
+    sortDescendingByTitle(movieList);
 });
-function sortDescendingByName(movieList) {
-    movieList.sort((b, a) => a.title.charAt(0).localeCompare(b.title.charAt(0)));
+function sortDescendingByTitle(movieList) {
+    movieList.sort((b, a) => a.title.localeCompare(b.title));
     showMovieList(movieList);
 }
-
+function sortAscendingByRating(movieList) {
+    movieList.sort((b, a) => a.rating - b.rating);
+    showMovieList(movieList);
+}
+document.getElementById('sortAscendingByRating').addEventListener('click', function(){
+    sortAscendingByRating(movieList);
+})
 
 
 
@@ -135,30 +141,29 @@ function sequentialSearchByTitle(movieList) {
     const searchResultTbody = document.getElementById('searchResultTbody');
     const searchResultTable = document.getElementById('searchResultTable');
     let movieSearchInput = document.getElementById('movieSearchInput').value;
-    movieSearchInput= movieSearchInput.trim().replace(/\s+/g, ' ').toLowerCase();
+    movieSearchInput = movieSearchInput.trim().replace(/\s+/g, ' ').toLowerCase();
     console.log(movieSearchInput);
 
     // Reset result
     searchResultTable.style.display = 'none';
     searchResultlabel.innerHTML = "";
     searchResultTbody.innerHTML = '';
-    
+
     if (!movieSearchInput) {
         alert('Please fill the movie title to search');
         return;
     }
 
-    let found = false; // Biến xác định có tìm thấy phim không
-    
+    let found = 0;
+
     for (let i = 0; i < movieList.length; i++) {
         console.log(movieList[i].title.toLowerCase());
         if (movieList[i].title.trim().replace(/\s+/g, ' ').toLowerCase().localeCompare(movieSearchInput) === 0) {
-            found = true;
+            found++;
             searchResultTable.style.display = 'table';
             // Hiển thị kết quả tìm thấy
-            searchResultlabel.innerHTML = `1 result`;
-            searchResultTbody.innerHTML = `<tr><td>${movieList[i].movieID}</td><td>${movieList[i].title}</td><td>${movieList[i].year}</td><td>${movieList[i].rating}</td></tr>`;
-            break; // Dừng vòng lặp sau khi tìm thấy kết quả đầu tiên
+            searchResultlabel.innerHTML = `${found} result`;
+            searchResultTbody.innerHTML += `<tr><td>${movieList[i].movieID}</td><td>${movieList[i].title}</td><td>${movieList[i].year}</td><td>${movieList[i].rating}</td></tr>`;
         }
     }
 
@@ -171,3 +176,33 @@ function sequentialSearchByTitle(movieList) {
 document.getElementById('searchByTitleBtn').addEventListener('click', function () {
     sequentialSearchByTitle(movieList);
 });
+
+
+// Show or Hidden fieldset
+function settingFieldset() {
+    //Difine const for toggle button 
+    const addToggleButton = document.getElementById('addToggleButton');
+    const searchToggleButton = document.getElementById('searchToggleButton');
+    const toolToggleButton = document.getElementById('toolToggleButton');
+    // Difine const for toggle fieldset
+    const addFieldset = document.getElementById('addFieldset');
+    const searchFieldset = document.getElementById('searchFieldset');
+    const toolFieldset = document.getElementById('toolFieldset');
+
+    addToggleButton.addEventListener('click', function () {
+        if (addFieldset.style.display === "none" || addFieldset.style.display === "") {
+            addFieldset.style.display = "table";
+        } else addFieldset.style.display = "none"
+    });
+    searchToggleButton.addEventListener('click', function () {
+        if (searchFieldset.style.display === "none" || searchFieldset.style.display === "") {
+            searchFieldset.style.display = "table";
+        } else searchFieldset.style.display = "none"
+    });
+    toolToggleButton.addEventListener('click', function () {
+        if (toolFieldset.style.display === "none" || toolFieldset.style.display === "") {
+            toolFieldset.style.display = "table";
+        } else toolFieldset.style.display = "none"
+    });
+}
+settingFieldset();

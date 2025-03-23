@@ -9,7 +9,7 @@
 
 // Step 1:
 // Define the Movie class
-export default class Movie {
+class Movie {
   constructor(movieID, title, year, rating) {
     this.movieID = movieID;
     this.title = title;
@@ -19,7 +19,7 @@ export default class Movie {
 }
 //Step 02:
 // Create an array of at least 10 movies with mock values
-export let movieList = [
+let movieList = [
   new Movie("A021", "The Shawshank Redemption", 1994, 9.3),
   new Movie("C020", "The Godfather", 1972, 9.2),
   new Movie("D003", "The Dark Knight", 2008, 9.0),
@@ -32,39 +32,43 @@ export let movieList = [
   new Movie("B110", "Fight Club ", 1999, 8.81)
 ];
 //Display the movie list
-document.getElementById('movie-list').innerHTML = movieList.map(movie => `<span class="note bold">${movie.movieID}: ${movie.title}`).join("<br></span>");
+document.getElementById('movie-list').innerHTML = movieList.map(movie => `<span class="note bold">${movie.movieID}: ${movie.title}, Year: ${movie.year}, Rating: ${movie.rating}`).join("<br></span>");
 
 //Step 03:
 // Use localeCompare() to sort the movie list by movieID (as a string)
-export function sortMovie() {
+function sortMovie() {
   movieList.sort((a, b) => a.movieID.localeCompare(b.movieID));
 }
 sortMovie();
 //Display the movie list
-document.getElementById('sorted-movie-list').innerHTML = movieList.map(movie => `<span class="note bold">${movie.movieID}: ${movie.title}`).join("<br></span>");
+document.getElementById('sorted-movie-list').innerHTML = movieList.map(movie => `<span class="note bold">${movie.movieID}: ${movie.title}, Year: ${movie.year}, Rating: ${movie.rating}`).join("<br></span>");
 
 //Step 04:
 // Binary Search Implementation
-export function binarySearch(movieList, movieID) {
+function binarySearch(movieList, movieID) {
   let begin = 0;
   let end = movieList.length - 1;
+  
   while (begin <= end) {
     let mid = Math.floor((begin + end) / 2);
-    if (movieList[mid].movieID === movieID) {
+    let comparison = movieList[mid].movieID.localeCompare(movieID);
+
+    if (comparison === 0) {
       return mid;
-    } else if (movieList[mid].movieID < movieID) {
+    } else if (comparison < 0) {
       begin = mid + 1;
     } else {
       end = mid - 1;
     }
   }
+  
   return -1;
 }
 
 // Sequential Search Implementation
-export function sequentialSearch(movieList, movieID) {
+function sequentialSearch(movieList, movieID) {
   for (let i = 0; i < movieList.length; i++) {
-    if (movieList[i].movieID === movieID) {
+    if (movieList[i].movieID.localeCompare(movieID) === 0) {
       return i; 
     }
   }
