@@ -2,109 +2,107 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hue Discovery || Contact us</title>
-    <!-- Link to external CSS stylesheet -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Import Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <!-- Import Font Awesome for icons -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hue Discovery || Contact us</title>
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Import Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Import Font Awesome for icons -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
+  <!-- HEADER SECTION -->
+  <header class="header-container">
+    <!-- Website Logo -->
+    <div class="logo">
+      <h2>Hue</h2>
+      <p>Discovery</p>
+    </div>
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li class="menu"><a href="index.html">Homepage</a></li>
+        <li class="menu"><a href="service.html" class="current">Book Now</a></li>
+        <li class="menu"><a href="about.html">About Us</a></li>
+        <li class="menu"><a href="contact.html">Contact Us</a></li>
+        <li class="loginLi"><a class="loginBt" href="login.html" aria-label="Link to Login Page">Login</a></li>
+      </ul>
+    </nav>
+  </header>
 
- <!-- HEADER SECTION -->
-    <header class="header-container">
-        <!-- Website Logo -->
-        <div class="logo">
-            <h2>Hue</h2>
-            <p>Discovery</p>
+  <!-- HERO SECTION -->
+  <section class="booknow-hero">
+    <div class="content-hero">
+      <h2>Book Your Adventure Now</h2>
+      <p>Choose your dates and we'll take care of the rest.</p>
+      <a class="cta-button" href="#booking-form">Start Your Journey</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="booknow-content-wrap">
+      <div class="testimonials">
+        <h2>What Our Customers Are Saying</h2>
+        <div class="testimonial">
+
+          <p>"The experience was amazing! Highly recommend to anyone looking for an adventure."</p>
+          <p>- Sarah L.</p>
         </div>
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li class="menu"><a href="index.html">Homepage</a></li>
-                <li class="menu"><a href="service.html" class="current">Book Now</a></li>
-                <li class="menu"><a href="about.html">About Us</a></li>
-                <li class="menu"><a href="contact.html">Contact Us</a></li>
-                <li class="loginLi"><a class="loginBt" href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="booknow-hero">
-<div class="content-hero">
-    <h2>Book Your Adventure Now</h>
-        <p>Choose your dates and we'll take care of the rest.</p>    
-        <a class="cta-button" href="#" class="btn">Start Your Journey</a>
-</div>
-    </section>
-
-    <section>
-        <div class="booknow-content-wrap">
-            <div class="testimonials">
-                    <h2>What Our Customers Are Saying</h2>
-                    <div class="testimonial">
-
-                        <p>"The experience was amazing! Highly recommend to anyone looking for an adventure."</p>
-                        <p>- Sarah L.</p>
-                    </div>
-                    <div class="testimonial">
-                        <p>"A seamless booking process and unforgettable memories. Thank you!"</p>
-                        <p>- John D.</p>
-                    </div>
-                    <img style="width: 50%; height: auto;" src="./img/bg-bn1.jpg" alt="">
-            </div>
-            <div class="booking-form">
-                <h2>Reserve Your Spot</h2>
-                <form action="/submit-booking" method="POST">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-        
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-        
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-        
-                    <label for="date">Choose a Date</label>
-                    <input type="date" id="date" name="date" required>
-        
-                    <label for="time">Select Time</label>
-                    <input type="time" id="time" name="time" required>
-        
-                    <label for="people">Number of People</label>
-                    <input type="number" id="people" name="people" min="1" required>
-        
-                    <label for="requests">Special Requests (Optional)</label>
-                    <textarea id="requests" name="requests" rows="4"></textarea>
-        
-                    <button type="submit" class="cta-button">Book Now</button>
-                </form>
-            </div>
+        <div class="testimonial">
+          <p>"A seamless booking process and unforgettable memories. Thank you!"</p>
+          <p>- John D.</p>
         </div>
+        <img style="width: 50%; height: auto;" src="./img/bg-bn1.jpg" alt="A girl is wearing traditional clothes">
+      </div>
+      <div class="booking-form">
+        <h2>Reserve Your Spot</h2>
+        <form action="/submit-booking" method="POST" id="booking-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
 
-    </section>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
 
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
 
+          <label for="date">Choose a Date</label>
+          <input type="date" id="date" name="date" required>
 
- <!-- FOOTER SECTION -->
- <footer>
+          <label for="time">Select Time</label>
+          <input type="time" id="time" name="time" required>
+
+          <label for="people">Number of People</label>
+          <input type="number" id="people" name="people" min="1" required>
+
+          <label for="requests">Special Requests (Optional)</label>
+          <textarea id="requests" name="requests" rows="4"></textarea>
+
+          <button type="submit" class="cta-button" aria-label="Submit to book a ticket">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER SECTION -->
+  <footer>
     <div class="footer-container">
       <div class="footer-content">
         <!-- Quick Links Section -->
         <div class="quick-link">
           <h3 class="footer-header-text">Quick Links</h3>
-          <p><a class="footer-link" href="index.html">Homepage</a></p>
-          <p><a class="footer-link" href="service.html">Book Now</a></p>
-          <p><a class="footer-link" href="about.html">About Us</a></p>
-          <p><a class="footer-link" href="contact.html">Contact Us</a></p>
-          <p><a class="footer-link" href="login.html">Login</a></p>
+          <ul>
+            <li><a class="footer-link" href="index.html" aria-label="Link to HomePage">Homepage</a></li>
+            <li><a class="footer-link" href="service.html" aria-label="Link to Booknow Page">Book Now</a></li>
+            <li><a class="footer-link" href="about.html" aria-label="Link to About Us Page">About Us</a></li>
+            <li><a class="footer-link" href="contact.html" aria-label="Link to Contact Page">Contact Us</a></li>
+            <li><a class="footer-link" href="login.html" aria-label="Link to Login Page">Login</a></li>
+          </ul>
         </div>
         <!-- Contact Information -->
         <div class="contact">
@@ -117,9 +115,12 @@
         <div class="follow">
           <h3 class="footer-header-text">Follow Us</h3>
           <div class="social-media-container">
-            <a class="social-media footer-link" href="https://www.facebook.com/huediscovery"><i class="icon fab fa-facebook-f"></i></a>
-            <a class="social-media footer-link" href="https://www.instagram.com/huediscovery"><i class="icon fab fa-instagram"></i></a>
-            <a class="social-media footer-link" href="https://www.twitter.com/huediscovery"><i class="icon fab fa-twitter"></i></a>
+            <a class="social-media footer-link" aria-label="Link to Facebook Fan Page"
+              href="https://www.facebook.com/huediscovery" target="_blank"><i class="icon fab fa-facebook-f"></i></a>
+            <a class="social-media footer-link" aria-label="Link to Instagram Page"
+              href="https://www.instagram.com/huediscovery" target="_blank"><i class="icon fab fa-instagram"></i></a>
+            <a class="social-media footer-link" aria-label="Link to Twitter Page"
+              href="https://www.twitter.com/huediscovery" target="_blank"><i class="icon fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
@@ -130,4 +131,5 @@
     </div>
   </footer>
 </body>
+
 </html>

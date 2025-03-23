@@ -181,7 +181,8 @@ p {
 
 /* Hero book now button styling */
 .hero .book-now-btn {
-  z-index: 1;
+  position: relative; /* Ensure the button is above other content */
+  z-index: 2; /* Ensure button is above other elements */
   font-size: 20px;
   background-color: seagreen;
   text-decoration: none;
@@ -191,6 +192,7 @@ p {
   color: white;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
   transition: 0.3s ease-in-out;
+  margin-top: 20px;
 }
 
 /* Book now button hover effect */
@@ -228,7 +230,6 @@ p {
 .content-wrapper {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
   padding: 10px;
 }
 
@@ -339,10 +340,6 @@ border-radius: 20px;
 }
 
 
-
-
-
-
 /* Table Recommended Itineraries Styling  ---------------------------------------------------------------------*/
 
 #intineraries {
@@ -350,6 +347,7 @@ border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin-bottom: 40px;
 }
 
@@ -366,6 +364,7 @@ flex-direction: column;
   align-items: center;
   width: 80%;
   min-height: 400px;
+  overflow-x: auto;
 }
 
 .recommended-intineraries-table {
@@ -541,31 +540,19 @@ td {
   color: rgb(136, 136, 136);
   font-size: 14px;
 }
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .footer-container .footer-content .footer-tab {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .footer-header-text::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .social-media-container {
-    justify-content: center;
-  }
+footer  ul {
+list-style-type: none;
+padding-left: 0;
+margin-left: 0;
 }
+
 /*---------------------------------------------------------
 CONTACT US PAGE STYLING.
  ---------------------------------------------------------*/
  /* Hero section for the Contact Us page */
  .contact-hero {
   position: relative;
-  background: url("../img/contact-hero1.jpg") no-repeat center/cover;
+  background: url("../img/contact-hero.jpg") no-repeat center/cover;
   height: 800px;
   display: flex;
   flex-direction: column;
@@ -740,6 +727,7 @@ BOOKING PAGE STYLING.
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 /* Styling for hero heading */
@@ -748,8 +736,9 @@ BOOKING PAGE STYLING.
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-weight: 500;
   font-family: "Northwell", serif;
+  margin-bottom: 15px;
   z-index: 1;
-  line-height: 80px;
+  
 }
 
 /* Styling for hero paragraph */
@@ -757,7 +746,6 @@ BOOKING PAGE STYLING.
   font-family: "Poppins", serif;
   font-size: 30px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  line-height: 30px;
   margin-bottom: 20px;
   color: white;
   background-color: rgba(139, 139, 139, 0.603);
@@ -769,12 +757,12 @@ BOOKING PAGE STYLING.
 
 /* Styling for call-to-action button */
 .content-hero .cta-button {
-  line-height: 100px;
   font-family: "Poppins", serif;
   background-color: #ff6f61;
   border: none;
   color: white;
-  padding: 15px 30px;
+  margin-top: 10px;
+  padding: 20px 10px;
   font-size: 1.25rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -893,7 +881,6 @@ ABOUT US PAGE STYLING.
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   color: white;
   background-size: cover;
 }
@@ -915,8 +902,8 @@ ABOUT US PAGE STYLING.
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-weight: 500;
   font-family: "Northwell", serif;
+  margin: 15px;
   z-index: 1;
-  line-height: 80px;
 }
 
 /* Styling for About Us paragraph */
@@ -924,13 +911,13 @@ ABOUT US PAGE STYLING.
   font-family: "Poppins", serif;
   font-size: 30px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  line-height: 30px;
-  margin-bottom: 20px;
   color: white;
   background-color: rgba(139, 139, 139, 0.603);
   border-radius: 15px;
   padding:4px 10px;
-  margin: auto;
+  margin: 15px;
+  z-index: 1;
+
 }
 
 /* Container for the About Us section */

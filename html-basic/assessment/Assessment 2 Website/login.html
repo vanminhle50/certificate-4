@@ -30,97 +30,109 @@
                 <li class="menu"><a href="index.html">Homepage</a></li>
                 <li class="menu"><a href="service.html">Book Now</a></li>
                 <li class="menu"><a href="about.html">About Us</a></li>
-                <li class="menu"><a href="contact.html" >Contact Us</a></li>
-                <li class="loginLi"><a class="loginBt current" style="background-color: rgb(5, 143, 0);" href="login.html">Login</a></li>
+                <li class="menu"><a href="contact.html">Contact Us</a></li>
+                <li class="loginLi"><a class="loginBt current" style="background-color: rgb(5, 143, 0);"
+                        href="login.html" aria-label="Link to Login Page">Login</a></li>
             </ul>
         </nav>
     </header>
-    <section class="login-hero">
-            <!-- LOGIN FORM -->
-<div class="login-wrap">
-    <div class="login-form-container">
-        <h2 id="form-title">Login</h2>
-        <h2 class="login-title">Hello, Friend! <i class="fa-solid fa-message"></i></h2>
-        <p class="login-paragraph-title">Enter your personal details and start journey with us</p>
+    <section class="login-hero" aria-label="A beautiful hero section with people wearing traditional clothes.">
+        <!-- LOGIN FORM -->
+        <div class="login-wrap">
+            <div class="login-form-container">
+                <h2 id="form-title">Login</h2>
+                <h2 class="login-title">Hello, Friend! <i class="fa-solid fa-message"></i></h2>
+                <p class="login-paragraph-title">Enter your personal details and start journey with us</p>
 
-        <form id="auth-form">
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email"  required>
+                <form id="auth-form">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="input-group" id="confirm-password-group" style="display: none;">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" name="password" id="confirm-password">
+                    </div>
+                    <button type="submit" class="btn" aria-label="Sign In">Sign In</button>
+                </form>
+                <p class="toggle" onclick="toggleForm()">Don't have an account? Sign up</p>
             </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password"  required>
-            </div>
-            <div class="input-group" id="confirm-password-group" style="display: none;">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password">
-            </div>
-            <button type="submit" class="btn">Sign In</button>
-        </form>
-        <p class="toggle" onclick="toggleForm()">Don't have an account? Sign up</p>
-    </div>
-</div>
+        </div>
     </section>
     <div class="space" style="width: 100%; background-color: rgba(170, 170, 170, 0.212);"></div>
-        
-        <script>
-            function toggleForm() {
-                let formTitle = document.getElementById("form-title");
-                let confirmPasswordGroup = document.getElementById("confirm-password-group");
-                let submitButton = document.querySelector(".btn");
-                let toggleText = document.querySelector(".toggle");
-    
-                if (formTitle.textContent === "Login") {
-                    formTitle.textContent = "Sign Up";
-                    confirmPasswordGroup.style.display = "block";
-                    submitButton.textContent = "Sign Up";
-                    toggleText.textContent = "Already have an account? Login";
-                } else {
-                    formTitle.textContent = "Login";
-                    confirmPasswordGroup.style.display = "none";
-                    submitButton.textContent = "Login";
-                    toggleText.textContent = "Don't have an account? Sign up";
-                }
+
+    <script>
+        function toggleForm() {
+            let formTitle = document.getElementById("form-title");
+            let confirmPasswordGroup = document.getElementById("confirm-password-group");
+            let submitButton = document.querySelector(".btn");
+            let toggleText = document.querySelector(".toggle");
+
+            if (formTitle.textContent === "Login") {
+                formTitle.textContent = "Sign Up";
+                confirmPasswordGroup.style.display = "block";
+                submitButton.textContent = "Sign Up";
+                toggleText.textContent = "Already have an account? Login";
+            } else {
+                formTitle.textContent = "Login";
+                confirmPasswordGroup.style.display = "none";
+                submitButton.textContent = "Login";
+                toggleText.textContent = "Don't have an account? Sign up";
             }
-        </script>
+        }
+    </script>
 
     <!-- FOOTER SECTION -->
     <footer>
         <div class="footer-container">
-          <div class="footer-content">
-            <!-- Quick Links Section -->
-            <div class="quick-link">
-              <h3 class="footer-header-text">Quick Links</h3>
-              <p><a class="footer-link" href="index.html">Homepage</a></p>
-              <p><a class="footer-link" href="service.html">Book Now</a></p>
-              <p><a class="footer-link" href="about.html">About Us</a></p>
-              <p><a class="footer-link" href="contact.html">Contact Us</a></p>
-              <p><a class="footer-link" href="login.html">Login</a></p>
+            <div class="footer-content">
+                <!-- Quick Links Section -->
+                <div class="quick-link">
+                    <h3 class="footer-header-text">Quick Links</h3>
+                    <ul>
+                        <li><a class="footer-link" href="index.html" aria-label="Link to HomePage">Homepage</a></li>
+                        <li><a class="footer-link" href="service.html" aria-label="Link to Booknow Page">Book Now</a>
+                        </li>
+                        <li><a class="footer-link" href="about.html" aria-label="Link to About Us Page">About Us</a>
+                        </li>
+                        <li><a class="footer-link" href="contact.html" aria-label="Link to Contact Page">Contact Us</a>
+                        </li>
+                        <li><a class="footer-link" href="login.html" aria-label="Link to Login Page">Login</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div class="contact">
+                    <h3 class="footer-header-text">Contact Us</h3>
+                    <p>Address: 123 Hung Vuong Street, Kim Long Ward, Phu Xuan Distric, Hue City, Vietnam</p>
+                    <p>Phone: 0123456789</p>
+                    <p>Email: info@huediscovery.com.vn</p>
+                </div>
+                <!-- Social Media Links -->
+                <div class="follow">
+                    <h3 class="footer-header-text">Follow Us</h3>
+                    <div class="social-media-container">
+                        <a class="social-media footer-link" aria-label="Link to Facebook Fan Page"
+                            href="https://www.facebook.com/huediscovery" target="_blank"><i
+                                class="icon fab fa-facebook-f"></i></a>
+                        <a class="social-media footer-link" aria-label="Link to Instagram Page"
+                            href="https://www.instagram.com/huediscovery" target="_blank"><i
+                                class="icon fab fa-instagram"></i></a>
+                        <a class="social-media footer-link" aria-label="Link to Twitter Page"
+                            href="https://www.twitter.com/huediscovery" target="_blank"><i
+                                class="icon fab fa-twitter"></i></a>
+                    </div>
+                </div>
             </div>
-            <!-- Contact Information -->
-            <div class="contact">
-              <h3 class="footer-header-text">Contact Us</h3>
-              <p>Address: 123 Hung Vuong Street, Kim Long Ward, Phu Xuan Distric, Hue City, Vietnam</p>
-              <p>Phone: 0123456789</p>
-              <p>Email: info@huediscovery.com.vn</p>
+            <!-- Copyright Section -->
+            <div class="copyright">
+                &copy; 2023 Hue Discovery. All rights reserved.
             </div>
-            <!-- Social Media Links -->
-            <div class="follow">
-              <h3 class="footer-header-text">Follow Us</h3>
-              <div class="social-media-container">
-                <a class="social-media footer-link" href="https://www.facebook.com/huediscovery"><i class="icon fab fa-facebook-f"></i></a>
-                <a class="social-media footer-link" href="https://www.instagram.com/huediscovery"><i class="icon fab fa-instagram"></i></a>
-                <a class="social-media footer-link" href="https://www.twitter.com/huediscovery"><i class="icon fab fa-twitter"></i></a>
-              </div>
-            </div>
-          </div>
-          <!-- Copyright Section -->
-          <div class="copyright">
-            &copy; 2023 Hue Discovery. All rights reserved.
-          </div>
         </div>
-      </footer>
+    </footer>
 </body>
 
 </html>

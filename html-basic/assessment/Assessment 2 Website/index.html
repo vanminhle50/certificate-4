@@ -14,6 +14,8 @@
     <!-- Import Font Awesome for icons -->
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Preload for hero background to improve performance -->
+    <link rel="preload" href="./img/Hue-hero.jpg" as="image">
 </head>
 
 <body>
@@ -25,21 +27,21 @@
             <p>Discovery</p>
         </div>
         <!-- Navigation Menu -->
-        <nav>
+        <nav id="nav-menu">
             <ul>
                 <li class="menu"><a href="index.html" class="current ">Homepage</a></li>
                 <li class="menu"><a href="service.html">Book Now</a></li>
                 <li class="menu"><a href="about.html">About Us</a></li>
                 <li class="menu"><a href="contact.html">Contact Us</a></li>
-                <li class="loginLi"><a class="loginBt" href="login.html">Login</a></li>
+                <li class="loginLi"><a class="loginBt" href="login.html" aria-label="Link to Login Page">Login</a></li>
             </ul>
         </nav>
     </header>
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" aria-label="A beautiful hero section featuring the Hue Imperial City.">
         <h1>Hue city</h1>
         <p>The best destinations of Vietnam's central region.</p>
-        <a class="book-now-btn" href="service.html" class="btn">Book Now</a>
+        <a class="book-now-btn" href="service.html">Book Now</a>
     </section>
     <!-- Main Content Section -->
     <main>
@@ -49,53 +51,61 @@
                 <div class="content-tab col1">
                     <div class="paragraph-container">
                         <h2>Chuong Duc Gate</h2>
-                        <p>Chuong Duc Gate, one of Hue Imperial City’s main gates, was built in 1804 under Emperor Gia Long. Featuring intricate architecture and rich history, it served as a vital entrance to the royal citadel, reflecting Vietnam’s imperial heritage..</p>
+                        <p>Chuong Duc Gate, one of Hue Imperial City’s main gates, was built in 1804 under Emperor Gia
+                            Long. Featuring intricate architecture and rich history, it served as a vital entrance to
+                            the royal citadel, reflecting Vietnam’s imperial heritage..</p>
                         <figure>
-                            <img src="./img/HueCity.avif" alt="chuong-duc-gate-image">
+                            <img src="./img/HueCity.jpg" alt="Chuong Duc gate image">
                             <figcaption>Chuong Duc Gate, Hue Imperial City</figcaption>
                         </figure>
                     </div>
                     <div class="btn-container">
-                        <a class="read-more-btn" href="#">Read more</a>
+                        <a class="read-more-btn" href="#" aria-label="Read more for this article">Read more</a>
                     </div>
                 </div>
                 <div class="content-tab col2">
                     <div class="paragraph-container">
                         <h2>Traditional handicrafts</h2>
-                        <p>Traditional handicrafts include embroidery, bronze casting, conical hat making, and wood carving. Passed down through generations, they showcase Hue’s rich heritage and contribute to its artistic and economic identity.</p>
+                        <p>Traditional handicrafts include embroidery, bronze casting, conical hat making, and wood
+                            carving. Passed down through generations, they showcase Hue’s rich heritage and contribute
+                            to its artistic and economic identity.</p>
                         <figure>
-                            <img src="./img/vietnameseCulture.jpg" alt="flower-paper-handicraft-hue-city-image">
+                            <img src="./img/vietnameseCulture.jpg" alt="Flower paper handicraft Hue city image">
                             <figcaption>Traditional handicraft in Hue Imperial City</figcaption>
                         </figure>
                     </div>
                     <div class="btn-container">
-                        <a class="read-more-btn" href="#">Read more</a>
+                        <a class="read-more-btn" href="#" aria-label="Read more for this article">Read more</a>
                     </div>
                 </div>
                 <div class="content-tab col3">
                     <div class="paragraph-container">
                         <h2>Thien Mu Pagoda</h2>
-                        <p> Thien Mu Pagoda, Hue City’s iconic landmark, stands on Ha Khe Hill by the Hương River. Built in 1601, it features a seven-story tower, ancient relics, and peaceful surroundings, symbolizing Vietnam’s spiritual heritage and attracting visitors worldwide.</p>
+                        <p> Thien Mu Pagoda, Hue City’s iconic landmark, stands on Ha Khe Hill by the Hương River. Built
+                            in 1601, it features a seven-story tower, ancient relics, and peaceful surroundings,
+                            symbolizing Vietnam’s spiritual heritage and attracting visitors worldwide.</p>
                         <figure>
-                            <img src="./img/Hue7.jpg" alt="thien-mu-pagoda-image">
+                            <img src="./img/Hue7.jpg" alt="Thien Mu pagoda image">
                             <figcaption>Thien Mu Pagoda, Hue Imperial City</figcaption>
                         </figure>
                     </div>
                     <div class="btn-container">
-                        <a class="read-more-btn" href="#">Read more</a>
+                        <a class="read-more-btn" href="#" aria-label="Read more for this article">Read more</a>
                     </div>
                 </div>
                 <div class="content-tab col4">
                     <div class="paragraph-container">
                         <h2>Huong River</h2>
-                        <p>The Huong River, or Perfume River, flows through Hue City, Vietnam. Known for its poetic beauty, it enhances Hue’s charm, reflecting historic sites like the Imperial City and pagodas, making it a significant cultural and tourist attraction.</p>
+                        <p>The Huong River, or Perfume River, flows through Hue City, Vietnam. Known for its poetic
+                            beauty, it enhances Hue’s charm, reflecting historic sites like the Imperial City and
+                            pagodas, making it a significant cultural and tourist attraction.</p>
                         <figure>
-                            <img src="./img/Hue11.jpg" alt="rowboat-on-huong-river-image">
+                            <img src="./img/Hue11.jpg" alt="Rowboat on Huong river image">
                             <figcaption>Rowboat on Huong river</figcaption>
                         </figure>
                     </div>
                     <div class="btn-container">
-                        <a class="read-more-btn" href="#">Read more</a>
+                        <a class="read-more-btn" href="#" aria-label="Read more for this article">Read more</a>
                     </div>
                 </div>
             </div>
@@ -103,14 +113,16 @@
         <section>
             <div class="header-table-text-container">
                 <figure class="header-table-img-container">
-                    <img src="./img/Hue9.jpg" alt="gate-in-imperial-hue-city">
+                    <img src="./img/Hue9.jpg" alt="The gate in Hue Imperial city">
                     <figcaption>Gate in Hue Imperial City</figcaption>
                 </figure>
                 <div style="width: 50%;">
                     <h2 class="header-text"><span class="highlight-text">Hue Imperial City: </span> Recommended
                         Itineraries</h2>
-                    <p>Hue, the ancient capital of Vietnam, is a city filled with rich history, stunning architecture,
-                        and breathtaking natural beauty. Whether you're a history enthusiast, a nature lover, or someone
+                    <p>Hue, the ancient capital of Vietnam, is a city filled with rich history, stunning
+                        architecture,
+                        and breathtaking natural beauty. Whether you're a history enthusiast, a nature lover, or
+                        someone
                         looking to experience the local culture, Hue offers something for everyone. Here are some
                         recommended itineraries to help you make the most of your visit, from exploring the imperial
                         citadels and royal tombs to relaxing by the Perfume River and enjoying the local cuisine.
@@ -119,6 +131,7 @@
             </div>
         </section>
         <section id="intineraries">
+            <h2>Explore various travel plans for your next trip.</h2>
             <div class="table-part-container">
                 <div class="intinerary-table-container">
                     <table class="recommended-intineraries-table">
@@ -173,7 +186,7 @@
                                     <img style="width: 200px; border-radius: 20px;" src="./img/huong-river.jpg"
                                         alt="Huong-river">
                                 </td>
-                                <td >Couples</td>
+                                <td>Couples</td>
                                 <td>Perfume River cruise, Hue Royal Tea</td>
                                 <td>Evening</td>
                                 <td class="center-text-column"><a href="#" class="read-more-btn">View More</a></td>
@@ -198,39 +211,50 @@
     <!-- FOOTER SECTION -->
     <footer>
         <div class="footer-container">
-          <div class="footer-content">
-            <!-- Quick Links Section -->
-            <div class="quick-link">
-              <h3 class="footer-header-text">Quick Links</h3>
-              <p><a class="footer-link" href="index.html">Homepage</a></p>
-              <p><a class="footer-link" href="service.html">Book Now</a></p>
-              <p><a class="footer-link" href="about.html">About Us</a></p>
-              <p><a class="footer-link" href="contact.html">Contact Us</a></p>
-              <p><a class="footer-link" href="login.html">Login</a></p>
+            <div class="footer-content">
+                <!-- Quick Links Section -->
+                <div class="quick-link">
+                    <h3 class="footer-header-text">Quick Links</h3>
+                    <ul>
+                        <li><a class="footer-link" href="index.html" aria-label="Link to HomePage">Homepage</a></li>
+                        <li><a class="footer-link" href="service.html" aria-label="Link to Booknow Page">Book Now</a>
+                        </li>
+                        <li><a class="footer-link" href="about.html" aria-label="Link to About Us Page">About Us</a>
+                        </li>
+                        <li><a class="footer-link" href="contact.html" aria-label="Link to Contact Page">Contact Us</a>
+                        </li>
+                        <li><a class="footer-link" href="login.html" aria-label="Link to Login Page">Login</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div class="contact">
+                    <h3 class="footer-header-text">Contact Us</h3>
+                    <p>Address: 123 Hung Vuong Street, Kim Long Ward, Phu Xuan Distric, Hue City, Vietnam</p>
+                    <p>Phone: 0123456789</p>
+                    <p>Email: info@huediscovery.com.vn</p>
+                </div>
+                <!-- Social Media Links -->
+                <div class="follow">
+                    <h3 class="footer-header-text">Follow Us</h3>
+                    <div class="social-media-container">
+                        <a class="social-media footer-link" aria-label="Link to Facebook Fan Page"
+                            href="https://www.facebook.com/huediscovery" target="_blank"><i
+                                class="icon fab fa-facebook-f"></i></a>
+                        <a class="social-media footer-link" aria-label="Link to Instagram Page"
+                            href="https://www.instagram.com/huediscovery" target="_blank"><i
+                                class="icon fab fa-instagram"></i></a>
+                        <a class="social-media footer-link" aria-label="Link to Twitter Page"
+                            href="https://www.twitter.com/huediscovery" target="_blank"><i
+                                class="icon fab fa-twitter"></i></a>
+                    </div>
+                </div>
             </div>
-            <!-- Contact Information -->
-            <div class="contact">
-              <h3 class="footer-header-text">Contact Us</h3>
-              <p>Address: 123 Hung Vuong Street, Kim Long Ward, Phu Xuan Distric, Hue City, Vietnam</p>
-              <p>Phone: 0123456789</p>
-              <p>Email: info@huediscovery.com.vn</p>
+            <!-- Copyright Section -->
+            <div class="copyright">
+                &copy; 2023 Hue Discovery. All rights reserved.
             </div>
-            <!-- Social Media Links -->
-            <div class="follow">
-              <h3 class="footer-header-text">Follow Us</h3>
-              <div class="social-media-container">
-                <a class="social-media footer-link" href="https://www.facebook.com/huediscovery"><i class="icon fab fa-facebook-f"></i></a>
-                <a class="social-media footer-link" href="https://www.instagram.com/huediscovery"><i class="icon fab fa-instagram"></i></a>
-                <a class="social-media footer-link" href="https://www.twitter.com/huediscovery"><i class="icon fab fa-twitter"></i></a>
-              </div>
-            </div>
-          </div>
-          <!-- Copyright Section -->
-          <div class="copyright">
-            &copy; 2023 Hue Discovery. All rights reserved.
-          </div>
         </div>
-      </footer>
+    </footer>
 </body>
 
 </html>

@@ -2,108 +2,112 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hue Discovery || Contact us</title>
-    <!-- Link to external CSS stylesheet -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Import Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <!-- Import Font Awesome for icons -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hue Discovery || Contact us</title>
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Import Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Import Font Awesome for icons -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <!-- HEADER SECTION -->
-    <header class="header-container">
-        <!-- Website Logo -->
-        <div class="logo">
-            <h2>Hue</h2>
-            <p>Discovery</p>
-        </div>
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li class="menu"><a href="index.html">Homepage</a></li>
-                <li class="menu"><a href="service.html">Book Now</a></li>
-                <li class="menu"><a href="about.html">About Us</a></li>
-                <li class="menu"><a href="contact.html" class="current">Contact Us</a></li>
-                <li class="loginLi"><a class="loginBt" href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="contact-hero">
+  <!-- HEADER SECTION -->
+  <header class="header-container">
+    <!-- Website Logo -->
+    <div class="logo">
+      <h2>Hue</h2>
+      <p>Discovery</p>
+    </div>
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li class="menu"><a href="index.html">Homepage</a></li>
+        <li class="menu"><a href="service.html">Book Now</a></li>
+        <li class="menu"><a href="about.html">About Us</a></li>
+        <li class="menu"><a href="contact.html" class="current">Contact Us</a></li>
+        <li class="loginLi"><a class="loginBt" href="login.html" aria-label="Link to Login Page">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="contact-hero" aria-label="A beautiful hero section with people wearing traditional clothes.">
     <!-- CONTACT FORM -->
     <div class="contact-form">
       <div class="form-container">
-          <div class="contact-page-header-text-container">
-              <h2 class="header-text style2">CONTACT US</h2>
-              <span class="icon-message"><i class="fa-solid fa-message"></i></span>
+        <div class="contact-page-header-text-container">
+          <h2 class="header-text style2">CONTACT US</h2>
+          <span class="icon-message"><i class="fa-solid fa-message"></i></span>
+        </div>
+        <h3 class="header-text style3">Get the info you are looking for right now!</h3>
+        <p class="paragraph-text-style">
+          * Please fill out the form below to contact us
+        </p>
+        <form class="form-container">
+          <div class="form-group">
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
           </div>
-          <h3 class="header-text style3">Get the info you are looking for right now!</h3>
-          <p class="paragraph-text-style">
-              * Please fill out the form below to contact us
-          </p>
-          <form class="form-container">
-              <div class="form-group">
-                  <label for="fullname">Full name</label>
-                  <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required />
-              </div>
-              <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email" required />
-              </div>
-              <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" required></textarea>
-              </div>
-              <button type="submit" class="submit-button">Submit</button>
-          </form>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-button" aria-label="Submit">Submit</button>
+        </form>
       </div>
-  </div>
+    </div>
 
-      <div class="space" style="width: 100%; background-color: rgba(170, 170, 170, 0.212);"></div>
-    </section>
-
-    <!-- FOOTER SECTION -->
-    <footer>
-        <div class="footer-container">
-          <div class="footer-content">
-            <!-- Quick Links Section -->
-            <div class="quick-link">
-              <h3 class="footer-header-text">Quick Links</h3>
-              <p><a class="footer-link" href="index.html">Homepage</a></p>
-              <p><a class="footer-link" href="service.html">Book Now</a></p>
-              <p><a class="footer-link" href="about.html">About Us</a></p>
-              <p><a class="footer-link" href="contact.html">Contact Us</a></p>
-              <p><a class="footer-link" href="login.html">Login</a></p>
-            </div>
-            <!-- Contact Information -->
-            <div class="contact">
-              <h3 class="footer-header-text">Contact Us</h3>
-              <p>Address: 123 Hung Vuong Street, Kim Long Ward, Phu Xuan Distric, Hue City, Vietnam</p>
-              <p>Phone: 0123456789</p>
-              <p>Email: info@huediscovery.com.vn</p>
-            </div>
-            <!-- Social Media Links -->
-            <div class="follow">
-              <h3 class="footer-header-text">Follow Us</h3>
-              <div class="social-media-container">
-                <a class="social-media footer-link" href="https://www.facebook.com/huediscovery"><i class="icon fab fa-facebook-f"></i></a>
-                <a class="social-media footer-link" href="https://www.instagram.com/huediscovery"><i class="icon fab fa-instagram"></i></a>
-                <a class="social-media footer-link" href="https://www.twitter.com/huediscovery"><i class="icon fab fa-twitter"></i></a>
-              </div>
-            </div>
-          </div>
-          <!-- Copyright Section -->
-          <div class="copyright">
-            &copy; 2023 Hue Discovery. All rights reserved.
+    <div class="space" style="width: 100%; background-color: rgba(170, 170, 170, 0.212);"></div>
+  </section>
+  <!-- FOOTER SECTION -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Quick Links Section -->
+        <div class="quick-link">
+          <h3 class="footer-header-text">Quick Links</h3>
+          <ul>
+            <li><a class="footer-link" href="index.html" aria-label="Link to HomePage">Homepage</a></li>
+            <li><a class="footer-link" href="service.html" aria-label="Link to Booknow Page">Book Now</a></li>
+            <li><a class="footer-link" href="about.html" aria-label="Link to About Us Page">About Us</a></li>
+            <li><a class="footer-link" href="contact.html" aria-label="Link to Contact Page">Contact Us</a></li>
+            <li><a class="footer-link" href="login.html" aria-label="Link to Login Page">Login</a></li>
+          </ul>
+        </div>
+        <!-- Contact Information -->
+        <div class="contact">
+          <h3 class="footer-header-text">Contact Us</h3>
+          <p>Address: 123 Hung Vuong Street, Kim Long Ward, Phu Xuan Distric, Hue City, Vietnam</p>
+          <p>Phone: 0123456789</p>
+          <p>Email: info@huediscovery.com.vn</p>
+        </div>
+        <!-- Social Media Links -->
+        <div class="follow">
+          <h3 class="footer-header-text">Follow Us</h3>
+          <div class="social-media-container">
+            <a class="social-media footer-link" aria-label="Link to Facebook Fan Page"
+              href="https://www.facebook.com/huediscovery" target="_blank"><i class="icon fab fa-facebook-f"></i></a>
+            <a class="social-media footer-link" aria-label="Link to Instagram Page"
+              href="https://www.instagram.com/huediscovery" target="_blank"><i class="icon fab fa-instagram"></i></a>
+            <a class="social-media footer-link" aria-label="Link to Twitter Page"
+              href="https://www.twitter.com/huediscovery" target="_blank"><i class="icon fab fa-twitter"></i></a>
           </div>
         </div>
-      </footer>
+      </div>
+      <!-- Copyright Section -->
+      <div class="copyright">
+        &copy; 2023 Hue Discovery. All rights reserved.
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
