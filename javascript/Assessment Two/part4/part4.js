@@ -8,6 +8,7 @@
 // ---------------------------------------------------------------------
 
 // Step 1:
+
 // Define the Movie class
 class Movie {
   constructor(movieID, title, year, rating) {
