@@ -1,0 +1,14 @@
+C:\certificate-4\certificate-4\C#\week7\Session 7\bin\Debug\net7.0\Session 7.exe
+C:\certificate-4\certificate-4\C#\week7\Session 7\bin\Debug\net7.0\Session 7.deps.json
+C:\certificate-4\certificate-4\C#\week7\Session 7\bin\Debug\net7.0\Session 7.runtimeconfig.json
+C:\certificate-4\certificate-4\C#\week7\Session 7\bin\Debug\net7.0\Session 7.dll
+C:\certificate-4\certificate-4\C#\week7\Session 7\bin\Debug\net7.0\Session 7.pdb
+C:\certificate-4\certificate-4\C#\week7\Session 7\obj\Debug\net7.0\Session 7.GeneratedMSBuildEditorConfig.editorconfig
+C:\certificate-4\certificate-4\C#\week7\Session 7\obj\Debug\net7.0\Session 7.AssemblyInfoInputs.cache
+C:\certificate-4\certificate-4\C#\week7\Session 7\obj\Debug\net7.0\Session 7.AssemblyInfo.cs
+C:\certificate-4\certificate-4\C#\week7\Session 7\obj\Debug\net7.0\Session 7.csproj.CoreCompileInputs.cache
+C:\certificate-4\certificate-4\C#\week7\Session 7\obj\Debug\net7.0\Session 7.dll
+C:\certificate-4\certificate-4\C#\week7\Session 7\obj\Debug\net7.0\refint\Session 7.dll
+C:\certificate-4\certificate-4\C#\week7\Session 7\obj\Debug\net7.0\Session 7.pdb
+C:\certificate-4\certificate-4\C#\week7\Session 7\obj\Debug\net7.0\Session 7.genruntimeconfig.cache
+C:\certificate-4\certificate-4\C#\week7\Session 7\obj\Debug\net7.0\ref\Session 7.dll
