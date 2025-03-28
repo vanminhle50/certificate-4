@@ -12,7 +12,8 @@ body {
     transition: background 0.3s, color 0.3s;
     height: 100%;
 }
-main{
+
+main {
     padding: 5px;
 }
 
@@ -27,16 +28,20 @@ button {
     margin-bottom: 10px;
     transition: ease-out 0.3s;
     padding: 10px 20px;
+    cursor: pointer;
+
     &:hover {
         color: #ff0000;
         background-color: white;
         border: 1px solid #ff0000;
     }
 }
-.active{
+
+.active {
     color: white;
-    background-color:rgb(192, 0, 0);
+    background-color: rgb(192, 0, 0);
 }
+
 /* Styling default all input box */
 input {
     height: 40px;
@@ -188,21 +193,30 @@ body:has(#toggle:checked) {
     color: white;
 
     h1 {
+        z-index: 1;
+        width: 100%;
+        padding: 10px;
         color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.4);
         font-size: 40px;
         text-transform: uppercase;
         text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4),
             0px 2px 1px rgba(0, 0, 0, 0.1),
             0px 8px 8px rgba(0, 0, 0, 0.1);
-
+            margin-bottom:  0;
         span {
             font-size: 70px;
             color: #ff0000;
+
         }
     }
 
     p {
         font-size: 18px;
+        width: 100%;
+        background-color:  rgba(0, 0, 0, 0.4);
+        padding: 10px 20px;
+        margin: 0;
     }
 
     &:before {
@@ -321,21 +335,25 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     button {
         width: 32%;
+
         &:hover {
             border: 1px solid rgb(139, 46, 46);
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
-        &:active{
+
+        &:active {
             border: 1px solid rgb(139, 46, 46);
             color: rgb(139, 46, 46);
             background-color: white;
         }
     }
 }
+
 /* -------------------------------ADD MOVIES SECTION------------------------------- */
-.add-movies-section{
+.add-movies-section {
     display: none;
     align-items: flex-start;
     flex-direction: column;
@@ -343,12 +361,14 @@ table {
     padding-right: 30px;
     margin-bottom: 20px;
     border: 1px solid rgb(139, 46, 46);
-    h2{
+
+    h2 {
         margin: 0;
         margin-bottom: 20px;
     }
-    table{
-        td{
+
+    table {
+        td {
             padding: 0;
             margin: 0;
         }
@@ -357,7 +377,7 @@ table {
 }
 
 /* -------------------------------SEARCH MOVIES SECTION------------------------------- */
-.search-movies-section{
+.search-movies-section {
     display: none;
     align-items: flex-start;
     flex-direction: column;
@@ -365,28 +385,35 @@ table {
     padding-right: 30px;
     margin-bottom: 20px;
     border: 1px solid rgb(139, 46, 46);
-    h2{
+
+    h2 {
         margin: 0;
         margin-bottom: 20px;
     }
-    label{
+
+    label {
         font-size: 20px;
     }
-    .search-input-group{
+
+    .search-input-group {
         display: flex;
-        input{
+
+        input {
             width: 500px;
             border-radius: 20px 0px 0px 20px;
         }
-        #searchByIDBtn{
+
+        #searchByIDBtn {
             border: 1px solid black;
         }
-        #searchByTitleBtn{
+
+        #searchByTitleBtn {
             border-radius: 0px 20px 20px 0px;
             border: 1px solid black;
         }
     }
 }
+
 /* -------------------------------DATA TOOLS SECTION------------------------------- */
 .data-tool-section {
     display: none;
@@ -395,19 +422,23 @@ table {
     padding-left: 30px;
     padding-right: 30px;
     border: 1px solid rgb(139, 46, 46);
-    h2{
+
+    h2 {
         margin: 0;
     }
-    .data-tool-button-container{
+
+    .data-tool-button-container {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-        button{
+
+        button {
             padding: 10px 30px;
             width: 300px;
         }
+
         .reset-data-button {
             background-color: white;
             color: #ff0000;
@@ -418,11 +449,11 @@ table {
             text-align: center;
             padding: 0px;
             box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    
+
             &:hover {
                 transform: scale(1.1);
             }
-    
+
             &:focus {
                 box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.6);
             }
@@ -455,4 +486,3 @@ footer {
 .note {
     color: red;
 }
-

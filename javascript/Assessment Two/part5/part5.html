@@ -30,15 +30,12 @@
             </li>
         </ul>
 
-
     </nav>
     <!-- HERO SECTION -->
     <section class="hero">
-        <div>
-            <h1><span>Welcome to <i class="fa-solid fa-video"></i></span> <br>M<i class="fa-solid fa-film fa-sm"></i>vie
+            <h1><span>Welcome to <i class="fa-solid fa-video"></i></span> <br>The M<i class="fa-solid fa-film fa-sm"></i>vie
                 Management System</h1>
             <p>Organize & Enjoy Your Movie Collection Like Never Before!</p>
-        </div>
     </section>
     <!--MAIN-->
     <main>
@@ -48,7 +45,7 @@
                 <div class="table-title-container">
                     <h2><span>Manage Your Movies</span><br><i class="fa-solid fa-clapperboard"></i> Lights, Camera,
                         Action! </h2>
-                    <button class="refresh-button" id="refreshButton" type="button">Refresh</button>
+                    <button class="refresh-button" id="refreshData" type="button">Refresh</button>
                 </div>
                 <table class="movie-list-table">
                     <thead>
@@ -67,8 +64,10 @@
         <section>
             <div class="toggle-button">
                 <button id="addToggleButton" type="button" onclick="this.classList.toggle('active')">Add Movies</button>
-                <button id="searchToggleButton" type="button" onclick="this.classList.toggle('active')">Search Movies</button>
-                <button id="toolToggleButton" type="button" onclick="this.classList.toggle('active')">Data Tools</button>
+                <button id="searchToggleButton" type="button" onclick="this.classList.toggle('active')">Search
+                    Movies</button>
+                <button id="toolToggleButton" type="button" onclick="this.classList.toggle('active')">Data
+                    Tools</button>
             </div>
         </section>
         <!-- ADD MOVIE TOOL -->
@@ -103,7 +102,8 @@
             <h2>Search Movies</h2>
             <!-- Input box and button search container -->
             <div class="search-input-group">
-                <input id="movieSearchInput" type="text" placeholder="Please fill movie ID or movie title to search your movies">
+                <input id="movieSearchInput" type="text"
+                    placeholder="Please fill movie ID or movie title to search your movies">
                 <button type="submit" id="searchByIDBtn">Search by ID</button>
                 <button type="submit" id="searchByTitleBtn">Search by Title</button>
             </div>
