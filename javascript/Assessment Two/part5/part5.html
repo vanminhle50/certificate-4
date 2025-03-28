@@ -8,40 +8,48 @@
     <link rel="stylesheet" href="./style.css">
     <!-- Add CSS library of Prism.js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-
+    <!-- Link google font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nova+Mono&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Link awesome font -->
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.7.0/css/all.css">
 </head>
 
 <body>
     <!-- HEADER -->
-    <header>
-        <!--<h1><span class="highlight-text">Assessment 2:</span>Part 5: Build the UI for Part 4.</h1>
-        <div class="header-content-wrap">
-            <div style="min-width: 500px;">
-                <p>// Certificate IV in Information Technology<br>
-                    // Holmesglen Institute, VIC, Australia<br>
-                    // Student Name: Van Minh Le<br>
-                    // Student ID: 100693330</p>
-            </div>
-            <div class="required-container">
-                <p>You are required to create a JavaScript array to maintain a list of the movie object defined in Part
-                    4 and build a web-based UI to manage the movie list using HTML, CSS and JavaScript. This move list
-                    needs to be created as a class.</p>
-            </div>
-        </div> -->
-    </header>
+    <nav>
+        <ul class="logo" aria-label="Branch Logo">Movies</ul>
+        <ul class="menu">
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#" class="current">Movies Management</a></li>
+            <li><a href="#">About Us</a></li>
+            <li aria-label="Dark Mode Button">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="toggle-label"></label>
+            </li>
+        </ul>
+
+
+    </nav>
     <!-- HERO SECTION -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>Welcome to the Movie Management System</h2>
+        <div>
+            <h1><span>Welcome to <i class="fa-solid fa-video"></i></span> <br>M<i class="fa-solid fa-film fa-sm"></i>vie
+                Management System</h1>
             <p>Organize & Enjoy Your Movie Collection Like Never Before!</p>
-            <button type="button">Dark</button> <button type="button">Light</button>
         </div>
     </section>
     <!--MAIN-->
     <main>
         <!-- MOVIE LIST TABLE -->
-        <section>
+        <section id="displayMovies">
             <div class="movie-list-container">
+                <div class="table-title-container">
+                    <h2><span>Manage Your Movies</span><br><i class="fa-solid fa-clapperboard"></i> Lights, Camera,
+                        Action! </h2>
+                    <button class="refresh-button" id="refreshButton" type="button">Refresh</button>
+                </div>
                 <table class="movie-list-table">
                     <thead>
                         <tr>
@@ -55,92 +63,79 @@
                 </table>
             </div>
         </section>
-        <hr>
         <!-- TOGGLE BUTTON -->
         <section>
             <div class="toggle-button">
-                <button id="addToggleButton" type="button">Add Movies</button>
-                <button id="searchToggleButton" type="button">Search Movies</button>
-                <button id="toolToggleButton" type="button">Data Tools</button>
+                <button id="addToggleButton" type="button" onclick="this.classList.toggle('active')">Add Movies</button>
+                <button id="searchToggleButton" type="button" onclick="this.classList.toggle('active')">Search Movies</button>
+                <button id="toolToggleButton" type="button" onclick="this.classList.toggle('active')">Data Tools</button>
             </div>
         </section>
         <!-- ADD MOVIE TOOL -->
-        <section>
-            <fieldset id="addFieldset">
-                <legend>
-                    <h2>Add Movies</h2>
-                </legend>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Movie ID</th>
-                            <th class="title">Title</th>
-                            <th>Year</th>
-                            <th>Rating</th>
-                        </tr>
-                    <tbody>
-                        <tr>
-                            <td><input type="text" id="movieIDInput" placeholder="Movie ID: Example A001" required></td>
-                            <td> <input type="text" id="movieTitleInput" placeholder="Movie Title" required></td>
-                            <td> <input type="number" id="movieYearInput" min="1895" max="2100" step="1"
-                                    placeholder="Year of production" required></td>
-                            <td>
-                                <input type="number" id="movieRatingInput" min="0.01" max="10.00" step="1"
-                                    placeholder="Rating" required>
-                            </td>
-                        </tr>
-                    </tbody>
-                    </thead>
-                </table>
-                <button type="submit" id="addMovieBtn">Add Movies</button>
-            </fieldset>
+        <section class="add-movies-section" id="addMoviesSection">
+            <h2>Add Movies</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Movie ID</th>
+                        <th class="title">Title</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td><input type="text" id="movieIDInput" placeholder="Movie ID: Example A001" required></td>
+                        <td> <input type="text" id="movieTitleInput" placeholder="Movie Title" required></td>
+                        <td> <input type="number" id="movieYearInput" min="1895" max="2100" step="1"
+                                placeholder="Year of production" required></td>
+                        <td>
+                            <input type="number" id="movieRatingInput" min="0.1" max="10.0" step="0.1"
+                                placeholder="Rating" required>
+                        </td>
+                    </tr>
+                </tbody>
+                </thead>
+            </table>
+            <button type="submit" id="addMovieBtn">Add Movies</button>
         </section>
         <!-- SEARCH MOVIE TOOL -->
-        <section>
-            <fieldset id="searchFieldset">
-                <legend>
-                    <h2>Search Movies</h2>
-                </legend>
-                <div style="display: flex;">
-                    <input id="movieSearchInput" type="text" placeholder="Please fill movieID to search">
-                    <button type="submit" id="searchBtn">Search by ID</button>
-                    <button type="submit" id="searchByTitleBtn">Search by Title</button>
-                </div>
-
-
-                <label id="searchResultlabel"></label>
-                <table id="searchResultTable" style="display: none;">
-                    <thead>
-                        <tr>
-                            <th>Movie ID</th>
-                            <th class="title">Title</th>
-                            <th>Year</th>
-                            <th>Rating</th>
-                        </tr>
-                    <tbody id="searchResultTbody"></tbody>
-                </table>
-            </fieldset>
+        <section class="search-movies-section" id="searchSection">
+            <h2>Search Movies</h2>
+            <!-- Input box and button search container -->
+            <div class="search-input-group">
+                <input id="movieSearchInput" type="text" placeholder="Please fill movie ID or movie title to search your movies">
+                <button type="submit" id="searchByIDBtn">Search by ID</button>
+                <button type="submit" id="searchByTitleBtn">Search by Title</button>
+            </div>
+            <!-- The number of search result table -->
+            <div><label id="searchResultlabel"></label></div>
+            <!-- Search result Table -->
+            <table class="search-result-table" id="searchResultTable" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Movie ID</th>
+                        <th class="title">Title</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                    </tr>
+                <tbody id="searchResultTbody"></tbody>
+            </table>
         </section>
         <!-- DATA TOOL -->
-        <section class="tool-section">
-            <fieldset id="toolFieldset">
-                <legend>
-                    <h2>Data Tools</h2>
-                </legend>
-                <div>
-                    <button id="refreshData" type="button">Refresh Data</button>
-
-                    <button id="sortByID" type="button">Sort by ID (Ascending)</button>
-                    <button id="sortDescendingByID" type="button">Sort by ID (Descending)</button>
-                    <button id="sortAscendingByTitle" type="button">Sort by Title (Ascending)</button>
-                    <button id="sortDescendingByTitle" type="button">Sort by Title (Descending)</button>
-                    <button id="sortAscendingByRating" type="button">Sort by Rating (Ascending)</button>
-                </div>
-            </fieldset>
+        <section class="data-tool-section" id="dataToolSection">
+            <h2>Data Tools</h2>
+            <div class="data-tool-button-container">
+                <button id="sortByID" type="button">Sort A-Z by ID</button>
+                <button id="sortDescendingByID" type="button">Sort Z-A by ID</button>
+                <button id="sortAscendingByTitle" type="button">Sort A-Z by Title</button>
+                <button id="sortDescendingByTitle" type="button">Sort Z-A by Title</button>
+                <button id="sortAscendingByRating" type="button">Sort by Rating - Best Movie</button>
+                <button class="reset-data-button" id="resetData" type="button">Reset Data</button>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Van Minh Le. All rights reserved.</p>
+        <p>&copy; 2025 Van Minh Le. All rights reserved.</p>
         <p>Holmesglen Institute, Certificate IV in Information Technology</p>
     </footer>
     <script type="module" src="part5.js"></script>

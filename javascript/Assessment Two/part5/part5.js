@@ -24,7 +24,7 @@ function sortMoviebyID(movieList) {
     sortMovie(movieList);
     showMovieList(movieList);
 }
-function refreshData(movieList) {
+function resetData(movieList) {
     movieList = [...originalMovieList];
     showMovieList(movieList);
 }
@@ -40,7 +40,7 @@ function addMovie(movieList) {
         if (0.01 > movieRating || movieRating > 10) {
             alert("The rating should be a value between 0.01 and 10.0");
             return;
-        } else if (movieYear <= 1985 || movieYear >= new Date().getFullYear()) {
+        } else if (movieYear < 1895 || movieYear >= new Date().getFullYear()) {
             alert("The year should be a value from 1895 to current year");
             return;
         } else
@@ -56,8 +56,8 @@ function addMovie(movieList) {
 // Listen Event and add function for it.
 //Show original data
 
-document.getElementById('refreshData').addEventListener('click', function () {
-    refreshData(movieList);
+document.getElementById('resetData').addEventListener('click', function () {
+    resetData(movieList);
 });
 
 document.getElementById('sortByID').addEventListener('click', function () { sortMoviebyID(movieList); });
@@ -90,7 +90,7 @@ function SearchbyID(movieList) {
     } else searchResultlabel.innerHTML = `0 result`;
 }
 
-document.getElementById('searchBtn').addEventListener('click', function () {
+document.getElementById('searchByIDBtn').addEventListener('click', function () {
     SearchbyID(movieList);
 });
 
@@ -179,30 +179,30 @@ document.getElementById('searchByTitleBtn').addEventListener('click', function (
 
 
 // Show or Hidden fieldset
-function settingFieldset() {
+function toggleSetting() {
     //Difine const for toggle button 
     const addToggleButton = document.getElementById('addToggleButton');
     const searchToggleButton = document.getElementById('searchToggleButton');
     const toolToggleButton = document.getElementById('toolToggleButton');
     // Difine const for toggle fieldset
-    const addFieldset = document.getElementById('addFieldset');
-    const searchFieldset = document.getElementById('searchFieldset');
-    const toolFieldset = document.getElementById('toolFieldset');
+    const addMoviesSection = document.getElementById('addMoviesSection');
+    const searchSection = document.getElementById('searchSection');
+    const dataToolSection = document.getElementById('dataToolSection');
 
     addToggleButton.addEventListener('click', function () {
-        if (addFieldset.style.display === "none" || addFieldset.style.display === "") {
-            addFieldset.style.display = "table";
-        } else addFieldset.style.display = "none"
+        if (addMoviesSection.style.display === "none" || addMoviesSection.style.display === "") {
+            addMoviesSection.style.display = "flex";
+        } else addMoviesSection.style.display = "none"
     });
     searchToggleButton.addEventListener('click', function () {
-        if (searchFieldset.style.display === "none" || searchFieldset.style.display === "") {
-            searchFieldset.style.display = "table";
-        } else searchFieldset.style.display = "none"
+        if (searchSection.style.display === "none" || searchSection.style.display === "") {
+            searchSection.style.display = "flex";
+        } else searchSection.style.display = "none"
     });
     toolToggleButton.addEventListener('click', function () {
-        if (toolFieldset.style.display === "none" || toolFieldset.style.display === "") {
-            toolFieldset.style.display = "table";
-        } else toolFieldset.style.display = "none"
+        if (dataToolSection.style.display === "none" || dataToolSection.style.display === "") {
+            dataToolSection.style.display = "flex";
+        } else dataToolSection.style.display = "none"
     });
 }
-settingFieldset();
+toggleSetting();
