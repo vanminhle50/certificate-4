@@ -11,6 +11,14 @@
 //7. Change the background colour of the body to the selected colour
 //8. Test!
 
-function randomColour(){
-
+let colourArray =["#D9043D","#033E8C","#F2B705","#F28705","#D90404"];
+function changeBackgroundColour(colourArray){
+let min=0;
+let max=colourArray.length;
+const changBackgroundColourButton=document.getElementById('btn btn-outline-secondary');
+function getRandomInt(min,max){
+        return Math.floor(Math.random()*(max-min+1)+1);
+}
+let colour=colourArray[getRandomInt(min,max)];
+document.getElementById('bodyID').style.backgroundColor=colour;
 }

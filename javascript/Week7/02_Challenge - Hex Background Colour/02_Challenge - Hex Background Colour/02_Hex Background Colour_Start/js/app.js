@@ -19,3 +19,26 @@
 //? Note: as the loop repeats 6 times you should end up with a HEX value that is 6 characters long.
 //12. Change the background colour of the body to the selected HEX value
 //13. Display the HEX value in the DOM
+
+function randomInt(max, min) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function hexRandomColour() {
+    const hexChars = '1234567890ABCDEF';
+    let colour = "#";
+    let min = 0;
+    let max = hexChars.length;
+    for (i = 0;i < 6; i++)
+    {
+        colour += hexChars[randomInt(min, max)];
+        i++;
+    }
+    return colour;
+}
+function changeBackgroundColour(){
+    document.getElementById('bodyID').style.backgroundColor=hexRandomColour();
+}
+
+setInterval(() => {
+    changeBackgroundColour();
+}, 1000);
