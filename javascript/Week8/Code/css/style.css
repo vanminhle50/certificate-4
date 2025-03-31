@@ -1,0 +1,136 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: cornsilk;
+
+}
+/* Heading style */
+h1 {
+    margin: 1rem 0;
+    color: crimson;
+    padding: 1.2rem 0;
+    text-align: center;
+    border: 6px crimson double;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Utility Style */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mb-3 {
+    margin: 1rem;
+}
+
+input {
+    padding: 0.5rem 1rem;
+}
+
+button {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1.2rem;
+    background: #304F4F;
+    color: cyan;
+    border: 4px solid#dddddd;
+    &hover {
+        background-color: black;
+        border: 4px solid crimson;
+    }
+}
+
+/* List styles------------------------------------------------------------------------ */
+#mList {
+    border: 6px double crimson;
+}
+
+ol {
+    margin-left: 1.5rem;
+    border: 2px solid #333333;
+    margin-bottom: 1.5rem;
+}
+
+.list {
+    margin-top: 0.5rem;
+
+    .row {
+        padding: 5px 15px;
+        cursor: pointer;
+
+        &:nth-child(odd) {
+            background-color: #dddddd;
+        }
+        &:hover {
+            background-color: yellow;
+        }
+    }
+}
+
+/* Tab styles */
+.tab {
+    margin-top: 1rem;
+    overflow: hidden;
+    border: 2px solid black;
+
+    button {
+        float: left;
+        border: none;
+        outline: none;
+        padding: 1rem 1.2rem;
+        transition: 0.3s;
+        color: cyan;
+
+        &:active {
+            background-color: yellow;
+            color: black;
+            font-weight: 700;
+        }
+    }
+}
+/* Tab content */
+.tabcontent{
+    display: none;
+    padding: 1rem 1.5rem;
+    border: 2px solid #333333;
+    border-top: none;
+    h2{
+        margin-top: 0;
+        text-align: center;
+    }
+    label{
+        display: inline-block;
+        width: 6%;
+    }
+    input{
+        display: inline-block;
+        width: 93%;
+   }
+   button{
+    width: 100%;
+   } 
+}
+/* Footer */
+footer{
+    margin-top: 2rem;
+    border: 6px double crimson;
+    color: crimson;
+    padding: 2rem;
+    text-align: right;
+    font-size: 1.5rem;
+    p{
+        padding-right: 0.5rem;
+    }
+}
