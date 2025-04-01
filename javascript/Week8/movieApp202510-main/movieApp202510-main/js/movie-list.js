@@ -14,7 +14,6 @@ class MovieList {
     this.refresh();
   }
 
-
   // Methods
   // Generate one row of the movieList
   movieRow(title, year){

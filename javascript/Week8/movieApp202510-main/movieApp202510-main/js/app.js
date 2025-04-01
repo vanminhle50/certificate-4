@@ -10,8 +10,8 @@ let initMovies = [
 
 // Create an instance of the MovieList class
 // MovieList takes in the rootId and the movie array
-let movieList = new MovieList('list', initMovies);
 
+let movieList = new MovieList('list', initMovies);
 // Event functions
 // Search Click
 function searchClick(){
@@ -26,6 +26,7 @@ function searchClick(){
 function a2zClick(){
   movieList.sortA2Z();
 }
+
 // Z to A Click
 function z2aClick(){
   movieList.sortZ2A();

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 5 || Assessment 2 - JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Add CSS library of Prism.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <!-- Link google font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nova+Mono&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Link awesome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <nav>
+        <ul class="logo" aria-label="Branch Logo">Movies</ul>
+        <ul class="menu">
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#" class="current">Movies Management</a></li>
+            <li><a href="#">About Us</a></li>
+            <li aria-label="Dark Mode Button">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="toggle-label"></label>
+            </li>
+        </ul>
+
+    </nav>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1><span>Welcome to <i class="fa-solid fa-video"></i></span> <br>The M<i class="fa-solid fa-film fa-sm"></i>vie
+            Management System</h1>
+        <p>Organize & Enjoy Your Movie Collection Like Never Before!</p>
+    </section>
+    <!--MAIN-->
+    <main style="max-width: 1500px; margin: auto;">
+        <!-- MOVIE LIST TABLE -->
+        <section id="displayMovies">
+            <div class="movie-list-container">
+                <div class="table-title-container">
+                    <h2><span>Manage Your Movies</span><br><i class="fa-solid fa-clapperboard"></i> Lights, Camera,
+                        Action! </h2>
+                    <button class="refresh-button" id="refreshData" type="button"
+                        onclick="refreshData()" aria-label="Refresh Data"><i class="fa-solid fa-rotate"></i></button>
+                </div>
+                <table class="movie-list-table">
+                    <thead>
+                        <tr>
+                            <th>Movie ID</th>
+                            <th class="title">Title</th>
+                            <th>Year</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movieListTbody"></tbody>
+                </table>
+                <!-- The number of search result table -->
+            </div>
+            <label id="searchResultlabel"></label>
+        </section>
+        <!-- TOGGLE BUTTON -->
+        <section>
+            <div class="toggle-button-container">
+                <button class="toggle-button" id="defaultButton" type="button"
+                    onclick="formControl('addMoviesSection',this)">Add
+                    Movies</button>
+                <button class="toggle-button" type="button" onclick="formControl('searchSection',this)">Search
+                    Movies</button>
+                <button class="toggle-button" type="button" onclick="formControl('dataToolSection',this)">Data
+                    Tools</button>
+            </div>
+        </section>
+        <!-- ADD MOVIE TOOL -->
+        <section class="add-movies-section toggle-section" id="addMoviesSection">
+            <h2>Add Movies</h2>
+            <div style="display:flex; width: 100%; margin-bottom: 20px;">
+                <div style="width: 20%;padding: 0px 5px 0px 0px;">
+                    <h3>MovieID</h3>
+                    <input class="add-input" type="text" id="movieIDInput" placeholder="Movie ID: Example A001"
+                        required>
+                </div>
+                <div style="width: 40%;padding: 0px 5px 0px 0px;">
+                    <h3>Title</h3>
+                    <input class="add-input" type="text" id="movieTitleInput" placeholder="Movie Title" required>
+                </div>
+                <div style="width: 20%;padding: 0px 5px 0px 0px;">
+                    <h3>Year</h3>
+                    <input class="add-input" type="number" id="movieYearInput" min="1895" max="2100" step="1"
+                        placeholder="Year of production" required>
+                </div>
+                <div style="width: 20%;">
+                    <h3>Rating</h3>
+                    <input class="add-input" type="number" id="movieRatingInput" min="0.1" max="10.0" step="0.1"
+                        placeholder="Rating" required>
+                </div>
+            </div>
+
+            <div class="add-button-container">
+                <button type="button" id="addMovieBtn" onclick="addMovie()">Add Movies</button>
+                <button type="button" id="clearInputBox" onclick="clearInputBox()">Clear</button>
+            </div>
+        </section>
+        <!-- SEARCH MOVIE TOOL -->
+        <section class="search-movies-section toggle-section" id="searchSection">
+            <h2>Search Movies</h2>
+            <!-- Input box and button search container -->
+            <div class="search-input-group">
+                <input id="movieSearchInput" type="text"
+                    placeholder="Please fill movie ID or movie title to search your movies">
+                <button type="button" id="searchByIDBtn" onclick="searchById()">Search by ID</button>
+                <button type="button" id="searchByTitleBtn" onclick="searchByTitle()">Search by Title</button>
+            </div>
+        </section>
+        <!-- DATA TOOL -->
+        <section class="data-tool-section toggle-section" id="dataToolSection">
+            <h2>Data Tools</h2>
+            <div class="data-tool-button-container">
+                <button type="button" onclick="sortA2ZById()">Sort A-Z by ID</button>
+                <button type="button" onclick="sortZ2AByID()">Sort Z-A by ID</button>
+                <button type="button" onclick="sortA2ZByTitle()">Sort A-Z by Title</button>
+                <button type="button" onclick="sortZ2AByTitle()">Sort Z-A by Title</button>
+                <button type="button" onclick="sortBestMovie()">Sort Best Movie</button>
+                <div>
+                    <button class="reset-data-button" type="button" aria-label="Reset Data"><i
+                            class="fa-solid fa-rotate-right" onclick="resetData()"></i></button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Van Minh Le. All rights reserved.</p>
+        <p>Holmesglen Institute, Certificate IV in Information Technology</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
