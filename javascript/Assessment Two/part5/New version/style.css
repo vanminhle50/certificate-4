@@ -15,6 +15,8 @@ body {
 
 main {
     padding: 5px;
+    max-width: 1500px;
+    margin: auto;
 }
 
 /* Styling default all button */
@@ -33,7 +35,7 @@ button {
 
     &:hover {
         color: #ff0000;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0);
         border: 1px solid #ff0000;
     }
 }
@@ -52,10 +54,12 @@ input {
     border: 1px solid red;
     border-radius: 20px;
 }
-input:focus{
-    border:3px solid red; /* Viền chuyển sang màu xanh */
+
+input:focus {
+    border: 3px solid red;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
+
 /* -------------------------------HEADER NAVIGATION BAR----------------------------- */
 /* Style for navigation menu bar */
 nav {
@@ -113,8 +117,6 @@ nav {
 
     }
 }
-
-
 
 /* -------------------------------DARK MODE PART------------------------------- */
 /* Styling for Dark mode and Light Mode */
@@ -244,6 +246,7 @@ body:has(#toggle:checked) {
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 20px;
+
     .table-title-container {
         display: flex;
         justify-content: space-between;
@@ -253,7 +256,7 @@ body:has(#toggle:checked) {
         /* Styling for Refresh button */
         .refresh-button {
             color: #ff0000;
-            background-color: #ffffff;
+            background-color: #ffffff00;
             border: 5px solid #ff0000;
             cursor: pointer;
             width: 70px;
@@ -274,6 +277,7 @@ body:has(#toggle:checked) {
         }
 
     }
+
     /* Styling for Display section header text */
     h2 {
 
@@ -296,9 +300,9 @@ table {
     margin: 0px 20px 20px 0px;
     table-layout: fixed;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
     /* Styling for table header */
-    thead 
-    tr{
+    thead tr {
         background-color: #333;
         color: white;
         border: 1px solid;
@@ -310,19 +314,23 @@ table {
             border: 1px solid;
         }
     }
-    tbody{
-        tr:nth-child(even){
+
+    tbody {
+        tr:nth-child(even) {
             background-color: #e6e6e675;
         }
-        tr:nth-child(odd){
+
+        tr:nth-child(odd) {
             background-color: #ffffff9a;
         }
-        tr:hover{
+
+        tr:hover {
             background-color: #5a5a5a3a;
             font-weight: 600;
-    
+
         }
     }
+
     /* Styling for table data */
     th,
     td {
@@ -353,11 +361,10 @@ table {
     align-items: center;
 
     button {
-        width: 32%;
-
+        width: 100%;
         &:hover {
             border: 1px solid rgb(192, 0, 0);
-            transform: scale(1.05);
+            transform: matrix(1, 0, 0, 1 ,0 ,5);
         }
     }
 }
@@ -373,19 +380,79 @@ table {
 
     h2 {
         margin: 0;
+        margin-bottom: 0px;
+        font-size: 25px;
+    }
+
+    p {
+        color: #ff0000;
+        margin-top: 0px;
         margin-bottom: 20px;
     }
 
-    table {
-        td {
-            padding: 0;
-            margin: 0;
+    .add-movie-input-container {
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 0px;
+
+        h3 {
+            margin-top: 0;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .movieID-input-wrap {
+            width: 20%;
+            padding: 0px 5px 0px 0px;
+        }
+        .movie-title-input-wrap{
+            width: 40%;
+            padding: 0px 5px 0px 0px;
+        }
+        .movie-year-input-wrap{
+            width: 20%;
+            padding: 0px 5px 0px 0px;
+        }
+        .movie-rating-input-wrap{
+            width: 20%;
         }
 
     }
-    .add-button-container{
+
+    .add-button-container {
         display: flex;
         gap: 20px;
+        border-radius: 20px;
+
+        #addMovieBtn {
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+
+            &:hover {
+                transform: scale(1.1);
+                border-radius: 10px;
+                background: #ff0000;
+                color: white;
+            }
+        }
+        #clearInputBox{
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0);
+            color: #ff0000;
+            border: 1px #ff0000;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+            
+            &:hover {
+                border-radius: 20px;
+                background: #ff0000;
+                color: white;
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+            }
+        }
+
     }
 }
 
@@ -400,8 +467,16 @@ table {
 
     h2 {
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
+        font-size: 25px;
     }
+
+    p {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        color: #ff0000;
+    }
+
     .search-input-group {
         display: flex;
 
@@ -412,13 +487,19 @@ table {
         }
 
         #searchByIDBtn {
-            border: 1px solid black;
+            border: 1px solid  #ff0000;
             height: 50px;
+            border-radius: none;
+            background-color: #ff0000;
+            &:hover
+            {
+                background-color: rgba(255, 255, 255, 0);
+            }
         }
 
         #searchByTitleBtn {
             border-radius: 0px 20px 20px 0px;
-            border: 1px solid black;
+            border: 1px solid  #ff0000;
             height: 50px;
         }
     }
@@ -434,6 +515,14 @@ table {
 
     h2 {
         margin: 0;
+        margin-bottom: 0px;
+        font-size: 25px;
+    }
+
+    p {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        color: #ff0000;
     }
 
     .data-tool-button-container {
@@ -449,8 +538,8 @@ table {
         }
 
         .reset-data-button {
-            margin-left: 20px ;
-            background-color: white;
+            margin-left: 20px;
+            background-color: rgba(255, 255, 255, 0);
             color: #ff0000;
             border: 5px solid red;
             width: 70px;
@@ -466,11 +555,79 @@ table {
                 transform: rotate(360deg);
                 color: white;
             }
-
         }
     }
 
 }
+/* Reset data confirmation form */
+.modal {
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    .modal-content {
+        z-index: 12;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        width: 500px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    
+    .buttons-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    
+    .cancel-btn {
+        background-color: #f44336; /* Red */
+        color: white;
+    }
+    
+    .confirm-btn {
+        background-color: #4caf50; /* Green */
+        color: white;
+    }
+    
+    .cancel-btn:hover {
+        background-color: #d32f2f;
+    }
+    
+    .confirm-btn:hover {
+        background-color: #388e3c;
+    }
+    
+}
+
+
+
 
 /* -------------------------------FOOTER PART------------------------------- */
 /* Styling for footer */

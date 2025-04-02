@@ -24,7 +24,8 @@ let movieList = [
 ];
 let originalData = [...movieList];
 
-/* PART 3: CLASS MANAGE MOVIES */
+//========================================================
+/* PART 2: CLASS MANAGE MOVIES */
 /* Description: This part store methods to manage movies*/
 class ManageMovies {
     constructor(rootID, movieList) {
@@ -34,7 +35,6 @@ class ManageMovies {
         this.movieList = movieList;
         this.displayData(movieList);
     }
-
     /* REQUIREMENT 01 - DISPLAY DATA*/
     /* Define displayData() method */
     displayData(movieList) {
@@ -98,11 +98,24 @@ class ManageMovies {
         /* Get elements from input box in Add Movie Section */
         let movieID = document.getElementById('movieIDInput').value.trim();
         let movieTitle = document.getElementById('movieTitleInput').value.trim();
+        /* Type of movieYear variable is a number */
         let movieYear = Number(document.getElementById('movieYearInput').value);
+        /* Type of movieRating variable is a number */
         let movieRating = Number(document.getElementById('movieRatingInput').value);
-        /* Check the input conditions */
-        if (!movieID || !movieTitle || !movieYear === "" || !movieRating === "") {
-            alert('Please fill all input of movie!');
+        if (!movieID) {
+            document.getElementById('movieIDInput').focus();
+            return;
+        }
+        else if (!movieTitle) {
+            document.getElementById('movieTitleInput').focus();
+            return;
+        }
+        else if (!movieYear === "" || movieYear == 0) {
+            document.getElementById('movieYearInput').focus();
+            return;
+        }
+        else if (!movieRating === "" || movieRating == 0) {
+            document.getElementById('movieRatingInput').focus();
             return;
         }
         else /* Check if the ID exists */ {
@@ -152,6 +165,13 @@ class ManageMovies {
     sortBestMovie() {
         this.movieList.sort((a, b) => b.rating - a.rating);
     }
+    resetData(originalData) {
+        this.movieList = [];
+        for (let i = 0; i < originalData.length; i++) {
+            this.movieList.push(originalData[i]);
+        }
+        return movieList;
+    }
     /* REQUIREMENT 03: SEARCH A MOVIE IN MOVIE LIST */
     /* Search by ID */
 
@@ -178,7 +198,7 @@ class ManageMovies {
         return searchList;
     }
 }
-
+//========================================================
 /* PART 3: THE MANGAGE MOVIES WEBSITE APP */
 
 /* DISPLAY SECTION */
@@ -275,8 +295,17 @@ function sortBestMovie() {
     manageMovies.sortBestMovie();
     manageMovies.displayData(movieList);
 }
-function resetData() {
-    manageMovies.displayData(originalData);
+function showResetModal() {
+    document.getElementById('resetDataModal').style.display = "flex";
+}
+function resetData(reset) {
+    if (reset === 0) {
+        document.getElementById('resetDataModal').style.display = 'none';
+        return;
+    } else if (reset===1){
+        document.getElementById('resetDataModal').style.display = 'none';
+        return;
+    }
 }
 
 /* SEARCH MOVIE SECTION */
@@ -314,13 +343,11 @@ function searchById() {
 
 let addInput = document.getElementsByClassName("add-input");
 for (let i = 0; i < addInput.length; i++) {
-    if (document.getElementById('clearInputBox').style.display = 'none') {
-        addInput[i].addEventListener("input", function () {
+    addInput[i].addEventListener("input", function () {
+        if (document.getElementById('clearInputBox').style.display === 'none') {
             document.getElementById('clearInputBox').style.display = 'block';
-        });
-    } else
-        addInput[i].addEventListener("input", function () {
+        } else {
             document.getElementById('clearInputBox').style.display = 'none';
-        });
-
+        }
+    });
 }
