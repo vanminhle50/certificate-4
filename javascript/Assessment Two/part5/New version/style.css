@@ -1,18 +1,26 @@
-/* Styling for Page */
+/*=================================================================================
+// CSS file for the website the movie management system website app
+// Author Name: Van Minh Le
+// Student ID: 100693330
+// Major: Use Version Control in Development Environments
+//================================================================================= */
+
+/* PART 01: DEFAULT SETTINGS FOR ALL ELEMENTS ON THE WEBSITE */
+/* Styling for all elements in the website */
 * {
     box-sizing: border-box;
 }
 
-/* Styling for default body website */
+/* Styling for body website */
 body {
     font-family: "Roboto", sans-serif;
     background-color: white;
-    height: 100vh;
-    margin: 0PX;
+    margin: 0px;
     transition: background 0.3s, color 0.3s;
     height: 100%;
 }
 
+/* Styling main section */
 main {
     padding: 5px;
     max-width: 1500px;
@@ -21,23 +29,10 @@ main {
 
 /* Styling default all button */
 button {
-    background-color: #ff0000;
-    height: 40px;
-    border: none;
-    color: white;
     font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    transition: ease-out 0.3s;
-    padding: 10px 20px;
-
+    font-weight: 600;
+    background-color: #ff0000;
     cursor: pointer;
-
-    &:hover {
-        color: #ff0000;
-        background-color: rgba(255, 255, 255, 0);
-        border: 1px solid #ff0000;
-    }
 }
 
 .active {
@@ -51,25 +46,32 @@ input {
     width: 100%;
     padding: 20px;
     outline: none;
-    border: 1px solid red;
+    border: 1px solid #333;
     border-radius: 20px;
 }
 
+/* Styling for input box when it is focused */
 input:focus {
     border: 3px solid red;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
-/* -------------------------------HEADER NAVIGATION BAR----------------------------- */
-/* Style for navigation menu bar */
+/*END PART 01: DEFAULT SETTINGS FOR ALL ELEMENTS ON THE WEBSITE */
+
+/* PART 02: SETTINGS FOR SPECIFIC ELEMENTS ON THE WEBSITE */
+
+/* HEADER ON THE WEBSITE*/
+/* Styling for navigation menu bar */
 nav {
+    z-index: 10;
+    /* Make sure the header is on top of other elements */
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
     position: sticky;
     top: 0;
-    z-index: 10;
     padding-left: 50px;
     padding-right: 50px;
 
@@ -111,6 +113,7 @@ nav {
             }
         }
 
+        /* Styling for active state of the link on the navigation bar */
         .current {
             color: #ff0000;
         }
@@ -118,28 +121,12 @@ nav {
     }
 }
 
-/* -------------------------------DARK MODE PART------------------------------- */
+/* DARK MODE BUTTON */
 /* Styling for Dark mode and Light Mode */
+/* Create dark mode button */
 /* Hidden checkbox */
 #toggle {
     display: none;
-}
-
-/* Dark mode when checkbox is checked */
-/* Change body background colour from white to black */
-body:has(#toggle:checked) {
-    background-color: rgb(25, 25, 25);
-    color: white;
-
-    /* Change colour for display section header text */
-    #displayMovies h2 span {
-        color: white;
-    }
-
-    /* Chang colour cover hero make sure hero image is blur */
-    .hero::before {
-        background-color: rgba(0, 0, 0, 0.315);
-    }
 }
 
 /*Draw slider switch button */
@@ -171,7 +158,9 @@ body:has(#toggle:checked) {
     }
 }
 
-/* Dark mode styles for the switch */
+/* Dark mode when checkbox is checked */
+
+/* Change the background and circle color */
 #toggle:checked+.toggle-label {
     background: #333;
     border: 1px solid white;
@@ -182,9 +171,28 @@ body:has(#toggle:checked) {
     background: yellow;
 }
 
-/* -------------------------------HERO PART------------------------------- */
+/* Change body background colour from white to black */
+body:has(#toggle:checked) {
+    background-color: rgb(25, 25, 25);
+    color: white;
+
+    /* Change colour for display section header text */
+    #displayMovies h2 span {
+        color: white;
+    }
+
+    /* Chang colour cover hero make sure hero image is blur */
+    .hero::before {
+        background-color: rgba(0, 0, 0, 0.315);
+    }
+}
+
+
+/* HERO PART ON THE WEBSITE */
+
 /* Stying for Hero */
 .hero {
+    /* Hero image for the website */
     position: relative;
     z-index: 1;
     background-image: url('./img/MovieLibraryHero.jpg');
@@ -201,6 +209,19 @@ body:has(#toggle:checked) {
     text-align: center;
     color: white;
 
+    /* Make a cover to blur hero make sure all header elements of hero to ability reader */
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(79, 79, 79, 0.315);
+        z-index: -1;
+    }
+
+    /* Styling header of the hero */
     h1 {
         z-index: 1;
         width: 100%;
@@ -221,23 +242,13 @@ body:has(#toggle:checked) {
         }
     }
 
+    /* Styling for paragraph of the hero */
     p {
         font-size: 18px;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.4);
         padding: 10px 20px;
         margin: 0;
-    }
-
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(79, 79, 79, 0.315);
-        z-index: -1;
     }
 }
 
@@ -246,6 +257,16 @@ body:has(#toggle:checked) {
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 20px;
+
+    /* Styling for Display section header text */
+    h2 {
+
+        /* Make up for span */
+        span {
+            color: black;
+            font-size: 40px;
+        }
+    }
 
     .table-title-container {
         display: flex;
@@ -278,21 +299,10 @@ body:has(#toggle:checked) {
 
     }
 
-    /* Styling for Display section header text */
-    h2 {
-
-        /* Make up for span */
-        span {
-            color: black;
-            font-size: 40px;
-        }
-
-    }
-
 }
 
 
-/* Styling for default table */
+/* Styling for Movie Data Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -315,7 +325,10 @@ table {
         }
     }
 
+    /* Styling for table body */
     tbody {
+
+        /* Styling adjust background color for table body data */
         tr:nth-child(even) {
             background-color: #e6e6e675;
         }
@@ -324,6 +337,7 @@ table {
             background-color: #ffffff9a;
         }
 
+        /* Styling effect hover for table body data */
         tr:hover {
             background-color: #5a5a5a3a;
             font-weight: 600;
@@ -340,11 +354,12 @@ table {
         font-size: 1.2em;
     }
 
+    /* Ensure the title column fits its content */
     .title {
         width: 40%;
     }
 
-    /* Styling for table data in tbody */
+    /* Styling for table data in table body */
     td {
         border: 1px solid #ddd;
         text-align: left;
@@ -352,7 +367,10 @@ table {
 
 }
 
-/* -------------------------------TOGGLE BUTTON CONTAINER------------------------------- */
+/* END OF HEADER OF THE WEBSITE */
+
+/* TOGGLE BUTTONS SECTION */
+/* Button container for toggling visualization options */
 .toggle-button-container {
     padding-left: 30px;
     padding-right: 30px;
@@ -360,16 +378,26 @@ table {
     justify-content: space-between;
     align-items: center;
 
-    button {
+    /* Styling for toggle button */
+    .toggle-button {
         width: 100%;
+        height: 40px;
+        color: white;
+        transition: ease-in-out 0.3s;
+        border: none;
+        margin-bottom: 20px;
+
+        /* Styling effect hover for toggle button */
         &:hover {
-            border: 1px solid rgb(192, 0, 0);
-            transform: matrix(1, 0, 0, 1 ,0 ,5);
+            border: 1px solid rgb(255, 0, 0);
+            background-color: rgba(255, 255, 255, 0);
+            color: #ff0000;
+            transform: translateY(5px);
         }
     }
 }
 
-/* -------------------------------ADD MOVIES SECTION------------------------------- */
+/* ADD A MOVIE SECTION */
 .add-movies-section {
     display: flex;
     align-items: flex-start;
@@ -378,12 +406,14 @@ table {
     padding-right: 30px;
     margin-bottom: 20px;
 
+    /* Styling for Add a movie section header text */
     h2 {
         margin: 0;
         margin-bottom: 0px;
         font-size: 25px;
     }
 
+    /* Styling for Add a movie section paragraph text */
     p {
         color: #ff0000;
         margin-top: 0px;
@@ -396,55 +426,75 @@ table {
         margin-bottom: 20px;
         margin-top: 0px;
 
+        /* Styling for header of input field */
         h3 {
             margin-top: 0;
             margin-left: 20px;
             margin-bottom: 10px;
         }
 
+        /* Styling for input field */
         .movieID-input-wrap {
             width: 20%;
             padding: 0px 5px 0px 0px;
         }
-        .movie-title-input-wrap{
+
+        .movie-title-input-wrap {
             width: 40%;
             padding: 0px 5px 0px 0px;
         }
-        .movie-year-input-wrap{
+
+        .movie-year-input-wrap {
             width: 20%;
             padding: 0px 5px 0px 0px;
         }
-        .movie-rating-input-wrap{
+
+        .movie-rating-input-wrap {
             width: 20%;
         }
 
     }
 
+    /* Styling for function button */
     .add-button-container {
         display: flex;
         gap: 20px;
         border-radius: 20px;
 
+        /* Styling for Add a movie button */
         #addMovieBtn {
+            background-color: #ff0000;
+            border: none;
+            color: white;
+            height: 40px;
+            border-radius: 5px;
+            padding: 10px 20px;
             cursor: pointer;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            transition: ease-in-out 0.3s;
 
+            /* Styling effect hover for add a movie button */
             &:hover {
-                transform: scale(1.1);
-                border-radius: 10px;
+                transform: scale(1.15);
+                border-radius: 20px;
                 background: #ff0000;
                 color: white;
+                box-shadow: 0 0 10px rgb(255, 35, 35);
             }
         }
-        #clearInputBox{
+
+        /* Styling for Clear input box button */
+        #clearInputBox {
+            display: none;
             cursor: pointer;
+            border: none;
             border-radius: 10px;
+            padding: 10px 20px;
             background-color: rgba(255, 255, 255, 0);
             color: #ff0000;
-            border: 1px #ff0000;
-            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-            
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+            transition: ease-in-out 0.3s;
+
+            /* Styling effect hover for clear input box button */
             &:hover {
                 border-radius: 20px;
                 background: #ff0000;
@@ -456,7 +506,7 @@ table {
     }
 }
 
-/* -------------------------------SEARCH MOVIES SECTION------------------------------- */
+/* SEARCH MOVIE SECTION */
 .search-movies-section {
     display: flex;
     align-items: flex-start;
@@ -465,60 +515,72 @@ table {
     padding-right: 30px;
     margin-bottom: 20px;
 
+    /* Styling for Search movie section header text */
     h2 {
         margin: 0;
         margin-bottom: 0px;
         font-size: 25px;
     }
 
+    /* Styling for Search movie section paragraph text */
     p {
         margin-top: 0px;
         margin-bottom: 20px;
         color: #ff0000;
     }
-
+    /* Styling for search field */
     .search-input-group {
         display: flex;
-
+        /* Styling for input box */
         input {
             width: 500px;
             border-radius: 20px 0px 0px 20px;
             height: 50px;
+            border-color: #ff0000;
         }
-
+        /* Styling for search by id button */
         #searchByIDBtn {
-            border: 1px solid  #ff0000;
+            border: 1px solid #ff0000;
             height: 50px;
-            border-radius: none;
-            background-color: #ff0000;
-            &:hover
-            {
+            background-color: #c70000;
+            color: white;
+            transition: ease-in-out 0.3s;
+            /* Styling effect hover for search by id button */
+            &:hover {
                 background-color: rgba(255, 255, 255, 0);
+                color: #ff0000;
             }
         }
-
+        /* Styling for search by title button */
         #searchByTitleBtn {
             border-radius: 0px 20px 20px 0px;
-            border: 1px solid  #ff0000;
-            height: 50px;
+            border: 1px solid #ff0000;
+            background-color: #ff0000;
+            color: white;
+            transition: ease-in-out 0.3s;
+            /* Styling effect hover for search by title button */
+            &:hover {
+                background-color: rgba(255, 255, 255, 0);
+                color: #ff0000;
+            }
         }
     }
 }
 
-/* -------------------------------DATA TOOLS SECTION------------------------------- */
+/* DATA TOOLS SECTION - sort and reset data functions */
 .data-tool-section {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
-
+    /* Styling for data tools header */
     h2 {
         margin: 0;
         margin-bottom: 0px;
         font-size: 25px;
     }
-
+    /* Styling for data tools paragraph text */
     p {
         margin-top: 0px;
         margin-bottom: 20px;
@@ -531,37 +593,55 @@ table {
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-
+        /* Styling for sort buttons */
         button {
             padding: 10px 30px;
-            width: 300px;
+            height: 40px;
+            width: 100%;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(192, 0, 0);
+            color: white;
+            transition: ease-in-out 0.3s;
+            /* Styling effect hover for sort buttons */
+            &:hover {
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(255, 0, 0, 1);
+                color: #ff0000;
+                background-color: rgba(255, 255, 255, 0);
+            }
         }
-
+        /* Styling for reset data button */
         .reset-data-button {
             margin-left: 20px;
+            padding: 0px;
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+            border-radius: 50%;
             background-color: rgba(255, 255, 255, 0);
             color: #ff0000;
             border: 5px solid red;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
             font-size: 30px;
             text-align: center;
-            padding: 0px;
             box-shadow: 0 0 10px #ff0000;
-
+            transition: ease-in-out 0.3s;
+            /* Styling effect hover for reset data button */
             &:hover {
-                background-color: #ff0000;
+                border-radius: 50%;
                 transform: rotate(360deg);
-                color: white;
+                color: #ff0000;
             }
         }
+
     }
 
 }
+
 /* Reset data confirmation form */
 .modal {
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay */
     position: fixed;
     top: 0;
     left: 0;
@@ -571,65 +651,71 @@ table {
     justify-content: center;
     align-items: center;
     z-index: 11;
+
     .modal-content {
+        color: #000000;
         z-index: 12;
         background-color: white;
         padding: 30px;
         border-radius: 8px;
-        width: 500px;
+        width: 550px;
         text-align: center;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
-    
+    /* Styling for modal header text */
     h2 {
-        font-size: 18px;
+        font-size: 24px;
         margin-bottom: 15px;
     }
-    
+    /* Styling for modal paragraph text */
     p {
-        font-size: 14px;
-        color: #555;
+        font-size: 15px;
+        color: #ff0000;
         margin-bottom: 20px;
     }
-    
+    /* Styling for buttons container */
     .buttons-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
-    
+    /* Styling for buttons in modal */
     button {
-        padding: 10px 20px;
+        padding: 10px 30px;
         font-size: 14px;
         border: none;
         cursor: pointer;
         border-radius: 5px;
-        margin: 5px;
+        margin: 10px;
     }
-    
+    /* Styling for cancel button */
     .cancel-btn {
-        background-color: #f44336; /* Red */
+        background-color: #333 !important;
         color: white;
+        transition: ease-in-out 0.3s;
+        /* Styling effect hover for cancel button */
+        &:hover {
+            background-color: white !important;
+            border: 1px #333 solid;
+            color: #333;
+            transform: scale(1.1);
+        }
     }
-    
+    /* Styling for confirm button */
     .confirm-btn {
-        background-color: #4caf50; /* Green */
+        background-color: #ff0000;
         color: white;
+        transition: ease-in-out 0.3s;
+        /* Styling effect hover for confirm button */
+        &:hover {
+            background-color: white;
+            color: #ff0000;
+            border: 1px solid #ff0000;
+            transform: scale(1.1);
+        }
     }
-    
-    .cancel-btn:hover {
-        background-color: #d32f2f;
-    }
-    
-    .confirm-btn:hover {
-        background-color: #388e3c;
-    }
-    
 }
 
-
-
-
-/* -------------------------------FOOTER PART------------------------------- */
+/* FOOTER ON THE WEBSITE */
 /* Styling for footer */
 footer {
     text-align: center;
@@ -638,18 +724,4 @@ footer {
     padding: 10px;
     bottom: 0;
     width: 100%;
-}
-
-
-/* Another styling*/
-.highlight-text {
-    color: yellow;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.note {
-    color: red;
 }

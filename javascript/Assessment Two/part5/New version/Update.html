@@ -4,52 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Part 5 || Assessment 2 - JavaScript</title>
-    <!-- Link css file -->
+    <title>The Movie Management System</title>
+    <!-- Link favicon: Icon for the website -->
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <!-- Link CSS file: Stying for the website -->
     <link rel="stylesheet" href="./style.css">
-    <!-- Link google font -->
+    <!-- Link google fonts: Fonts for the website -->
     <link
         href="https://fonts.googleapis.com/css2?family=Nova+Mono&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <!-- Link awesome font -->
+    <!-- Link Font Awesome: Icons for the website -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <!-- HEADER -->
-     <!-- Navigation menu bar -->
-    <nav>
-        <ul class="logo" aria-label="Branch Logo">Movies</ul>
-        <ul class="menu">
-            <li><a href="#">Homepage</a></li>
-            <li><a href="#" class="current">Movies Management</a></li>
-            <li><a href="#">About Us</a></li>
-            <li aria-label="Dark Mode Button">
-                <input type="checkbox" id="toggle">
-                <label for="toggle" class="toggle-label"></label>
-            </li>
-        </ul>
-    </nav>
-    <!-- End of navigation menu bar -->
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1><span>Welcome to <i class="fa-solid fa-video"></i></span> <br>The M<i class="fa-solid fa-film fa-sm"></i>vie
-            Management System</h1>
-        <p>Organize & Enjoy Your Movie Collection Like Never Before!</p>
-    </section>
-    <!-- End of hero section -->
-    <!--MAIN-->
+    <!-- HEADER OF THE WEBSITE -->
+    <header>
+        <!-- Navigation menu bar -->
+        <nav>
+            <!-- Branch Logo -->
+            <div class="logo" aria-label="Branch Logo">Movies</div>
+            <!-- Navigation menu bar items -->
+            <ul class="menu">
+                <li><a href="#">Homepage</a></li>
+                <li><a href="#" class="current">Movies Management</a></li>
+                <li><a href="#">About Us</a></li>
+                <li aria-label="Dark Mode Button">
+                    <input type="checkbox" id="toggle" checked>
+                    <label for="toggle" class="toggle-label"></label>
+                </li>
+            </ul>
+            <!-- End of navigation menu bar items -->
+        </nav>
+        <!-- End of navigation menu bar -->
+        <!-- Hero section -->
+        <section class="hero">
+            <h1><span>Welcome to <i class="fa-solid fa-video"></i></span> <br>The M<i
+                    class="fa-solid fa-film fa-sm"></i>vie
+                Management System</h1>
+            <p>Organize & Enjoy Your Movie Collection Like Never Before!</p>
+        </section>
+        <!-- End of hero section -->
+    </header>
+    <!-- END OF HEADER OF THE WEBSITE -->
+     
+    <!--MAIN OF THE WEBSITE-->
     <main>
-        <!-- MOVIE LIST TABLE -->
+        <!-- DISPLAY SECTION -->
         <section id="displayMovies">
+            <!--Table container -->
             <div class="movie-list-container">
+                <!-- Header of table container -->
                 <div class="table-title-container">
                     <h2><span>Manage Your Movies</span><br><i class="fa-solid fa-clapperboard"></i> Lights, Camera,
                         Action! </h2>
-                    <button class="refresh-button" id="refreshData" type="button"
-                        onclick="refreshData()" aria-label="Refresh Data"><i class="fa-solid fa-rotate"></i></button>
+                    <button class="refresh-button" id="refreshData" type="button" onclick="refreshData()"
+                        aria-label="Refresh Data"><i class="fa-solid fa-rotate"></i></button>
                 </div>
+                <!-- End Header of table container -->
+                <!-- Movies Table: Display movie data -->
                 <table class="movie-list-table">
+                    <!-- Table header: Column names for the movie data -->
                     <thead>
                         <tr>
                             <th>Movie ID</th>
@@ -58,28 +73,43 @@
                             <th>Rating</th>
                         </tr>
                     </thead>
+                    <!-- Table body where movie data is displayed -->
                     <tbody id="movieListTbody"></tbody>
                 </table>
-                <!-- The number of search result table -->
+                <!-- End Movies Table -->
             </div>
+            <!-- End table container -->
+            <!-- Search result label: Display search result -->
             <label id="searchResultlabel"></label>
         </section>
-        <!-- TOGGLE BUTTON -->
+        <!-- END OF DISPLAY SECTION-->
+
+        <!-- TOGGLE BUTTONS SECTION -->
+        <!-- Button container for toggling visualization options -->
         <section>
             <div class="toggle-button-container">
+                <!-- Toggle button for the add a movie section -->
                 <button class="toggle-button" id="defaultButton" type="button"
-                    onclick="formControl('addMoviesSection',this)"><i class="fa-solid fa-arrow-right"></i> Add
+                    onclick="toggleSectionDisplay ('addMoviesSection',this)"><i class="fa-solid fa-arrow-right"></i> Add
                     a Movie</button>
-                <button class="toggle-button" type="button" onclick="formControl('searchSection',this)"><i class="fa-solid fa-arrow-right"></i> Search
+                <!-- Toggle button for the seach movie section -->
+                <button class="toggle-button" type="button" onclick="toggleSectionDisplay ('searchSection',this)"><i
+                        class="fa-solid fa-arrow-right"></i> Search
                     Movies</button>
-                <button class="toggle-button" type="button" onclick="formControl('dataToolSection',this)"><i class="fa-solid fa-arrow-right"></i> Data
+                <!-- Toggle button for the data tools section -->
+                <button class="toggle-button" type="button" onclick="toggleSectionDisplay ('dataToolSection',this)"><i
+                        class="fa-solid fa-arrow-right"></i> Data
                     Tools</button>
             </div>
         </section>
-        <!-- ADD MOVIE TOOL -->
+        <!-- END TOGGLE BUTTONS SECTION: button container for toggling visualization options -->
+
+        <!-- ADD A MOVIE SECTION -->
         <section class="add-movies-section toggle-section" id="addMoviesSection">
+            <!-- Header of add a movie section -->
             <h2><i class="fa fa-plus-circle"></i> Add New Movie</h2>
             <p>Fill in the details below to add a new movie to the platform.</p>
+            <!-- Input fields for movie details: Movie ID, Title, Year, and Rating -->
             <div class="add-movie-input-container">
                 <div class="movieID-input-wrap">
                     <h3>MovieID</h3>
@@ -101,14 +131,21 @@
                         placeholder="Rating" required>
                 </div>
             </div>
-
+            <!-- End of input fields for movie details -->
+            <!-- Add movie button and clear input box button -->
             <div class="add-button-container">
-                <button type="button" id="addMovieBtn" onclick="addMovie()"><i class="fa-solid fa-arrow-up-from-bracket"></i> Add Movie</button>
-                <button type="button" id="clearInputBox" onclick="clearInputBox()"> <i class="fa-solid fa-eraser"></i> Clear</button>
+                <button type="button" id="addMovieBtn" onclick="addMovie()"><i
+                        class="fa-solid fa-arrow-up-from-bracket"></i> Add Movie</button>
+                <button type="button" id="clearInputBox" onclick="clearInputBox()"> <i class="fa-solid fa-eraser"></i>
+                    Clear</button>
             </div>
+            <!-- End of add movie button and clear input box button -->
         </section>
-        <!-- SEARCH MOVIE TOOL -->
+        <!-- END OF ADD A MOVIE SECTION -->
+
+        <!-- SEARCH MOVIE SECTION -->
         <section class="search-movies-section toggle-section" id="searchSection">
+            <!-- Header of search movie section -->
             <h2><i class="fa-solid fa-magnifying-glass"></i> Search Movies</h2>
             <p>Let find the movie! <i class="fa fa-film"></i> </p>
             <!-- Input box and button search container -->
@@ -118,38 +155,64 @@
                 <button type="button" id="searchByIDBtn" onclick="searchById()">Search by ID</button>
                 <button type="button" id="searchByTitleBtn" onclick="searchByTitle()">Search by Title</button>
             </div>
+            <!-- End of input box and button search container -->
         </section>
-        <!-- DATA TOOL -->
+        <!-- END OF SEARCH MOVIE SECTION -->
+
+        <!-- SORT AND RESET DATA SECTION - DATA TOOLS SECTION -->
         <section class="data-tool-section toggle-section" id="dataToolSection">
+            <!-- Header of data tools section -->
             <h2><i class="fa-solid fa-toolbox"></i> Data Tools</h2>
             <p>Easily organize your data with our sort tools</p>
+            <!-- Sort buttons container: Sort movie data by ID, Title, or Best Movie -->
             <div class="data-tool-button-container">
+                <!-- Sort by Id -->
                 <button type="button" onclick="sortA2ZById()"><i class="fa fa-arrow-up"></i> Sort ID A-Z</button>
                 <button type="button" onclick="sortZ2AByID()"><i class="fa fa-arrow-down"></i> Sort ID Z-A</button>
-                <button type="button" onclick="sortA2ZByTitle()"><i class="fa fa-sort-alpha-down"></i> Sort Title A-Z</button>
-                <button type="button" onclick="sortZ2AByTitle()"><i class="fa fa-sort-alpha-up"></i> Sort Title Z-A</button>
+                <!-- Sort by Title -->
+                <button type="button" onclick="sortA2ZByTitle()"><i class="fa fa-sort-alpha-down"></i> Sort Title
+                    A-Z</button>
+                <button type="button" onclick="sortZ2AByTitle()"><i class="fa fa-sort-alpha-up"></i> Sort Title
+                    Z-A</button>
+                <!-- Sort by Rating -->
                 <button type="button" onclick="sortBestMovie()"><i class="fa fa-star"></i> Sort Best</button>
+                <!-- Reset Data Button -->
                 <div>
                     <button class="reset-data-button" type="button" aria-label="Reset Data"><i
                             class="fa-solid fa-rotate-right" onclick="showResetModal()"></i></button>
                 </div>
-                <!-- Reset data confirmation form-->
-                <div class="modal" id="resetDataModal">
-                    <div class="modal-content">
-                        <h2>Are you sure you want to reset your data?</h2>
-                        <p>This action cannot be undone. All your data will be lost.</p>
-                        <div class="buttons-container ">
-                            <button class="cancel-btn" id="camcelResetData" onclick="resetData(0)">Cancel</button>
-                            <button class="confirm-btn" onclick="resetData(1)">Confirm</button>
-                        </div>
+            </div>
+            <!-- End of sort buttons container -->
+
+            <!-- Reset data confirmation form-->
+            <div class="modal" id="resetDataModal">
+                <div class="modal-content">
+                    <!-- Header of Reset Data confirmation form -->
+                    <h2> <span>Are you sure</span> you want to reset your data?</h2>
+                    <p><i class="fa-solid fa-triangle-exclamation"></i> This action cannot be undone. All your data will
+                        be lost.</p>
+                    <!-- Reset Data and Cancel functions Button -->
+                    <div class="buttons-container ">
+                        <button class="cancel-btn" onclick="resetData(0)">Cancel</button>
+                        <button class="confirm-btn" onclick="resetData(1)">Confirm</button>
                     </div>
                 </div>
+            </div>
+            <!-- End of Reset data confirmation form -->
         </section>
+        <!-- END OF SORT AND RESET DATA SECTION - DATA TOOLS SECTION -->
     </main>
+    <!-- END OF MAIN -->
+    <!-- FOOTER FOR WEBSITE -->
     <footer>
         <p>&copy; 2025 Van Minh Le. All rights reserved.</p>
         <p>Holmesglen Institute, Certificate IV in Information Technology</p>
     </footer>
+    <!-- END OF FOOTER FOR WEBSITE -->
+    <!-- Link JavaScript file: Stying for the website -->
+    <!-- Movie Manager Class file: Stores a lot of functions to manage movies -->
+    <script src="./movie-list-class.js"></script>
+    <!-- Sript file: Set function for The Movie Management website App -->
     <script src="./script.js"></script>
 </body>
 

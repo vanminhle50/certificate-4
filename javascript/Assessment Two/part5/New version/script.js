@@ -1,6 +1,33 @@
-/* PART 1: DEFINE AND CREATE ORIGINAL DATA */
-/* This is program use table element to display movies data */
-/* Define class Movie with 4 property MovieID, title, year, rating */
+//=================================================================================
+//  File Name: script.js
+// Author Name: Van Minh Le
+// Student ID: 100693330
+// Major: Use Version Control in Development Environments
+//=================================================================================
+/**
+ * @description This is script file for Movie Manager App
+ * functionalities:
+ * PART 1: Create Data for the Movie Management Website App
+ * PART 2: Function of the Movie Management Website App
+ * - SECTION 01: Display Section
+ * - SECTION 02: Add a Movie Section
+ * - SECTION 03: Sort Movie and Reset Data Section (Data Tool Section)
+ * - SECTION 04: Search Movie Section
+ * PART 3: Automatically Functions was called when website opened
+ */
+//=================================================================================
+
+// PART 01: CREATE DATA FOR THE MOVIE MANAGEMENT WEBSITE APP
+/* Create Movie Class with 4 property MovieID, title, year, rating */
+/**
+ * @class Movie
+ * @description Represents a movie with an ID, title, year, and rating.
+ * @constructor
+ * @property {string} movieID - The unique ID of the movie.
+ * @property {string} title - The title of the movie.
+ * @property {number} year - The release year of the movie.
+ * @property {parseFloat} rating - The rating of the movie (0-10).
+ */
 class Movie {
     constructor(movieID, title, year, rating) {
         this.movieID = movieID;
@@ -9,344 +36,339 @@ class Movie {
         this.rating = rating;
     };
 }
-/* Initialize the value of the movieList array*/
+// Create the movielist array with 10 movie objects each has 4 properties (movieID, title, year, rating).
+// The movieID is unique for each movie object.
+// The title is a string, the year is a year number type yyyy, and the rating is a float number.
+/**
+ * @var {Array<Movie>} movieList
+ * @description An array of Movie objects representing a list of 10 movie objects.
+ */
 let movieList = [
-    new Movie("A021", "The Shawshank Redemption", 1994, 9.3),
-    new Movie("C020", "The Godfather", 1972, 9.2),
-    new Movie("D003", "The Dark Knight", 2008, 9.0),
-    new Movie("A104", "The Godfather Part II", 1974, 9.0),
-    new Movie("B005", "12 Angry Men", 1957, 9.0),
-    new Movie("A106", "Schindler's List", 1993, 9.0),
-    new Movie("S007", "The Lord of the Rings", 2003, 9.0),
-    new Movie("D108", "Pulp Fiction", 1994, 8.9),
-    new Movie("L009", "The Good, the Bad and the Ugly", 1966, 8.8),
-    new Movie("B110", "Fight Club", 1999, 8.1)
+    new Movie("N001", "Narcos", 2015, 8.8),
+    new Movie("T001", "The The Irishman", 2019, 7.8),
+    new Movie("T002", "The Dark Knight", 2008, 9.0),
+    new Movie("S001", "Stranger Things", 2016, 8.7),
+    new Movie("T003", "The Witcher", 2019, 8.1),
+    new Movie("S002", "Schindler's List", 1993, 9.0),
+    new Movie("T004", "The Lord of the Rings", 2003, 9.0),
+    new Movie("P001", "Pulp Fiction", 1994, 8.90),
+    new Movie("T005", "The Good, the Bad and the Ugly", 1966, 8.8),
+    new Movie("F001", "Fight Club", 1999, 8.1)
 ];
-let originalData = [...movieList];
+// Deep copy an independent copy of movieList into originalData - It use for reset data function.
+let originalData = structuredClone(movieList);
 
-//========================================================
-/* PART 2: CLASS MANAGE MOVIES */
-/* Description: This part store methods to manage movies*/
-class ManageMovies {
-    constructor(rootID, movieList) {
-        /* The ID of the element where the movie list will be displayed.
-        In the program - This is the ID of tbody: movieListTbody when we create ManageMovies Class in the Main program*/
-        this.rootID = rootID;
-        this.movieList = movieList;
-        this.displayData(movieList);
-    }
-    /* REQUIREMENT 01 - DISPLAY DATA*/
-    /* Define displayData() method */
-    displayData(movieList) {
-
-        /* First method (using innerHTML) is quick and suitable for small programs without security concerns. 
-           However, it can expose the app to XSS (Cross-Site Scripting) attacks and remove event listeners from child elements. 
-           Use it for trusted data and simple updates. 
-
-        //Step 01: Clear data table
-        this.rootID.innerHTML = '';
-
-        // Step 02: Push Data to table
-        this.movieList.forEach(movie => this.rootID.innerHTML += `<tr><td>${movie.movieID}</td><td>${movie.title}</td><td>${movie.year}</td><td>${movie.rating}</td></tr>`);
-        */
-
-        /* Second method: DOM Manipulation (Using DOM API (Document Object Model Application Programming Interface) to create HTML elements in JavaScipt ) */
-        //Step 01: Clear data table
-        // Define childNodes HTMLCollection all elements have Tagname 'tr'
-        let childNodes = this.rootID.getElementsByTagName('tr');
-        // Create a backward loop to make sure all elements is removed.
-        for (let i = childNodes.length - 1; i >= 0; i--) {
-            this.rootID.removeChild(childNodes[i]);
-        }
-
-        //Step 02: Push Data to table
-        //Create a forward loop to push all movies from movielist to the table.
-        for (let i = 0; i < movieList.length; i++) {
-            // Get a movie from movie list.
-            let movie = movieList[i];
-            // Create a table row to store a movie.
-            let tr = document.createElement('tr');
-            // Create a td element to store the movieID Data of the movie.
-            let tdID = document.createElement('td');
-            // Set content for tdID
-            tdID.textContent = movie.movieID;
-            // Create a td element to store the Title of the movie.
-            let tdTitle = document.createElement('td');
-            // Set content for movie title
-            tdTitle.textContent = movie.title;
-            // Create a td element to store the relevant year of the movie.
-            let tdYear = document.createElement('td');
-            // Set content for movie year
-            tdYear.textContent = movie.year;
-            // Create a td element to store the rating of the movie.
-            let tdRating = document.createElement('td');
-            // Set content for movie rating
-            tdRating.textContent = movie.rating;
-            // Append <td> to <tr>
-            tr.appendChild(tdID);
-            tr.appendChild(tdTitle);
-            tr.appendChild(tdYear);
-            tr.appendChild(tdRating);
-            // Append <tr> to table
-            this.rootID.appendChild(tr);
-        }
-    }
-    /* End of Display Data Function */
-
-    /* REQUIREMENT 02: ADD A MOVIE TO MOVIE LIST*/
-    addMovie() {
-        /* Get elements from input box in Add Movie Section */
-        let movieID = document.getElementById('movieIDInput').value.trim();
-        let movieTitle = document.getElementById('movieTitleInput').value.trim();
-        /* Type of movieYear variable is a number */
-        let movieYear = Number(document.getElementById('movieYearInput').value);
-        /* Type of movieRating variable is a number */
-        let movieRating = Number(document.getElementById('movieRatingInput').value);
-        if (!movieID) {
-            document.getElementById('movieIDInput').focus();
-            return;
-        }
-        else if (!movieTitle) {
-            document.getElementById('movieTitleInput').focus();
-            return;
-        }
-        else if (!movieYear === "" || movieYear == 0) {
-            document.getElementById('movieYearInput').focus();
-            return;
-        }
-        else if (!movieRating === "" || movieRating == 0) {
-            document.getElementById('movieRatingInput').focus();
-            return;
-        }
-        else /* Check if the ID exists */ {
-            for (let i = 0; i < this.movieList.length; i++) {
-                if (movieID === this.movieList[i].movieID) {
-                    alert(`The ID exists!`);
-                    return;
-                }
-            }
-            /* The relevant year of the movie between 1895 to current year */
-            let currentYear = new Date().getFullYear();
-            if (!Number.isInteger(movieYear) || movieYear < 1895 || movieYear > currentYear) {
-                alert(`The relevant year of the movie should be between 1895 and ${currentYear}!`);
-                return;
-            } else
-                if (movieRating <= 0 || movieRating > 10) {
-                    alert(`The movie rating should be greater than 0 and less than 10!`);
-                    return;
-                } else {
-                    this.movieList.push(new Movie(movieID, movieTitle, movieYear, movieRating));
-                }
-        }
-    }
-
-
-
-    /* REQUIREMENT 02: ADD A MOVIE TO MOVIE LIST*/
-    //Sort by ID
-    // Sort A to Z by ID function
-    sortA2ZById() {
-        this.movieList.sort((a, b) => a.movieID.localeCompare(b.movieID));
-    }
-    // Sort Z to A by ID function
-    sortZ2AByID() {
-        this.movieList.sort((b, a) => a.movieID.localeCompare(b.movieID));
-    }
-    // Sort by Title
-    // Sort A to Z by Title function
-    sortA2ZByTitle() {
-        this.movieList.sort((a, b) => a.title.localeCompare(b.title));
-    }
-    // Sort Z to A by Title function
-    sortZ2AByTitle() {
-        this.movieList.sort((b, a) => a.title.localeCompare(b.title));
-    }
-    /* Sort by Rating */
-    sortBestMovie() {
-        this.movieList.sort((a, b) => b.rating - a.rating);
-    }
-    resetData(originalData) {
-        this.movieList = [];
-        for (let i = 0; i < originalData.length; i++) {
-            this.movieList.push(originalData[i]);
-        }
-        return movieList;
-    }
-    /* REQUIREMENT 03: SEARCH A MOVIE IN MOVIE LIST */
-    /* Search by ID */
-
-    searchById(searchString) {
-        searchString = searchString.toLowerCase().trim().replace(/\s+/g, ' ');
-        let searchList = [];
-        for (let i = 0; i < this.movieList.length; i++) {
-            if (this.movieList[i].movieID.toLowerCase().trim().replace(/\s+/g, ' ') === searchString) {
-                searchList.push(this.movieList[i]);
-            }
-        }
-        return searchList;
-    }
-
-    /* Search by Title */
-    searchByTitle(searchString) {
-        searchString = searchString.toLowerCase().trim().replace(/\s+/g, ' ');
-        let searchList = [];
-        for (let movie of this.movieList) {
-            if (movie.title.toLowerCase().trim().replace(/\s+/g, ' ').includes(searchString)) {
-                searchList.push(movie);
-            }
-        }
-        return searchList;
-    }
-}
-//========================================================
-/* PART 3: THE MANGAGE MOVIES WEBSITE APP */
-
-/* DISPLAY SECTION */
-/* Get element with movieListTbody */
+// Get the element with the ID "movieListTbody" from the HTML to specify where to display the movie list.
 let movieListTbody = document.getElementById('movieListTbody');
-/* Create class Manage Movies taking in the rootID and the movie array*/
-let manageMovies = new ManageMovies(movieListTbody, movieList);
-// Form control function
-function formControl(rootID, currentButton) {
-    /* Step 01: Hide all toggle sections when click button*/
-    /* Define toggleSection HTMLCollection all elements has classname 'toggle-section' */
+
+//Create movieManager class for managing movie data.
+/**
+ * @class MovieManager
+ * @description Manages the movie list and provides methods for adding, sorting, searching, and displaying movies.
+ */
+let movieManager = new MovieManager(movieListTbody, movieList);
+
+// END OF PART 01: CREATE DATA FOR MOVIE LIST
+
+// PART 02: FUNCTION OF THE MOVIE MANGAGEMENT WEBSITE APP
+
+// SECTION 01: DISPLAY SECTION.
+/**
+ * Section 01 include the following functions:
+ * 0. Display Data: Display the movie data in the table. It automatically called when the website is opened through constructor of class MovieManager.
+ * 1. Display Function Section: Toggle the visibility of sections when the function buttons are clicked.
+ * 2. Refresh Data: Refresh the movie data in the table.
+ */
+
+// Function 01. Display Function Section
+// Define toggleSectionDisplay function to show a specified form when click the function button.
+/**
+ * @function toggleSectionDisplay 
+ * @description Toggles the visibility of sections and sets the active state for function buttons.
+ * @param {string} rootID - The ID of the section to display.
+ * @param {HTMLElement} currentButton - The button that was clicked.
+ */
+
+function toggleSectionDisplay(rootID, currentButton) {
+    // Part 1: Toggle the visibility of sections.
+    // Step 01: Set display property with value "none" all sections forms to hide all section forms when button was clicked.
+    // Get HTMLCollection of all elements has classname 'toggle-section' and assign it to toggleSection variable.
     const toggleSection = document.getElementsByClassName('toggle-section');
-    /* Modify display property with none value to hide toggle section */
+    // Loop through each element in the toggleSection HTMLCollection and set its display property to 'none' to hide it.
     for (let i = 0; i < toggleSection.length; i++) {
         toggleSection[i].style.display = 'none';
     }
-    /* Reset Text Content of lable search result */
+
+    //Reset Text Content of lable search result. This part is used for search function.
     document.getElementById('searchResultlabel').textContent = "";
-    manageMovies.displayData(movieList);
+    movieManager.displayData(movieList);
 
-    /* Step 02: Show current section only when click button */
-    // Get the element with the ID specified by rootID when click button and assign it to currentSection
+    // Step 02: Show current section only when button was clicked.
+    // Get the element with the ID specified by rootID when button was clicked and assign it to currentSection
     currentSection = document.getElementById(rootID);
-    // Display the current section by setting its display property to 'flex'
+    // Display the current section by setting its display property to 'flex'.
     currentSection.style.display = 'flex';
-
-    /* Assign active state for current button when click button */
-    /* Step 01: Clear active state from all toggle buttons*/
+    // Part 2: Assign active state for current button when button was clicked.
+    // Step 01: Clear active class from all toggle buttons if it has active class.
+    // Get HTMLCollection of all elements has classname 'toggle-button' and assign it to toggleButton variable.
     let toggleButton = document.getElementsByClassName('toggle-button');
+    // Loop through each element in the toggleButton HTMLCollection and remove the 'active' class from it.
     for (let i = 0; i < toggleButton.length; i++) {
         toggleButton[i].classList.remove('active');
     }
-    /* Step 02: Add active state for current toggle button */
+    // Step 02: Add "active" class for current toggle button when button was clicked.
     currentButton.classList.add('active');
 }
-/* Define defaultOpenForm function to show default form when website opened*/
+// End of Function 01: Display Function Section
+
+
+// Function 01.1 Display Default Form Section
+// Define defaultOpenForm function to show default form when website was opened.
+/**
+ * @function defaultOpenForm 
+ * @description Displays the default form section when the website is opened.
+ * @param {string} rootID - The ID of the section to display.
+ * @param {HTMLElement} currentButton - The button that was clicked.
+ * @returns {void}
+ */
+
 function defaultOpenForm(rootID, currentButton) {
-    /* Call formControl Function to show a specified form */
-    formControl(rootID, currentButton);
+    // Call toggleSectionDisplay Function to show a specified form.
+    toggleSectionDisplay(rootID, currentButton);
 }
-/* Get element from defaultButton ID */
-defaultButton = document.getElementById('defaultButton');
-/* Call defaultOpendForm Function to show Add Movie Section when website opened*/
-defaultOpenForm('addMoviesSection', defaultButton);
-/* Refresh Data */
+// End of Function 01.1 Display Default Form Section
+
+// Function 02: Refresh the movie data to show currently data to table.
+/**
+ * @function refreshData
+ * @description Refreshes the movie data in the table and resets the search result label.
+ * @returns {void}
+ */
 function refreshData() {
-    manageMovies.displayData(movieList);
-    /* Reset Text Content of lable search result */
+    movieManager.displayData(movieList);
+    //Reset Text Content of lable search result to empty string. This part is used for search function.
     document.getElementById('searchResultlabel').textContent = "";
 }
+// End of Function 02: Refresh the movie data to show currently data to table.
+// END OF SECTION 01: DISPLAY SECTION.
+
+// SECTION 02: ADD A MOVIE SECTION
+/**
+ * Section 02 include the following functions:
+ * 1. Add Movie Function: Call function from class Manage Movie to create a movie object form input box form HTML and push it to the movieList array and show in the table.
+ * 2. Clear Input Boxs: Clear input boxs if the user want to renew the input data.
+ */
 
 
-
-
-/* ADD MOVIE SECTION */
-/* Add Movie Function - Call function from class Manage Movie to makke  */
+// Function 01: Add Movie Function - Call function from class Manage Movie
+/**
+ * @function addMovie
+ * @description Adds a movie to the movie list and updates the display.
+ * @returns {void}
+ */
 function addMovie() {
-    manageMovies.addMovie();
-    manageMovies.displayData(movieList);
+    movieManager.addMovie();
+    movieManager.displayData(movieList);
 }
+// End of Function 01: Add Movie Function - Call function from class Manage Movie
+
+// Function 02: Clear Input Boxs - Clear input detail boxs when user want to renew the input data.
+/**
+ * @function clearInputBox
+ * @description Clears the input fields in the form and hides the clear button.
+ * @return {void} 
+ */
 function clearInputBox() {
+    // Clear the input fields by setting their values to an empty string.
     document.getElementById('movieIDInput').value = '';
     document.getElementById('movieTitleInput').value = '';
     document.getElementById('movieYearInput').value = '';
     document.getElementById('movieRatingInput').value = '';
-    document.getElementById('clearInputBox').style.display = 'none';
+    document.getElementById('clearInputBox').style.display = 'none'; // Hide the clear button
 }
+// End of Function 02: Clear Input Boxs
+// END OF SECTION 02: ADD A MOVIE SECTION
 
-/* SORT SECTION */
-/* Sort by ID */
-/* Sort A-Z by ID function */
+// SECTION 03: SORT MOVIE AND RESET DATA SECTION ( DATA TOOL SECTION )
+/**
+ * Section 03 include the following functions:
+ * 1. Sort by ID: Sort the movie list by ID in ascending or descending order.
+ * 2. Sort by Title: Sort the movie list by title in ascending or descending order.
+ * 3. Sort by Best Movie: Sort the movie list by rating in descending order.
+ * 4. Reset Data: Reset the movie list to the original data.
+ * 4.1 Show Reset Modal: Show a modal to confirm data reset.
+ * 4.2 Reset Data: Reset the movie list to the original data if confirmed.
+ */
+
+// Function 01: Sort by ID
+// Function 01.1 Sort A-Z the movie list by ID in ascending order function
+/**
+ * @function sortA2ZById
+ * @description Sorts the movie list by ID in ascending order and updates the display.
+ * @return {void}
+ */
 function sortA2ZById() {
-    manageMovies.sortA2ZById();
-    manageMovies.displayData(movieList);
+    movieManager.displayData(movieManager.sortA2ZById());
 }
-/* Sort Z-A by ID function */
+// End of Function 01.1 Sort A-Z the movie list by ID in ascending order function
+// Function 01.2 Sort Z-A the movie list by ID in descending order function
+/**
+ * @function sortZ2AByID
+ * @description Sorts the movie list by ID in descending order and updates the display.
+ * @return {void}
+ */
 function sortZ2AByID() {
-    manageMovies.sortZ2AByID();
-    manageMovies.displayData(movieList);
+    movieManager.displayData(movieManager.sortZ2AByID());
 }
-/* Sort by Title */
-/* Sort A-Z by Title function */
+// End of Function 01.2 Sort Z-A the movie list by ID in descending order function
+// End of Function 01: Sort by ID
+
+// Function 02: Sort by Title
+// Function 02.1 Sort A-Z the movie list by Title in ascending order function
+/**
+ * @function sortA2ZByTitle
+ * @description Sorts the movie list by title in ascending order and updates the display.
+ * @return {void}
+ */
 function sortA2ZByTitle() {
-    manageMovies.sortA2ZByTitle();
-    manageMovies.displayData(movieList);
+
+    movieManager.displayData(movieManager.sortA2ZByTitle());
 }
-/* Sort Z-A by Tile function */
+// End of Function 02.1 Sort A-Z the movie list by Title in ascending order function
+
+// Function 02.2 Sort Z-A the movie list by Title in descending order function
+/**
+ * @function sortZ2AByTitle
+ * @description Sorts the movie list by title in descending order and updates the display.
+ * @return {void}
+ */
 function sortZ2AByTitle() {
-    manageMovies.sortZ2AByTitle();
-    manageMovies.displayData(movieList);
+    movieManager.displayData(movieManager.sortZ2AByTitle());
 }
-/* Sort Best Movie */
+// End of Function 02.2 Sort Z-A the movie list by Title in descending order function
+// End of Function 02: Sort by Title
+
+// Function 03: Sort by Best Movie
+/**
+ * @function sortBestMovie
+ * @description Sorts the movie list by rating in descending order to find the best movie and updates the display.
+ * @return {void}
+ */
 function sortBestMovie() {
-    manageMovies.sortBestMovie();
-    manageMovies.displayData(movieList);
+    movieManager.displayData(movieManager.sortBestMovie());
 }
+// End of Function 03: Sort by Best Movie
+
+// Function 04: Reset Data
+// Function 04.1 Show Reset Modal
+/**
+ * @function showResetModal
+ * @description Displays a modal to confirm data reset.
+ * @return {void}
+ */
 function showResetModal() {
     document.getElementById('resetDataModal').style.display = "flex";
 }
+// End of Function 04.1 Show Reset Modal
+// Function 04.2 Reset Data
+/**
+ * @function resetData
+ * @description Resets the movie list to the original data if confirmed.
+ * @param {number} reset - Indicates whether to reset data (1) or cancel (0).
+ * @return {void}
+ */
 function resetData(reset) {
     if (reset === 0) {
         document.getElementById('resetDataModal').style.display = 'none';
         return;
-    } else if (reset===1){
+    } else {
         document.getElementById('resetDataModal').style.display = 'none';
-        return;
+        movieManager.resetData(originalData);
     }
 }
+// End of Function 04.2 Reset Data
+// End of Function 04: Reset Data
+// END OF SECTION 03: SORT MOVIE AND RESET DATA SECTION ( DATA TOOL SECTION )
 
-/* SEARCH MOVIE SECTION */
+// SECTION 04: SEARCH MOVIE SECTION
+/**
+ * Section 04 include the following functions:
+ * 1. Search by Title: Search for movies by title.
+ * 2. Search by ID: Search for movies by ID.
+ */
 
+// Function 01: Search by Title
+/**
+ * @function searchByTitle
+ * @description Searches for movies by title and updates the display with the search results.
+ * @return {void}
+ */
 function searchByTitle() {
-
+    // Get the value from the input box with ID "movieSearchInput" and trim any leading or trailing whitespace.
     let searchString = document.getElementById('movieSearchInput').value.trim();
+    // Check if the search string is empty. If it is, focus on the input box and return.
     if (!searchString) {
         document.getElementById('movieSearchInput').focus();
         return;
-    } else {
-        let searchResult = manageMovies.searchByTitle(searchString);
-
-        manageMovies.displayData(searchResult);
-        /* Assign the number of search result for search Result Lable */
+    } else
+    // If the search string is not empty, call the searchByTitle function from the movieManager class to search for movies by title.
+    {
+        // Call the searchByTitle function from the movieManager class to search for movies by title. Get array of movie objects that match the search string.
+        let searchResult = movieManager.searchByTitle(searchString);
+        movieManager.displayData(searchResult);
+        // Set text content for Search Result Lable to display the number of search results.
         document.getElementById('searchResultlabel').textContent = `Found ${searchResult.length} results`;
     }
 }
-
+// End of Function 01: Search by Title
+// Function 02: Search by ID
+/**
+ * @function searchById
+ * @description Searches for movies by ID and updates the display with the search results.
+ * @return {void}
+ **/
 function searchById() {
-
+    // Get the value from the input box with ID "movieSearchInput" and trim any leading or trailing whitespace.
     let searchString = document.getElementById('movieSearchInput').value.trim();
+    // Check if the search string is empty. If it is, focus on the input box and return.
     if (!searchString) {
         document.getElementById('movieSearchInput').focus();
-
         return;
-    } else {
-        let searchResult = manageMovies.searchById(searchString);
-
-        manageMovies.displayData(searchResult);
-        /* Assign the number of search result for search Result Lable */
+    } else // If the search string is not empty, call the searchById function from the movieManager class to search for movies by ID.
+    {
+        // Call the searchById function from the movieManager class to search for movies by ID. Get array of movie objects that match the search string.
+        let searchResult = movieManager.searchById(searchString);
+        movieManager.displayData(searchResult);
+        // Set text content for Search Result Lable to display the number of search results.
         document.getElementById('searchResultlabel').textContent = `Found ${searchResult.length} results`;
     }
 }
+// End of Function 02: Search by ID
+// END OF SECTION 04: SEARCH MOVIE SECTION
+// END OF PART 02: FUNCTION OF THE MOVIE MANGAGEMENT WEBSITE APP
 
+// PART 03: AUTOMATICALY FUNCTIONS WAS CALLED WHEN WEBSITE OPENED
+// 01: Display Default Form Section when the website is opened.
+// Get element from the ID "defaultButton" and assign it to defaultButton variable.
+defaultButton = document.getElementById('defaultButton');
+// Call defaultOpendForm Function to show default section - Add Movies Section when website opened.
+defaultOpenForm('addMoviesSection', defaultButton);
+
+
+// 02: Toggle visibility of the "Clear" button in the "Add a Movie" section that clears input detail boxs.
+// Get HTMLCollection from all elements has classname "add-input".
 let addInput = document.getElementsByClassName("add-input");
+// Loop through each element in the addInput HTMLCollection and toggle the display of the clear button based on input.
 for (let i = 0; i < addInput.length; i++) {
+    // Add an event listener to each input element to listen for the "input" event.
+    // When the event occurs, check if the "clearInputBox" element is displayed or not.
+    // If it is not displayed, set its display to "block" to show it.
     addInput[i].addEventListener("input", function () {
-        if (document.getElementById('clearInputBox').style.display === 'none') {
+        if (document.getElementById('clearInputBox').style.display = 'none') {
             document.getElementById('clearInputBox').style.display = 'block';
-        } else {
+        }
+
+        else {
             document.getElementById('clearInputBox').style.display = 'none';
         }
     });
