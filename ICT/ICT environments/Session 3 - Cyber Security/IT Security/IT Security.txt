@@ -1,0 +1,19 @@
+Operating Systems and server Security:
+
+This term refers to the security features of computer, work area and server. Including:
+
+Virus scanning
+Individual logging in
+Administrator accounts
+Automatic logging out
+Server has admin access only
+Server back up
+Administrator accounts
+OS regularly updated
+Locked features where necessary (such as educational institutions limiting access to the control panel)
+Physical security: camera, locked down equipment, security doors with swipe access
+What are system security procedures?
+
+This is a policy detailing the methods and guidelines regarding the operating system and server security in an organisation. It may include training, procedures and the importance of computer security system
+
+For more information please go to:  https://spscc.edu/policy/pritsv4702
