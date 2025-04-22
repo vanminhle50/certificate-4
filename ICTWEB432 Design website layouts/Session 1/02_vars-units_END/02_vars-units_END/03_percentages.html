@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Unit (%)</title>
+    <!-- PERCENTAGE UNIT -->
+    <!-- Using the "%" unit can seem deceptively simple, but is often misused by learners.  
+      
+      PERCENTAGE APPLICATION - It is often used to define a size as RELATIVE TO AN ELEMENT'S PARENT OBJECT
+        - That is, if I state the "height: 100%", it means the height will absorb 100% of the height provided to the parent element which nests the element I am selecting
+      
+      COMMON CSS PROPERTIES USING %: width, height, margin, padding & font-size
+
+      - SEE MORE: https://developer.mozilla.org/en-US/docs/Web/CSS/percentage
+
+      EM vs %
+      The difference between em and the percentage unit is that:
+        - em scales an item by multiplying the element's parent's FONT SIZE by a number (like 1.2em)
+        - % scales an item by multiplying the element's parent's number SET FOR THAT EXACT CSS PROPERTY (height, weight, font-size, etc.) by a percentage (like 50%) = BROADER!
+    -->
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      /* 1. EM vs. % */
+      main {
+        font-size: 30px;
+        width: 400px;
+      }
+      .test1 {
+        width: 20em;
+        /* width: 20%; */
+        border: 2px solid blue;
+        background-color: lightsteelblue;
+      }
+
+      /* 2. % implications */
+      section {
+        color: white;
+        background-color: darkblue;
+        height: 600px;
+        width: 100vw;
+      }
+      .test2 {
+        padding: 40px;
+        margin: 40px auto;
+        border: 5px solid pink;
+        height: 30%; /* What is this height 30% of? */
+        width: 50%; /* What is this width 50% of? */
+      }
+      .test2 p {
+        font-size: 100%;  /* What is this font-size 100% of? */
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  <!-- 1. EM vs. % -->
+  <main>
+    <div class="test1">I am a child of the main element.</div>
+  </main>
+
+  <!-- 2.% implications -->
+  <section>
+    <div class="test2">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aliquid aliquam soluta rerum repellat voluptatem inventore neque praesentium quam nam.</p>
+    </div>
+  </section>
+</body>
+</html>

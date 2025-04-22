@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viewport Units (vh & vw)</title>
+    <!-- VIEWPORT UNITS -->
+    <!-- Technically, there is a THIRD type of unit (but can also be classed as "RELATIVE") being the VIEWPORT units, including: vw, vh, vmin & vmax
+      (a) vh: relative to 1% of viewport's height
+      (b) vw: relative to 1% of viewport's width
+
+      - NOTE: These measurements are based on the specific aspects of the viewport of the user NOT the document font-sizes
+
+      - SEE MORE: https://gist.github.com/basham/2175a16ab7c60ce8e001
+    -->
+    <style>
+      /* CSS RESET */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /* ROOT CSS - THIS AFFECTS REM! */
+      html {
+        font-size: 100%;
+        /* font-size: 16px; */
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* HEADER HERO IMAGE */
+      /* (a) vh: Percentage of viewport height, so responsive to different devices! */
+      header {
+        /* background: #333 url('https://api.unsplash.com/photos/random?client_id=') no-repeat center center/cover; */
+        background: #333 url('./ski.jpg') no-repeat center center/cover;
+        height: 100vh; /* NOTE: 100vh = 100% of viewport height! */
+        color: #333;
+        text-align: center;
+        padding-top: 15rem;
+      }
+
+      /* RELATIVE UNITS (rem) for all aspects */
+      header h1 {
+        padding-top: 10rem;
+        font-size: 3rem;
+      }
+      header p {
+        margin: 1rem 0;
+      }
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #333;
+        padding: 1rem 2rem;
+        background: #f4f4f4;
+      }
+      section {
+        padding: 2rem;
+      }
+
+      /* SHIFT UP OUR HEADER IF HEIGHT DROPS */
+      @media (max-height: 450px) {
+        header {
+          padding-top: 5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- RESPONSIVE HEADER SECTION DUE TO vh & rem -->
+    <header>
+      <h1>Welcome To Our Website</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus,
+        rem repellendus harum possimus molestias!
+      </p>
+      <div>
+        <a href="#" class="btn">Find Out More</a>
+      </div>
+    </header>
+    <section>
+      <h3>About Our Company</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        libero deleniti suscipit vero eum, itaque voluptas error iste dicta a.
+      </p>
+    </section>
+  </body>
+</html>

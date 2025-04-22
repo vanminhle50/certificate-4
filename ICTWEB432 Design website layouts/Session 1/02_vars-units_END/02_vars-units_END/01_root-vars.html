@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Variables</title>
+  <!-- CSS VARIABLES 
+    - PURPOSE: Within stylesheets, we can declare CSS Variables, which allow us to re-use particular values over and over in our application
+
+    - ADVANTAGES: This can be particularly useful when it comes to the colors of your design. Instead of copying and pasting the same colors over and over again, you can place them in variables.  This also leads to consistent design methodology
+
+    - TECHNICAL: CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries.
+  
+    - USE: Generally, we create the CSS Variable using the GLOBAL SCOPE, by declaring them within the :root selector, which matches the document's root element
+
+      -> We then use the variable value using var() and passing in the root declared variable name
+  
+  -->
+  <style>
+    /* Declaring CSS Variables */
+    :root {
+      --light-color: #f4f4f4;
+      --primary-color: #333333;
+      --secondary-color: #cccccc;
+      --max-width: 1100px;
+      --box-1-width: 3;
+      --box-2-width: 1;
+    }
+
+    /* Passing CSS Variables */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4rem;
+      background: var(--light-color);
+    }
+    header {
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      text-align: center;
+      border-bottom: 5px var(--secondary-color) solid;
+      padding: 2rem;
+    }
+    .container {
+      display: flex;
+      margin: auto;
+      max-width: var(--max-width);
+    }
+    .box {
+      background-color: var(--primary-color);
+      border-bottom: 5px var(--secondary-color) solid;
+      color: var(--light-color);
+      padding: 1rem;
+      margin: 1rem;
+    }
+    .box-1 {
+      flex: var(--box-1-width);
+    }
+    .box-2 {
+      flex: var(--box-2-width);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CSS Variables</h1>
+  </header>
+  <div class="container">
+    <div class="box box-1">
+      <h3>Hello World</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor optio
+        perspiciatis, sunt dolorum alias ipsam!
+      </p>
+    </div>
+    <div class="box box-2">
+      <h3>Hello World</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor optio
+        perspiciatis, sunt dolorum alias ipsam!
+      </p>
+    </div>
+  </div>
+</body>
+</html>

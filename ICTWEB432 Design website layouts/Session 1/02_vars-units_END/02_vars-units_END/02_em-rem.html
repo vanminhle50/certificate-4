@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute v Relative Units (em & rem)</title>
+    <!-- 1. LENGTH UNITS -->
+    <!-- EXPLANATION: There are two types of length units: absolute and relative.
+
+      - (a) ABSOLUTE LENGTH units are fixed and a length expressed in any of these will appear as exactly that size, including: cm, mm, in, px, pt & pc
+
+      - (b) RELATIVE LENGTH units specify a length relative to another length property. Relative length units scale better between different rendering medium and include: em, ex, ch, rem, vw, vh, vmin, vmax & %
+
+    
+      - WHAT TO USE: RELATIVE units play nicely with both screen and print media types and should be the most frequently used CSS units, particularly with font-sizes/media queries/padding & margin, whereas ABSOLUTE will be used for aspects that don't need to scale:
+        - rem: typically used with large-screen spacing like width, height, margin & padding
+        - em: typically used with text like font-size & line-height
+
+      2. REM v EM:
+        - (a) REM: Relative to the font size of the "root document"
+        - (b) EM: Relative to the CLOSEST font-size definition (often being the parent element)
+
+        - NOTE: Only use "em" with media queries NOT "rem"
+        - EXAMPLE: https://codepen.io/SitePoint/pen/yLYxKq
+    -->
+    <style>
+      /* 1. DIFFERENCES BETWEEN ABSOLUTE v RELATIVE */
+      /* ABSOLUTE UNIT: px */
+      #box-1 {
+        font-size: 20px;
+      }
+
+      /* RELATIVE UNIT: em */
+      #box-1 p {
+        font-size: 1.5em;
+        padding: 1em;
+      }
+
+      /* RELATIVE UNIT: rem */
+      #box-1 ul {
+        font-size: 1.2rem;
+      }
+
+      /* 2. DIFFERENCES BETWEEN REM v EM */
+      /* ABSOLUTE UNIT: root (px) */
+      html {
+        font-size: 10px;
+        /* font-size: 100%; */
+      }
+
+      /* RELATIVE UNIT: rem */
+      #box-2 h3 {
+        font-size: 2rem;
+      }
+
+      /* RELATIVE UNIT: rem */
+      #box-2 p {
+        font-size: 1.6rem;
+        line-height: 1.7rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 1. DIFFERENCES BETWEEN ABSOLUTE v RELATIVE  -->
+    <div id="box-1">
+      <h3>Box One</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut fugiat
+        tempora repudiandae. Dolores esse unde sunt temporibus est ad!
+      </p>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>
+          3
+          <ul>
+            <li>1</li>
+            <li>
+              2
+              <ul>
+                <li>nested 2</li>
+              </ul>
+            </li>
+            <li>3</li>
+          </ul>
+        </li>
+        <li>4</li>
+      </ul>
+    </div>
+
+    <!-- 2. DIFFERENCES BETWEEN REM v EM  -->
+    <div id="box-2">
+      <h3>Box two</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa quia
+        tenetur cum perspiciatis quidem tempora ea dolor suscipit veritatis
+        molestiae!
+      </p>
+    </div>
+  </body>
+</html>

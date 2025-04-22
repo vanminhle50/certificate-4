@@ -1,0 +1,13 @@
+[B] RESPONSIVE CSS PROPERTIES
+
+We need to develop our website to be flexible to adjust to different devices and browser sizes.  There are a number of methods that we can use to achieve this.
+
+[1] VARIABLES & UNITS
+
+  - 01: ROOT CSS VARIABLES: Declaring central variables we can re-use across a website
+
+  - 02: ELEMENT UNITS: Understanding "rem" & "em" and what CSS properties use these
+  
+  - 03: PERCENTAGE UNITS: Understanding the effect of using % & what properties it is associated with
+
+  - 04: VIEWPORT UNITS: Understanding "vh" & "vw" and what CSS implications are there
