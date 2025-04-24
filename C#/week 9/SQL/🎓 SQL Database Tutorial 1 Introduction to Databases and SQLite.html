@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html><head></head><body style="color: rgb(32, 33, 34); font-family: verdana, sans-serif; font-size: 12px;"><h3 data-end="293" data-start="267"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🧭 Learning Objectives</span></h3>
+<p data-end="332" data-start="294"><span style="font-size: 19px; font-family: tahoma, sans-serif;">By the end of this tutorial, you will:</span></p>
+<ul data-end="612" data-start="333">
+<li data-end="399" data-start="333" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="399" data-start="335"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Understand what a database is and what a relational database is.</span></p>
+</li>
+<li data-end="473" data-start="400" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="473" data-start="402"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Create simple related tables using Excel to explore data relationships.</span></p>
+</li>
+<li data-end="555" data-start="474" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="555" data-start="476"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Set up and use DB Browser for SQLite to create tables and define relationships.</span></p>
+</li>
+<li data-end="612" data-start="556" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="612" data-start="558"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Learn and practice basic SQL queries to retrieve data.</span></p>
+</li>
+</ul>
+<hr data-end="617" data-start="614">
+<h3 data-end="648" data-start="619"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🧩 1. What is a Database?</span></h3>
+<p data-end="762" data-start="649"><span style="font-size: 19px; font-family: tahoma, sans-serif;">A <strong data-end="663" data-start="651">database</strong> is an organized collection of data. It allows you to store, manage, and retrieve data efficiently.</span></p>
+<h4 data-end="784" data-start="764"><span style="font-size: 19px; font-family: tahoma, sans-serif;">✅ Key Features:</span></h4>
+<ul data-end="888" data-start="785">
+<li data-end="828" data-start="785" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="828" data-start="787"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Structured format (tables, rows, columns)</span></p>
+</li>
+<li data-end="866" data-start="829" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="866" data-start="831"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Easy to search, filter, and analyze</span></p>
+</li>
+<li data-end="888" data-start="867" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="888" data-start="869"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Scalable and secure</span></p>
+</li>
+</ul>
+<h4 data-end="906" data-start="890"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🧠 Example:</span></h4>
+<p data-end="937" data-start="907"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Think of an Excel spreadsheet:</span></p>
+<ul data-end="1038" data-start="938">
+<li data-end="974" data-start="938" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="974" data-start="940"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Each <strong data-end="954" data-start="945">sheet</strong> is like a <strong data-end="974" data-start="965">table</strong></span></p>
+</li>
+<li data-end="1005" data-start="975" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="1005" data-start="977"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Each <strong data-end="989" data-start="982">row</strong> is a <strong data-end="1005" data-start="995">record</strong></span></p>
+</li>
+<li data-end="1038" data-start="1006" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="1038" data-start="1008"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Each <strong data-end="1023" data-start="1013">column</strong> is a <strong data-end="1038" data-start="1029">field</strong></span></p>
+</li>
+</ul>
+<p data-end="1111" data-start="1040"><span style="font-size: 19px; font-family: tahoma, sans-serif;">📁 <strong data-end="1055" data-start="1043">Activity</strong>: Open Excel</span><br data-end="1070" data-start="1067"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Create a table with customer information:</span></p>
+<div><span data-state="closed" style="font-size: 19px; font-family: tahoma, sans-serif;"><button></button></span>
+<div>
+<table data-end="1312" data-start="1113" style="border-collapse: collapse; border-width: 1px;" border="1">
+<thead data-end="1162" data-start="1113">
+<tr data-end="1162" data-start="1113">
+<th data-end="1126" data-start="1113" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">CustomerID</span></th>
+<th data-end="1140" data-start="1126" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Name</span></th>
+<th data-end="1162" data-start="1140" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Email</span></th>
+</tr>
+</thead>
+<tbody data-end="1312" data-start="1213">
+<tr data-end="1262" data-start="1213">
+<td data-end="1226" data-start="1213" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">1</span></td>
+<td data-end="1240" data-start="1226" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Alice Smith</span></td>
+<td data-end="1262" data-start="1240" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><a rel="noopener" data-end="1259" data-start="1242">alice@example.com</a></span></td>
+</tr>
+<tr data-end="1312" data-start="1263">
+<td data-end="1276" data-start="1263" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">2</span></td>
+<td data-end="1290" data-start="1276" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Bob Jones</span></td>
+<td data-end="1312" data-start="1290" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><a rel="noopener" data-end="1307" data-start="1292">bob@example.com</a></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr data-end="1317" data-start="1314">
+<h3 data-end="1359" data-start="1319"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🔗 2. What is a Relational Database?</span></h3>
+<p data-end="1454" data-start="1361"><span style="font-size: 19px; font-family: tahoma, sans-serif;">A <strong data-end="1386" data-start="1363">Relational Database</strong> connects multiple tables using <strong data-end="1435" data-start="1418">relationships</strong> (usually by keys).</span></p>
+<h4 data-end="1477" data-start="1456"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🔄 Key Concepts:</span></h4>
+<ul data-end="1603" data-start="1478">
+<li data-end="1540" data-start="1478" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="1540" data-start="1480"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><strong data-end="1495" data-start="1480">Primary Key</strong>: Uniquely identifies each record in a table.</span></p>
+</li>
+<li data-end="1603" data-start="1541" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="1603" data-start="1543"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><strong data-end="1558" data-start="1543">Foreign Key</strong>: Refers to the primary key in another table.</span></p>
+</li>
+</ul>
+<h4 data-end="1628" data-start="1605"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🧠 Excel Activity:</span></h4>
+<p data-end="1655" data-start="1629"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Create two related tables:</span></p>
+<p data-end="1679" data-start="1657"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🧾 <strong data-end="1679" data-start="1660">Customers Table</strong></span></p>
+<div><span data-state="closed" style="font-size: 19px; font-family: tahoma, sans-serif;"><button></button></span>
+<div>
+<table data-end="1799" data-start="1680" style="width: 26.3158%; border-collapse: collapse; border-width: 1px;" border="1">
+<thead data-end="1709" data-start="1680">
+<tr data-end="1709" data-start="1680">
+<th data-end="1693" data-start="1680" style="width: 58.0508%; border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">CustomerID</span></th>
+<th data-end="1709" data-start="1693" style="width: 41.9492%; border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Name</span></th>
+</tr>
+</thead>
+<tbody data-end="1799" data-start="1740">
+<tr data-end="1769" data-start="1740">
+<td data-end="1753" data-start="1740" style="width: 58.0508%; border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">1</span></td>
+<td data-end="1769" data-start="1753" style="width: 41.9492%; border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Alice Smith</span></td>
+</tr>
+<tr data-end="1799" data-start="1770">
+<td data-end="1783" data-start="1770" style="width: 58.0508%; border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">2</span></td>
+<td data-end="1799" data-start="1783" style="width: 41.9492%; border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Bob Jones</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p data-end="1820" data-start="1801"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🧾 <strong data-end="1820" data-start="1804">Orders Table</strong></span></p>
+<div><span data-state="closed" style="font-size: 19px; font-family: tahoma, sans-serif;"><button></button></span>
+<div>
+<table data-end="2025" data-start="1821" style="border-collapse: collapse; border-width: 1px;" border="1">
+<thead data-end="1861" data-start="1821">
+<tr data-end="1861" data-start="1821">
+<th data-end="1831" data-start="1821" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">OrderID</span></th>
+<th data-end="1844" data-start="1831" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">CustomerID</span></th>
+<th data-end="1861" data-start="1844" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Product</span></th>
+</tr>
+</thead>
+<tbody data-end="2025" data-start="1903">
+<tr data-end="1943" data-start="1903">
+<td data-end="1913" data-start="1903" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">1001</span></td>
+<td data-end="1926" data-start="1913" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">1</span></td>
+<td data-end="1943" data-start="1926" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Laptop</span></td>
+</tr>
+<tr data-end="1984" data-start="1944">
+<td data-end="1954" data-start="1944" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">1002</span></td>
+<td data-end="1967" data-start="1954" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">2</span></td>
+<td data-end="1984" data-start="1967" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Headphones</span></td>
+</tr>
+<tr data-end="2025" data-start="1985">
+<td data-end="1995" data-start="1985" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">1003</span></td>
+<td data-end="2008" data-start="1995" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">1</span></td>
+<td data-end="2025" data-start="2008" style="border-width: 1px;"><span style="font-size: 19px; font-family: tahoma, sans-serif;">USB Cable</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p data-end="2082" data-start="2027"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><strong data-end="2043" data-start="2027">Relationship</strong>: Each order “belongs to” one customer.</span></p>
+<p data-end="2118" data-start="2084"><span style="font-size: 19px; font-family: tahoma, sans-serif;">📚 Optional Example with 3 Tables:</span></p>
+<ul data-end="2162" data-start="2119">
+<li data-end="2133" data-start="2119" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2133" data-start="2121"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><strong data-end="2133" data-start="2121">Students</strong></span></p>
+</li>
+<li data-end="2148" data-start="2134" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2148" data-start="2136"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><strong data-end="2148" data-start="2136">Teachers</strong></span></p>
+</li>
+<li data-end="2162" data-start="2149" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2162" data-start="2151"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><strong data-end="2162" data-start="2151">Classes</strong></span></p>
+</li>
+</ul>
+<blockquote data-end="2222" data-start="2164">
+<p data-end="2222" data-start="2166"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Each class is taught by one teacher and has one student.</span></p>
+</blockquote>
+<hr data-end="2227" data-start="2224">
+<h3 data-end="2272" data-start="2229"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🧰 3. Introducing DB Browser for SQLite</span></h3>
+<p data-end="2406" data-start="2274"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><strong data-end="2284" data-start="2274">SQLite</strong> is a lightweight, file-based relational database.</span><br data-end="2337" data-start="2334"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><strong data-end="2351" data-start="2337">DB Browser</strong> is a graphical tool to manage SQLite databases easily.</span></p>
+<h4 data-end="2432" data-start="2408"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🚀 Steps to Set Up:</span></h4>
+<ol data-end="2715" data-start="2433">
+<li data-end="2497" data-start="2433" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2497" data-start="2436"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Download <a href="https://sqlitebrowser.org/" target="_new" rel="noopener" data-end="2496" data-start="2445">DB Browser for SQLite</a>.</span></p>
+</li>
+<li data-end="2571" data-start="2498" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2571" data-start="2501"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Open the tool and click <strong data-end="2543" data-start="2525">"New Database"</strong> to create a <code data-end="2565" data-start="2556">.sqlite</code> file.</span></p>
+</li>
+<li data-end="2715" data-start="2572" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2595" data-start="2575"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Add tables manually:</span></p>
+<ul data-end="2715" data-start="2599">
+<li data-end="2625" data-start="2599" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2625" data-start="2601"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Click <strong data-end="2625" data-start="2607">"Create Table"</strong></span></p>
+</li>
+<li data-end="2666" data-start="2629" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2666" data-start="2631"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Define columns and set primary keys</span></p>
+</li>
+<li data-end="2715" data-start="2670" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2715" data-start="2672"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Use <strong data-end="2691" data-start="2676">Foreign Key</strong> to create relationships</span></p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 data-end="2735" data-start="2717"><span style="font-size: 19px; font-family: tahoma, sans-serif;">🛠️ Activity:</span></h4>
+<p data-end="2800" data-start="2736"><span style="font-size: 19px; font-family: tahoma, sans-serif;">Create the <strong data-end="2760" data-start="2747">Customers</strong> and <strong data-end="2775" data-start="2765">Orders</strong> tables using DB Browser:</span></p>
+<ul data-end="2883" data-start="2801">
+<li data-end="2843" data-start="2801" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2843" data-start="2803"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><code data-end="2815" data-start="2803">CustomerID</code> as PRIMARY KEY in Customers</span></p>
+</li>
+<li data-end="2883" data-start="2844" style="font-size: 19px; font-family: tahoma, sans-serif;">
+<p data-end="2883" data-start="2846"><span style="font-size: 19px; font-family: tahoma, sans-serif;"><code data-end="2858" data-start="2846">CustomerID</code> as FOREIGN KEY in Orders</span></p>
+</li>
+</ul>
+<hr data-end="2888" data-start="2885">
+<h3 data-end="2917" data-start="2890"><span style="font-size: 19px; font-family: tahoma, sans-serif;">📊 4. Basic SQL Queries</span></h3>
+<h4 data-end="184" data-start="155"><span style="font-family: tahoma, sans-serif; font-size: 19px;">💡 What is an SQL Query?</span></h4>
+<p data-end="445" data-start="186"><span style="font-family: tahoma, sans-serif; font-size: 19px;"><strong data-end="193" data-start="186">SQL</strong> stands for <strong data-end="234" data-start="205">Structured Query Language</strong>. It’s the standard language used to communicate with a database.</span><br data-end="302" data-start="299"><span style="font-family: tahoma, sans-serif; font-size: 19px;">An <strong data-end="318" data-start="305">SQL query</strong> is a command you write to ask the database to do something — such as <strong data-end="400" data-start="388">retrieve</strong>, <strong data-end="412" data-start="402">insert</strong>, <strong data-end="424" data-start="414">update</strong>, or <strong data-end="439" data-start="429">delete</strong> data.</span></p>
+<p data-end="503" data-start="447"><span style="font-family: tahoma, sans-serif; font-size: 19px;">Think of it like asking a question in a specific format:</span></p>
+<ul data-end="570" data-start="504">
+<li data-end="530" data-start="504" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="530" data-start="506"><span style="font-family: tahoma, sans-serif; font-size: 19px;">“Show me all customers.”</span></p>
+</li>
+<li data-end="570" data-start="531" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="570" data-start="533"><span style="font-family: tahoma, sans-serif; font-size: 19px;">“Find all orders made by customer 1.”</span></p>
+</li>
+</ul>
+<p data-end="586" data-start="572"><span style="font-family: tahoma, sans-serif; font-size: 19px;">SQL helps you:</span></p>
+<ul data-end="685" data-start="587">
+<li data-end="618" data-start="587" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="618" data-start="589"><span style="font-family: tahoma, sans-serif; font-size: 19px;">Access and view specific data</span></p>
+</li>
+<li data-end="654" data-start="619" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="654" data-start="621"><span style="font-family: tahoma, sans-serif; font-size: 19px;">Combine data from multiple tables</span></p>
+</li>
+<li data-end="685" data-start="655" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="685" data-start="657"><span style="font-family: tahoma, sans-serif; font-size: 19px;">Filter data using conditions</span></p>
+</li>
+</ul>
+<h4 data-end="2934" data-start="2919"><span style="font-size: 19px; font-family: tahoma, sans-serif;">📌 Syntax:</span></h4>
+<p><span style="font-size: 19px; font-family: tahoma, sans-serif;"><img src="image_20250423145930738.png" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></span></p>
+<h4 data-end="3024" data-start="3004"><span style="font-family: tahoma, sans-serif; font-size: 19px;">👨‍💻 Examples:</span></h4>
+<ol data-end="3051" data-start="3026">
+<li data-end="3051" data-start="3026" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="3051" data-start="3029"><span style="font-family: tahoma, sans-serif; font-size: 19px;"><strong data-end="3051" data-start="3029">View all customers</strong><strong data-end="3051" data-start="3029"></strong><strong data-end="3051" data-start="3029"><br><img src="image_20250423145930804.png" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></strong></span></p>
+</li>
+<li data-end="3051" data-start="3026" style="font-family: tahoma, sans-serif; font-size: 19px;"><span style="font-family: tahoma, sans-serif; font-size: 19px;"><strong data-end="3051" data-start="3029">Get all orders for customer ID 1 </strong><strong data-end="3051" data-start="3029"></strong><strong data-end="3051" data-start="3029"><br><img src="image_20250423145930868.png" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></strong></span></li>
+</ol>
+<h4 data-end="731" data-start="675"><span style="font-size: 19px;">💻 How to Run SQL Queries in DB Browser for SQLite:</span></h4>
+<ol data-end="1009" data-start="733">
+<li data-end="778" data-start="733" style="font-size: 19px;">
+<p data-end="778" data-start="736"><span style="font-size: 19px;"><strong data-end="758" data-start="736">Open your database</strong> file in DB Browser.</span></p>
+</li>
+<li data-end="825" data-start="779" style="font-size: 19px;">
+<p data-end="825" data-start="782"><span style="font-size: 19px;">Go to the <strong data-end="809" data-start="792">“Execute SQL”</strong> tab at the top.</span></p>
+</li>
+<li data-end="873" data-start="826" style="font-size: 19px;">
+<p data-end="873" data-start="829"><span style="font-size: 19px;">Type your SQL query in the text editor area.</span></p>
+</li>
+<li data-end="942" data-start="874" style="font-size: 19px;">
+<p data-end="942" data-start="877"><span style="font-size: 19px;">Click the <strong data-end="908" data-start="887">“Play” button (▶)</strong> or press <strong data-end="924" data-start="918">F5</strong> to run the query.</span></p>
+</li>
+<li data-end="1009" data-start="943" style="font-size: 19px;">
+<p data-end="1009" data-start="946"><span style="font-size: 19px;">View your results in the “Data returned” section at the bottom.</span></p>
+</li>
+</ol>
+<p style="font-family: tahoma, sans-serif;font-size: 19px;"><span style="font-family: tahoma, sans-serif; font-size: 19px;"><strong data-end="3051" data-start="3029"><img src="image_20250423150855282.png" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></strong></span></p>
+<hr data-end="3343" data-start="3340">
+<h3 data-end="3356" data-start="3345"><span style="font-family: tahoma, sans-serif; font-size: 19px;">✅ Recap</span></h3>
+<ul data-end="3626" data-start="3358">
+<li data-end="3409" data-start="3358" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="3409" data-start="3360"><span style="font-family: tahoma, sans-serif; font-size: 19px;">A <strong data-end="3374" data-start="3362">database</strong> is a structured way to store data.</span></p>
+</li>
+<li data-end="3473" data-start="3410" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="3473" data-start="3412"><span style="font-family: tahoma, sans-serif; font-size: 19px;">A <strong data-end="3437" data-start="3414">relational database</strong> connects related tables using keys.</span></p>
+</li>
+<li data-end="3556" data-start="3474" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="3556" data-start="3476"><span style="font-family: tahoma, sans-serif; font-size: 19px;">We explored tables using <strong data-end="3510" data-start="3501">Excel</strong> before moving into <strong data-end="3555" data-start="3530">DB Browser for SQLite</strong>.</span></p>
+</li>
+<li data-end="3626" data-start="3557" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="3626" data-start="3559"><span style="font-family: tahoma, sans-serif; font-size: 19px;">You learned to run <strong data-end="3599" data-start="3578">basic SQL queries</strong> using <code data-end="3614" data-start="3606">SELECT</code> and <code data-end="3625" data-start="3619">JOIN</code>.</span></p>
+</li>
+</ul>
+<h3 data-end="3653" data-start="3633"><span style="font-family: tahoma, sans-serif; font-size: 19px;">🧪 Practice Task</span></h3>
+<p data-end="3687" data-start="3654"><span style="font-family: tahoma, sans-serif; font-size: 19px;">Create a new SQLite database and:</span></p>
+<ul data-end="3881" data-start="3688">
+<li data-end="3742" data-start="3688" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="3742" data-start="3690"><span style="font-family: tahoma, sans-serif; font-size: 19px;">Add two related tables (e.g., <code data-end="3729" data-start="3720">Authors</code> and <code data-end="3741" data-start="3734">Books</code>)</span></p>
+</li>
+<li data-end="3765" data-start="3743" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="3765" data-start="3745"><span style="font-family: tahoma, sans-serif; font-size: 19px;">Insert a few records</span></p>
+</li>
+<li data-end="3881" data-start="3766" style="font-family: tahoma, sans-serif; font-size: 19px;">
+<p data-end="3881" data-start="3768"><span style="font-family: tahoma, sans-serif; font-size: 19px;">Write 3 SQL queries: list all books, books by a specific author, and a join to show author names with book titles</span></p>
+</li>
+</ul></body></html>
