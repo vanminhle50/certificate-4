@@ -1,0 +1,53 @@
+Accessibility Standards
+https://www.w3.org/standards/webdesign/accessibility
+https://www.w3.org/WAI/standards-guidelines/wcag/
+
+Semantic Tags
+https://www.w3.org/standards/semanticweb/
+
+WCAG Checklist
+https://webaim.org/standards/wcag/checklist
+
+Colour Contrast
+https://webaim.org/resources/contrastchecker/
+https://color.adobe.com/create/color-contrast-analyzer
+
+HTML Validator
+https://validator.w3.org/
+
+CSS Validator
+https://jigsaw.w3.org/css-validator/
+
+JS Validation
+https://www.site24x7.com/tools/javascript-validator.html
+https://esprima.org/demo/validate.html
+https://beautifytools.com/javascript-validator.php
+https://validatejs.org/
+https://validatejavascript.com/
+
+Test if pages are logical and accessible
+Text base browser
+https://adresults.com/tools/text-browser-lynx-viewer
+
+Check if a page can be read without style sheets
+Google Chrome
+https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm
+
+Firefox
+https://addons.mozilla.org/en-US/firefox/addon/web-developer/
+
+Check if a page can operate in a Monochrome environment
+
+Google Chrome
+https://chrome.google.com/webstore/detail/grayscale-the-web-save-si/mblmpdpfppogibmoobibfannckeeleag/related?hl=en
+
+Firefox
+https://addons.mozilla.org/en-US/firefox/addon/grayscalefortabs/
+
+Text to speech
+Google Chrome
+https://chrome.google.com/webstore/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp/related?hl=en
+
+Firefox
+https://addons.mozilla.org/en-US/firefox/addon/read-aloud/
+
