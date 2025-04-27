@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. Open the following code in the browser and try to debug it.
+        const users = [
+            {name: 'Daniel', age: 35},
+            {name: 'Jamie'},
+            //2. Comma missing in array
+            {name: 'Jen', age: 34}
+            //3. Comma missing in JSON
+            //Note that there is a red underline in vsCode that provides a clue also
+            {name: 'Amiel' age: 7}
+        ]
+    
+        users.forEach(user => {
+            printUser(user)
+        })
+
+        //4. Missing brace 
+        function printUser(user)
+            //5. Note that when Jamie is output in the console the age is not defined. 
+            //We could fix this by adding in a if statement or ensuring Jamie has a age defined in the JSON
+            console.log(`User ${user.name} will be ${user.age +5} in five years`)
+        }
+    </script>
+</body>
+</html>
