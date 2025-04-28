@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-colour: #000000;
+    --secondary-colour: #A66D3C;
+    --tertiary-colour: #ff1500;
+    --light-colour: #fff;
+    --font-main: "Roboto", sans-serif;
+    --font-size-base: 16px;
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: var(--font-size-base);
+    color: var(--primary-colour);
+}
+
+nav {
+    z-index: 10;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-colour);
+    position: sticky;
+    top: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+nav .branch-logo {
+    color: var(--primary-colour);
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0px;
+}
+
+nav .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Styling for items in menu */
+nav .nav-menu li {
+    margin-left: 50px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Styling for link */
+nav .nav-menu li a {
+    text-decoration: none;
+    color: var(--primary-colour);
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: var(--secondary-colour);
+    }
+}
+
+/* Styling for active state of the link on the navigation bar */
+.current {
+    color: var(--tertiary-colour);
+}
+
+
+/* HERO PART ON THE WEBSITE */
+
+/* Stying for Hero */
+.hero {
+    /* Hero image for the website */
+    position: relative;
+    z-index: 1;
+    background-image: url('../assets/img/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    color: white;
+
+    /* Make a cover to blur hero make sure all header elements of hero to ability reader */
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(163, 163, 163, 0.2);
+        z-index: -1;
+    }
+}
+
+/* Styling header of the hero */
+.hero h1 {
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+    font-size: 70px;
+    color: var(--light-colour);
+    background-color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4),
+        0px 2px 1px rgba(0, 0, 0, 0.1),
+        0px 8px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+/* Styling for paragraph of the hero */
+.hero p {
+    font-size: 18px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.hero-button-wrap {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero button {
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    color: var(--light-colour);
+    background: var(--secondary-colour);
+    border: 1px var(--light-colour) solid;
+    margin: 20px;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        background-color: var(--light-colour);
+        color: var(--secondary-colour);
+        border: 1px var(--secondary-colour) solid;
+        transform: scale(1.1);
+    }
+
+}
+
+.opening-hours-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--secondary-colour);
+    color: var(--light-colour);
+}
+
+.opening-hours-section .opening-hours-button-wrap button {
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--light-colour);
+    color: var(--secondary-colour);
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+        background-color: var(--secondary-colour);
+        color: var(--light-colour);
+        border: 1px var(--light-colour) solid;
+        border-radius: 10px;
+    }
+}
+
+.card-section {
+    padding: 50px;
+}
+
+.card-section .card-section-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.card-section .card-section-header h2 {
+    color: var(--secondary-colour);
+    margin-bottom: 10px;
+}
+
+.card-section .card-section-header p {
+    width: 700px;
+    margin-bottom: 10px;
+}
+.card-section .card-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer{
+    display: flex;
+    padding: 50px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-main-content-wrap{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;    
+}
+.footer-main-content-wrap .footer-header-wrap{
+margin-right: 10px;
+}
+.footer-main-content-wrap .footer-content-wrap{
+    width: 40%;
+}
+.footer-main-content-wrap .footer-link-wrap{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

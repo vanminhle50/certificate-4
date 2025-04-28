@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="coffee-bean-white.png"
+   inkscape:export-xdpi="17.104378"
+   inkscape:export-ydpi="17.104378"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="beancoffee.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.50835204"
+     inkscape:cx="253.76115"
+     inkscape:cy="442.60666"
+     inkscape:window-width="1147"
+     inkscape:window-height="1000"
+     inkscape:window-x="-7"
+     inkscape:window-y="406"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       d="m 152.19626,108.82447 c -7.99153,8.46415 -27.18747,22.15681 -50.01761,35.07176 -23.913972,13.52806 -30.719789,40.26012 -32.591806,51.80976 a 36.468258,61.310265 48.6477 0 0 60.229906,-19.55126 36.468258,61.310265 48.6477 0 0 22.37951,-67.33026 z"
+       style="opacity:1;stroke:#ffffff;stroke-width:2.5792;fill:#ffffff;stroke-opacity:1"
+       id="path5" />
+    <path
+       d="m 147.77069,104.79216 a 36.468258,61.310265 48.6477 0 0 -66.142204,16.61191 36.468258,61.310265 48.6477 0 0 -21.928894,67.88216 36.468258,61.310265 48.6477 0 0 5.352128,4.28036 c 1.352434,-10.02569 7.414599,-39.49441 32.913753,-53.91919 22.640757,-12.80782 41.695487,-26.37537 49.805217,-34.85524 z"
+       style="opacity:1;stroke:#ffffff;stroke-width:2.5792;fill:#ffffff;stroke-opacity:1"
+       id="path4" />
+  </g>
+</svg>
