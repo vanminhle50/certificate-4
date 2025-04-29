@@ -1,0 +1,81 @@
+[B] RESPONSIVE CSS PROPERTIES
+
+We need to develop our website to be flexible to adjust to different devices and browser sizes.  There are a number of methods that we can use to achieve this.
+
+[1.4] ADJUSTING HBT FOR MODERN WEB DESIGN
+
+The next iteration of HBT will detail three specific changes, to highlight how we can modernise the website, using where possible - flexbox, grid & media queries!
+
+                          -------------------
+
+  - [A] [ABOUT PAGE] Re-use & Re-order content (recap)
+    - (i) COPY NAVBAR ONTO ABOUT & ADJUST
+      -> Make sure to have everything navigate to new ./about
+      -> Move .current to about link, on about page
+
+    - (ii) COPY TESTIMONIALS & ADJUST
+      -> Remove one testimonial (2 in total) & rename title to "What Our Guests Say"
+      -> Make vertical from horizontal = tx-flex to "testimonial-flex" & make it column-based 
+
+    - (iii) ADD FOOTER to bottom of page
+
+    - (iv) MOBILE-BASED NAVBAR
+      -> We add a new mobile.css stylesheet to target our navbar for mobile device sizes
+      -> We change our flexbox to be column based
+      -> Add some border at the bottom to show clear divisions between the boxes!
+
+                          -------------------
+
+  - [B] [ABOUT PAGE] NEW ABOUT-INFO SECTION
+    - (i) DROP IN CONTENT (pasted in class!)
+
+    - (ii) ADJUST 'CARD' CLASS
+      -> Remove width setting (should be done in components)
+      -> Will affect other areas with the cards, but can be adjusted too - look to final 05 example!
+      -> Add a border radius
+      -> Reduce internal padding to -> padding: 40px 20px;
+
+    - (iii) ADD IN GRID
+      -> This way we use grid to apportion the the FIVE ITEMS, not inline-block, which can break easily
+      -> Allows for more flexible spacing too
+    
+    - (iv) MOBILE-BASED GRID
+      -> We can use our new mobile.css stylesheet & alter the grid
+      -> Change to less columns (2 in total) and spread the boxes over more rows
+      -> Can also adjust minor items to better size the page
+
+                          -------------------
+
+  - [C] [HOME PAGE] UPDATE "INFO" SECTION (old ABOUT section)
+  
+    - (i) RENAME ID: id changed to "info", as we will need about on other page
+
+    - (ii) RE-ORDER MARKUP: web reads left-to-right, so content on left & image on right
+
+    - (iii) RESTRUCTURE SECTION: 
+      -> info div -> bg-light, py-3 and include the new .wide-container class
+      -> info-content -> move text-center to the h2 (plus text-heading)
+      -> btn -> to dark btn, wrapped in text-center div & make btn link to about page
+
+    - (iv) REMOVE FLOAT: We will replace with flexbox from the .wide-container (no longer need artificial height either!)
+
+    - (v) IMAGE CHANGES: Image from background to main image element & scale
+
+    - (vi) CONTENT CHANGES:
+      -> Add 3 small paragraphs, rather than a big slab & within a div
+      -> Apply a vertical flexbox to the info-content section, so we can scale it to the image 
+      -> clean up with padding, line-heights & font-sizes
+  
+                          -------------------
+
+NOTE - FINAL 05 ALSO ADJUSTS OTHER ASPECTS TO IMPROVE UX & MODERN DESIGN:
+
+  - Hero text sizing and spacing has been increased to improve visual hierarchy & CTA
+
+  - Logo has been stylised to draw attention to main logo and make it more memorable & UX feedback with hover!
+
+  - Home & Contact cards have been flexed & against background images, with high contrast to draw attention = improves visual hierarchy
+
+  - The footer has been improved to add socials & increase visibility
+
+  - Headings have been made consistent across the site

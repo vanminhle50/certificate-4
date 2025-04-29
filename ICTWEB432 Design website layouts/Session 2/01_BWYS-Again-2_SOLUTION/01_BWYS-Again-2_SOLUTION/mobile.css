@@ -1,0 +1,27 @@
+:root {
+  --primaryColor: #FFFFFF;
+  --complementaryColor: #082f49;
+  --complementaryLightColor: #0c4a6e;
+  --brandColor: #ecfeff;
+}
+
+/* HEADER SECTION */
+/* navbar */
+#navbar .nav-flex {
+  flex-direction: column;
+  text-align: center;
+}
+#navbar ul {
+  flex-direction: column;
+}
+#navbar h2,
+#navbar ul li a {
+  border-bottom: var(--complementaryLightColor) dotted 1px;
+}
+
+/* INFO ARTICLE SECTION */
+.info-article {
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+}

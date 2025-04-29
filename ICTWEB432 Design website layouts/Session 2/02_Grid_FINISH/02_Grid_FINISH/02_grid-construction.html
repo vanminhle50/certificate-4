@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Construction</title>
+  <!-- GRID "TEMPLATE" CONSTRUCTION:
+    - GOLDEN RULE: We need to structure our grid in CSS, which tells our HTML to behave along the CSS gridlines!
+    
+    - 1. COLUMNS & ROWS: We explicitly set a grid by creating columns and rows with:
+      - grid-template-columns
+      - grid-template-rows
+
+    - 2. GAPS: We can create gutters between columns and rows using - "gap"
+
+    - 3. SPANNING ACROSS ROWS/COLS: We can also make one item span beyond one grid col or row
+      - grid-column-start & grid-column-end
+      - grid-row-start & grid-row-end
+      - grid-row / grid-column: span #
+
+    - 4. GRID TEMPLATE AREAS:
+      - grid-template-areas
+      - grid-area
+  -->
+  <style>
+    /* GENERAL STYLES */
+    :root {
+      --paradise: #EF476F;
+      --crayola: #FFD166;
+      --green: #06D6A0;
+      --powder: #FFEABA;
+    }
+    body {
+      background-color: var(--powder);
+      text-align: center;
+      max-width: 1024px;
+      margin: 1rem auto;
+      font-weight: 800;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    section {
+      margin: 4rem;
+      border: 5px solid black;
+    }
+    .box {
+      padding: 2rem;
+    }
+    .red {
+      background-color: var(--paradise);
+      /* 3. SPANNING GRID */
+      /* grid-column-start: 1;
+      grid-column-end: 4; */
+
+      /* 4. GRID AREAS */
+      /* grid-area: header; */
+    }
+    .yellow {
+      background-color: var(--crayola);
+      /* 4. GRID AREAS */
+      /* grid-area: content; */
+    }
+    .green {
+      background-color: var(--green);
+      /* 3. SPANNING GRID */
+      /* grid-column-start: 2;
+      grid-column-end: 4; */
+      /* grid-column: span 2; */
+
+      /* 4. GRID AREAS */
+      /* grid-area: sidebar; */
+    }
+
+    /* [1] GRID COLS & ROWS 
+      - ROW: Alters height & how many rows - more numbers, more rows specified
+      - COL: Alters width & how many columns - more numbers, more rows
+
+      - PX vs FR (fraction): Pixels are absolute, but ignore the items content/padding - fr preserves the box-model set
+        -> In this case, the 1fr for our box is the 2rem of padding!
+        -> Fraction (fr) distributes the EXTRA space, beyond that of the items inherent sizing (kind of like flex-grow) - avoid %
+
+        -> If you have repetetive sized rows, you can use "repeat" property
+    */
+    .grid-container-1 {
+      display: grid;
+
+      grid-template-rows: 50px 100px 150px;
+      grid-template-rows: 1fr 2fr 3fr;
+
+      grid-template-columns: 100px 200px 100px;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      grid-template-columns: repeat(3, 1fr);
+    }
+    /* [2] GRID GAPS: Gap will EAT into the fraction space evenly */
+    .grid-container-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+    /* [3] GRID SPANNING 
+      - Grid is super flexible, and we can allow items to spread across multiple rows/columns
+      - TWO KEY THINGS TO REMEMBER:
+        - A. TARGET ITEM: As we are altering SPECIFIC ITEM behaviour, you need to add the span properties to THOSE ITEMS. 
+        - B. SIZE OF SPAN: We can EITHER (i) tell the item to span a number of cols/rows OR (ii) tell it to start and end at certain grid lines
+
+      - GRID LINES?
+        -> Behind the scenes, CSS grid is creating grid lines which our HTML is stuck onto
+        -> We can see these grid lines when we inspect the element & select the grid
+        -> Grids will start at gridline 1 and end +1 for number of grids (ie. 3 cols = 4 grid col lines)    
+    */
+    .grid-container-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* SEE .red & .green for spanning grids */
+    }
+    /* [4] GRID TEMPLATE AREAS 
+      - Grid areas can also be named with the grid-template-areas property - names can then be referenced to position grid items
+      - Sets of names should be surrounded in single or double quotes, and each name separated by a whitespace.
+      - Each set of names defines a row, and each name defines a column.
+    */
+    .grid-container-4 {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+        "header header"
+        "content sidebar"
+      ;
+      /* 
+        - SEE all colours classes for our grid-area declarations.
+        - NOTE: Don't reference the areas in quotes in the items
+        - PLAY: Change which colour references which area - note how we can suddenly move items around AT EASE!
+      */
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. GRID COLUMNS & ROWS -->
+  <section class="grid-container-1">
+    <div class="box red">1</div>
+    <div class="box yellow">2</div>
+    <div class="box green">3</div>
+  </section>
+
+  <!-- 2. GRID GAPS -->
+  <section class="grid-container-2">
+    <div class="box red">1</div>
+    <div class="box yellow">2</div>
+    <div class="box green">3</div>
+  </section>
+
+  <!-- 3. GRID SPANNING -->
+  <section class="grid-container-3">
+    <div class="box red">1</div>
+    <div class="box yellow">2</div>
+    <div class="box green">3</div>
+  </section>
+
+  <!-- 3. GRID TEMPLATE AREAS -->
+  <section class="grid-container-4">
+    <div class="box red">1</div>
+    <div class="box yellow">2</div>
+    <div class="box green">3</div>
+  </section>
+</body>
+</html>

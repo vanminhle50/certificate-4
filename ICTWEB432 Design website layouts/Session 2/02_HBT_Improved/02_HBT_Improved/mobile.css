@@ -1,0 +1,36 @@
+:root {
+  --primaryColor: #333333;
+  --primaryLightColor: #444444;
+  --primaryDarkColor: #222222;
+  --complementaryColor: #FFFFFF;
+  --complementaryDarkColor: #cbd5e1;
+  --brandColor: #fdba74;
+  --brandLightColor: #ffedd5;
+  --brandDarkColor: #fb923c;
+}
+
+/* [COMPONENTS] */
+/* NAVBAR COMPONENT: MOBILE */
+#navbar .nx-flex,
+#navbar ul {
+  flex-direction: column;
+  text-align: center;
+}
+#navbar h2,
+#navbar ul li a { 
+  border-bottom: var(--primaryLightColor) dotted 1px;
+}
+
+/* [ABOUT PAGE] */
+/* ABOUT INFO: MOBILE */
+#about-info .container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+#about-info .about-content {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#about-info .about-content p {
+  padding: 0;
+}

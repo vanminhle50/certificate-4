@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Stylesheets</title>
+    <!-- 1. LINKING TO MOBILE CSS 
+      - We can also link the CSS for a set breakpoint (like mobile width) to a separate style sheet, to help keep our CSS coherent! 
+      - This way, rather than nest possibly MANY LINES of CSS for mobile, we can put it just in a separate stylesheet, which will APPLY OVER our standard stylesheet, where the breakpoint is ACTIVE
+
+      - SEE mobile.css & the <link> with the media attribute!
+
+      - NOTE: You could create MORE <link> with OTHER breakpoint stylesheets. 
+
+        -> ORDER is important - make sure the main stylesheet (default) for desktop is added in last.  Helps order your stylesheets.
+
+        -> This method can avoid using the @media rule, which some people find tricky to remember how to structure
+    -->
+
+    <!-- 2. SYNTAX FOR MEDIA 
+      - You may see the "screen and" syntax included with declarations - this just means your targeting screen-based devices, like mobiles, tablets & dekstops
+
+      - EXAMPLE: You can target only "print" based devices like screen readers, by using "print and"
+
+      - SEE MORE: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax
+    
+    -->
+    <style>
+      /* CSS Base */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: gray;
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+      }
+      h1 {
+        display: none;
+      }
+
+      /* Desktop (Widescreen) */
+      @media screen and (min-width: 1201px) {
+        body {
+          background: black;
+        }
+        .widescreen h1 {
+          display: block;
+        }
+      }
+
+      /* Desktop (standard) */
+      @media screen and (min-width: 769px) and (max-width: 1200px) {
+        body {
+          background: green;
+        }
+        .normal h1 {
+          display: block;
+        }
+      }
+
+      /* Tablet */
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        body {
+          background: blue;
+        }
+        .tablet h1 {
+          display: block;
+        }
+      }
+
+      /* Mobile */
+      @media screen and (max-width: 480px) {
+        body {
+          background: red;
+        }
+        .smartphone h1 {
+          display: block;
+        }
+      }
+
+      /* Landscape */
+      @media screen and (max-height: 500px) {
+        body {
+          background: orange;
+        }
+        .landscape h1 {
+          display: block;
+        }
+      }
+    </style>
+
+    <!-- 1. MOBILE CSS STYLESHEET -->
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:768px)"
+      href="css/mobile.css"
+    />
+  </head>
+  <body>
+    <div class="widescreen"><h1>Widescreen</h1></div>
+    <div class="normal"><h1>Normal</h1></div>
+    <div class="tablet"><h1>Tablet</h1></div>
+    <div class="smartphone"><h1>Smartphone</h1></div>
+    <div class="landscape"><h1>Landscape</h1></div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display - Grid</title>
+  <!-- EXAMPLE: GRID vs FLEX for COMPLEX LAYOUT
+    - Grid really shines vs. flex, when you're trying to create layouts that are fluid and inconsistent - see below.
+  -->
+
+  <style>
+    /* GENERAL STYLES */
+    :root {
+      --paradise: #EF476F;
+      --crayola: #FFD166;
+      --green: #06D6A0;
+      --powder: #FFEABA;
+    }
+    body {
+      background-color: var(--powder);
+      text-align: center;
+      max-width: 1024px;
+      margin: 1rem auto;
+      font-weight: 800;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    section {
+      margin: 8em auto;
+      border: 5px solid black;
+    }
+    .box {
+      padding: 2rem;
+      flex-grow: 1;
+    }
+    .red {
+      background-color: var(--paradise);
+    }
+    .yellow {
+      background-color: var(--crayola);
+    }
+    .green {
+      background-color: var(--green);
+      grid-column: span 2;
+    }
+
+    /* A. FLEXBOX: */
+    /* KEY ISSUE: We need to alter our HTML to make our flexbox work the way we want it to! */
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      width: 360px;
+      /* See box for "flex-grow" */
+    }
+    .wrapper {
+      display: flex;
+    }
+
+    /* B. GRID SETUP: */
+    /* KEY DIFFERENCE: Grid NEVER has to ALTER the DOM elements - we due layout PURELY by CSS */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      width: 360px;
+      /* See .green for "grid-column" to make it span two columns (2fr) */
+    }
+  </style>
+</head>
+<body>
+  <!-- A. FLEXBOX -->
+  <section class="flex-container">
+    <div class="wrapper">
+      <div class="box red">1</div>
+      <div class="box yellow">2</div>
+    </div>
+    <div class="box green">3</div>
+  </section>
+
+  <!-- B. GRID -->
+  <section class="grid-container">
+    <div class="box red">1</div>
+    <div class="box yellow">2</div>
+    <div class="box green">3</div>
+  </section>
+</body>
+</html>
