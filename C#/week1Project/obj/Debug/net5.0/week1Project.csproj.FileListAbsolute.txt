@@ -13,3 +13,19 @@ C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\refint\we
 C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\week1Project.pdb
 C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\week1Project.genruntimeconfig.cache
 C:\Users\Student\Desktop\HolmesglenIT\C#\week1Project\obj\Debug\net5.0\ref\week1Project.dll
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\bin\Debug\net5.0\week1Project.exe
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\bin\Debug\net5.0\week1Project.deps.json
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\bin\Debug\net5.0\week1Project.runtimeconfig.json
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\bin\Debug\net5.0\week1Project.runtimeconfig.dev.json
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\bin\Debug\net5.0\week1Project.dll
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\bin\Debug\net5.0\week1Project.pdb
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\week1Project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\week1Project.AssemblyInfoInputs.cache
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\week1Project.AssemblyInfo.cs
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\week1Project.csproj.CoreCompileInputs.cache
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\week1Project.sourcelink.json
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\week1Project.dll
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\refint\week1Project.dll
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\week1Project.pdb
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\week1Project.genruntimeconfig.cache
+D:\Holmesglen - Certificate IV\certificate-4\C#\week1Project\obj\Debug\net5.0\ref\week1Project.dll
