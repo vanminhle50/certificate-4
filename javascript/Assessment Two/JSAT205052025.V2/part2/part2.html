@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2 || Assessment 2 - JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Add CSS library of Prism.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <h1><span class="highlight-text">Assessment 2:</span> Part 2</h1>
+        <div class="header-content-wrap">
+            <div style="min-width: 500px;"><p>// Certificate IV in Information Technology<br>
+                // Holmesglen Institute, VIC, Australia<br>
+                // Student Name: Van Minh Le<br>
+                // Student ID: 100693330</p>
+            </div>
+            <div style="width: 60%;"><p>In this part, you are required to design and implement a range of algorithms to operate an object with given input. 
+                The following operations need to be done using JavaScript programming language and the result need to be verified using browser.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Javascript Code</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="note bold">Step 01:</span> Build an object called “myMovie” with the following
+                            properties and data.
+                            <ul>
+                                <li>Title: The longest day</li>
+                                <li>Year: 1964</li>
+                            </ul>
+                        </td>
+                        <td>
+
+                            <pre><code class="language-javascript">// Define an object "myMovie" with initial properties "title" and "year"
+const myMovie = { title: "The longest day", year: 1964 };</code></pre>
+                        </td>
+                        <td id="input-object">Not Found</td>
+                    </tr>
+                    <tr>
+                        <td><span class="note bold">Step 02:</span> Add in the properties:
+                            <ul>
+                                <li>Rating: 5</li>
+                                <li>Summary: World War II movie about the Normandy landings</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <pre><code class="language-javascript">// Add a new property "rating" with a value of 5 to the "myMovie" object
+myMovie.rating = 5;
+// Add a new property "summary" with a description of the movie to the "myMovie" object
+myMovie.summary = "World War II movie about the Normandy landings";</code></pre>
+                        </td>
+                        <td id="add-properties-object">Not Found</td>
+                    </tr>
+                    <tr>
+                        <td><span class="note bold">Step 03:</span> Change the rating to 4 and change the year to 1962
+                        </td>
+                        <td>
+                            <pre><code class="language-javascript">
+// Update the "rating" property to 4
+myMovie.rating = 4;
+// Update the "year" property to 1962
+myMovie.year = 1962;</code></pre>
+                        </td>
+                        <td id="changing-properties-object"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="note bold">Step 04:</span> Remove the Summary property</td>
+                        <td>
+                            <pre><code class="language-javascript">// Remove the "summary" property from the "myMovie" object
+delete myMovie.summary;</code></pre>
+                        </td>
+                        <td id="delete-properties-object">Not Found</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <!-- Add JavaScript library of Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="./part2.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
     --primary-colour: #000000;
     --secondary-colour: #A66D3C;
@@ -34,6 +32,8 @@ nav {
     padding-left: 50px;
     padding-right: 50px;
 }
+
+
 
 nav .branch-logo {
     color: var(--primary-colour);
