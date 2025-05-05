@@ -88,7 +88,7 @@ Allows sorting the movie list in various ways:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Clone the repository or download the project.
 2. Open `index.html` in any modern web browser.
@@ -96,7 +96,7 @@ Allows sorting the movie list in various ways:
 
 ---
 
-## 📌 Notes
+## Notes
 
 - Ensure all fields are filled before submitting a movie.
 - The Movie ID must be unique for each movie.
@@ -105,12 +105,12 @@ Allows sorting the movie list in various ways:
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Developed by Van Minh Le — feel free to improve or extend this project!
 
 ---
 
-## 📄 License
+## License
 
 This project is open-source and free to use. Feel free to modify, share, and contribute!
