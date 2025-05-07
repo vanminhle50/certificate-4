@@ -1,0 +1,25 @@
+/* CSS RESETS */
+p {
+  margin: 0;
+}
+
+/* EXAMPLE OF BOOTSTRAP OVERWRITE - button colours */
+.customBtnColor {
+  background-color: #4f46e5;
+  color: #fff;
+}
+.customBtnColor:hover {
+  background-color: #3730a3;
+  color: #e0e7ff;
+}
+
+/* ADDITION OF OUR OWN CUSTOM CSS WITH BOOTSTRAP */
+.icon {
+  width: 2.5rem;
+}
+
+.footer {
+  width: 100%;
+  line-height: 60px;
+  font-size: 14px;
+}

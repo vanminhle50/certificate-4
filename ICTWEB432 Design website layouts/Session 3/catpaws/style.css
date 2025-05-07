@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --primaryColor: #FFFFFF;
+  --complementaryColor: #082f49;
+  --complementaryLightColor: #0c4a6e;
+  --brandColor: #ecfeff;
+}
+
+/* DOCUMENT-WIDE CSS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+h1, h2, p {
+  color: var(--complementaryColor);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p, a {
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+/* COMPONENTS */
+.container {
+  max-width: 1400px;
+  margin: auto;
+  overflow: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--complementaryColor);
+  color: var(--primaryColor);
+  border: none;
+  padding: 13px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--complementaryLightColor);
+    color: var(--brandColor);
+  }
+}
+
+/* HEADER SECTION */
+/* navbar */
+#navbar {
+  background: var(--complementaryColor);
+  color: var(--primaryColor);
+  overflow: auto;
+}    
+#navbar .nav-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#navbar a {
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+#navbar h2 {
+  padding: 20px;
+  margin: 0;
+}
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#navbar ul li a {
+  display: block;
+  padding: 26px;
+
+  &:hover {
+    background-color: var(--complementaryLightColor);
+    color: var(--brandColor);
+  }
+}
+
+/* hero */
+header #hero {
+  /* SETTING BOX DIMENSIONS (we want to make the "cat" area void of content, so put padding over it) */
+  height: 90vh;
+  padding-bottom: 35vh;
+
+  /* SETTING THE BACKGROUND IMAGE */
+  background-image: url("./img/cat-splash.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  /* CENTERING & FLEXING CONTENT IN HEADER */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* INFO ARTICLE SECTION */
+section {
+  padding: 60px 0 40px;
+}
+
+.info-article {
+  background-color: var(--primaryColor);
+  padding: 100px;
+
+  /* FLEXING ROW */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+}
+
+/* LEFT FLEXBOX */
+#info-left {
+  width: 100%;
+}
+#info-left img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* RIGHT FLEXBOX */
+.info-article ul {
+  margin: 20px 0;
+  padding: 30px 40px;
+  border-radius: 5px;
+  background-color: var(--brandColor);
+}
+
+.info-article li {
+  margin-bottom: 0.6rem;
+  font-size: 1em;
+}
+
+/* FOOTER SECTION */
+#footer {
+  background: var(--complementaryColor);
+  color: var(--primaryColor);
+  padding: 20px;
+  font-size: 0.9em;
+  text-align: center;
+}

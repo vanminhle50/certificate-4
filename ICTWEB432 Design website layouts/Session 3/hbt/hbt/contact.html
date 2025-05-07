@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FontAwesome CDN -->
+  <script src="https://kit.fontawesome.com/cfa935a88a.js"crossorigin="anonymous"></script>
+  <!-- LINKED EXTERNAL STYLESHEET + NEW MOBILE STYLESHEET -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="./mobile.css">
+  <title>Hotel BT | Contact</title>
+</head>
+<body>
+  <header>
+    <!-- Div Section 1: Navbar -->
+    <nav id="navbar">
+      <div class="container nx-flex">
+        <h2><a href="./index.html">
+          <div class="brand-logo">
+            hotel<span>BT</span>
+          </div>
+        </a></h2>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html" class="current">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- NEW DIV 2: Contact Section -->
+  <section id="contact-form" class="py-2">
+    <div class="container">
+      <h1 class="text-heading"><span class="text-primary">Contact</span> Us</h1>
+      <p>Please fill out the form below to contact us</p>
+      <form action="#">
+        <!-- INPUT GROUP 1: NAME -->
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" id="name">
+        </div>
+        <!-- INPUT GROUP 2: EMAIL -->
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email">
+        </div>
+        <!-- INPUT GROUP 3: MESSAGE -->
+        <div class="input-group">
+          <label for="message">Message</label>
+          <textarea id="message"></textarea>
+        </div>
+        <!-- INPUT 4: SUBMIT BUTTON -->
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- NEW DIV 3: Contact Cards Section -->
+  <section id="contact-info" class="text-center bg-dark py-1">
+    <div class="container">
+      <div class="card">
+        <i class="fas fa-hotel fa-3x"></i>
+        <h3 class="text-standard">Location</h3>
+        <p>50 Main st, Boston MA</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-phone fa-3x"></i>
+        <h3 class="text-standard">Phone Number</h3>
+        <p>+61 400 000 001</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-envelope fa-3x"></i>
+        <h3 class="text-standard">Email Address</h3>
+        <p>frontdesk@hotelbt.co</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Div Section 4: Footer -->
+  <footer id="footer">
+    <div class="text-center">     
+       <!-- Top Footer -->
+      <div class="top-footer">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="far fa-envelope"></i></a>
+      </div>
+      <div class="bottom-footer container">
+        <h4>Hotel BT &copy; 2024</h4>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

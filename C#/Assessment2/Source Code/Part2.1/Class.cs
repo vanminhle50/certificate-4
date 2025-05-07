@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 public class Shape
 {
     // Name of the shape
@@ -37,12 +39,12 @@ public class Circle : Shape
     // Override method to calculate the area of the circle
     public override double Area()
     {
-        return Math.PI * radius * radius; // Area = π * r^2
+        return Math.PI * radius * radius; // Area = PI * r^2
     }
     // Override method to calculate the perimeter of the circle
     public override double Perimeter()
     {
-        return 2 * Math.PI * radius; // Perimeter = 2 * π * r
+        return 2 * Math.PI * radius; // Perimeter = 2 * PI * r
     }
 } 
 // Derived class for Rectangle
@@ -90,15 +92,21 @@ public class Square : Rectangle
 // Derived class for Trapezoid
 public class Trapezoid : Shape
 {
-    // Lengths of the two parallel sides and the height of the trapezoid
+   
+    // Base lengths and side lengths
     private double base1;
     private double base2;
+    private double side1;
+    private double side2;
+    // Height of the trapezoid
     private double height;
-    // Constructor to initialize the lengths and height, and name
-    public Trapezoid(double base1, double base2, double height) : base("Trapezoid")
+    // Constructor to initialize the base lengths, side lengths, height and name
+    public Trapezoid(double base1, double base2, double side1, double side2, double height) : base("Trapezoid")
     {
         this.base1 = base1;
         this.base2 = base2;
+        this.side1 = side1;
+        this.side2 = side2;
         this.height = height;
     }
     // Override method to calculate the area of the trapezoid
@@ -109,6 +117,6 @@ public class Trapezoid : Shape
     // Override method to calculate the perimeter of the trapezoid
     public override double Perimeter()
     {
-        return base1 + base2 + 2 * Math.Sqrt(height * height + Math.Pow((base2 - base1) / 2, 2)); // Perimeter = b1 + b2 + 2 * sqrt(h^2 + ((b2 - b1) / 2)^2)
+        return base1 + base2 + side1 + side2;// Perimeter = b1 + b2 + s1 + s1
     }
 }

@@ -1,0 +1,88 @@
+:root {
+  --primaryColor: #333333;
+  --primaryLightColor: #444444;
+  --primaryDarkColor: #222222;
+  --complementaryColor: #FFFFFF;
+  --complementaryDarkColor: #cbd5e1;
+  --brandColor: #fdba74;
+  --brandLightColor: #ffedd5;
+  --brandDarkColor: #fb923c;
+}
+
+/* [UTILITIES] */
+/* text-sizing */
+.text-heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.text-lead {
+  font-size: 2rem;
+}
+.text-standard {
+  font-size: 1.1em;
+}
+.text-minor {
+  font-size: 1em;
+}
+.text-tiny {
+  font-size: 0.8em;
+}
+
+/* [COMPONENTS] */
+/* NAVBAR COMPONENT: MOBILE */
+#navbar .nx-flex,
+#navbar ul {
+  flex-direction: column;
+  text-align: center;
+}
+#navbar h2,
+#navbar ul li a { 
+  border-bottom: var(--primaryLightColor) dotted 1px;
+}
+
+/* [HOME PAGE] */
+/* HERO */
+#hero .hero-content {
+  height: 100dvh;
+}
+#hero .hero-content h1 {
+  padding: 1rem 1rem;
+  font-size: 50px;
+}
+#hero .hero-content p {
+  line-height: 1.8em;
+}
+
+/* HOME INFO SECTION: MOBILE */
+#info .info-img{
+  display:none;
+}
+
+#home-info .info-content{
+  float:none;
+  width:100%;
+}
+
+/* FEATURES SECTION: MOBILE */
+#features {
+  padding: 3rem;
+}
+#features .wide-container {
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* [ABOUT PAGE] */
+/* ABOUT INFO: MOBILE */
+#about-info .container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+#about-info .about-content {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#about-info .about-content p {
+  padding: 0;
+}
