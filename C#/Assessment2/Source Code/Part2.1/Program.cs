@@ -2,6 +2,19 @@
 {
     static void Main(string[] args)
     {
+        // Creat a method to check positive input.
+        static double positiveInputCheck(string message)
+        {
+            double value;
+            do
+            {
+                Console.Write(message);
+                if (double.TryParse(Console.ReadLine(), out value) && value > 0)
+                    return value;
+                Console.WriteLine("The demention must be a non-negative number. Please try again");
+            } while (true);
+        }
+
         bool exit = false;
 
         while (!exit)
@@ -18,57 +31,66 @@
             Console.WriteLine("| 5. Exit              |");
             Console.WriteLine("------------------------");
             Console.Write("Can you please select a case (1-5): ");
-            int choice = Convert.ToInt32(Console.ReadLine());
+            string choice = Console.ReadLine();
             Console.WriteLine("------------------------");
 
             Shape shape = null;
 
             switch (choice)
             {
-                case 1:
+                case "1":
                     Console.WriteLine("You selected | Square |");
                     Console.WriteLine("-------------------------");
-                    Console.Write("Enter side length: ");
-                    double squareSide = Convert.ToDouble(Console.ReadLine());
+                    double squareSide = positiveInputCheck(" Enter Square Side Length: ");
                     shape = new Square(squareSide);
                     break;
-
-                case 2:
+                case "2":
                     Console.WriteLine("You selected | Rectangle |");
                     Console.WriteLine("-------------------------");
-                    Console.Write("Enter length: ");
-                    double rectLength = Convert.ToDouble(Console.ReadLine());
-                    Console.Write("Enter width: ");
-                    double rectWidth = Convert.ToDouble(Console.ReadLine());
+                    double rectLength,
+                        rectWidth;
+                    rectLength = positiveInputCheck("Enter Rectangle Length: ");
+                    rectWidth = positiveInputCheck("Enter Rectangle Width: ");
                     shape = new Rectangle(rectLength, rectWidth);
                     break;
-
-                case 3:
+                case "3":
                     Console.WriteLine("You selected | Circle |");
                     Console.WriteLine("-------------------------");
-                    Console.Write("Enter radius: ");
-                    double radius = Convert.ToDouble(Console.ReadLine());
+                    double radius = positiveInputCheck("Enter Radius: ");
                     shape = new Circle(radius);
                     break;
-
-                case 4:
+                case "4":
                     Console.WriteLine("You selected | Trapezoid |");
                     Console.WriteLine("-------------------------");
-                    Console.Write("Enter base1: ");
-                    double base1 = Convert.ToDouble(Console.ReadLine());
-                    Console.Write("Enter base2: ");
-                    double base2 = Convert.ToDouble(Console.ReadLine());
-                    Console.Write("Enter height: ");
-                    double height = Convert.ToDouble(Console.ReadLine());
-                    Console.Write("Enter side1: ");
-                    double side1 = Convert.ToDouble(Console.ReadLine());
-                    Console.Write("Enter side2: ");
-                    double side2 = Convert.ToDouble(Console.ReadLine());
+                    double base1,
+                        base2,
+                        height,
+                        side1,
+                        side2;
+                    do
+                    {
+                        base1 = positiveInputCheck("Enter Base 01: ");
+                        base2 = positiveInputCheck("Enter Base 02: ");
+                        height = positiveInputCheck("Enter Height: ");
+                        side1 = positiveInputCheck("Enter Side 01 ");
+                        side2 = positiveInputCheck("Enter Side 02 ");
+                        double d1 = Math.Sqrt(base1 * base1 - height * height);
+                        double d2 = Math.Sqrt(base2 * base2 - height * height);
+
+                        if (Math.Abs(base1 - base2) - (d1 + d2) <= 0)
+                        {
+                            Console.WriteLine("It is a Trapezoid. Choice a property!");
+                            break;
+                        }
+                        else
+                            Console.WriteLine("It is not a Trapezoid. Please try again.");
+                    } while (true);
+
                     // Create a new Trapezoid object with the provided dimensions
                     shape = new Trapezoid(base1, base2, side1, side2, height);
                     break;
 
-                case 5:
+                case "5":
                     exit = true;
                     continue;
 
@@ -90,21 +112,21 @@
                 Console.WriteLine("| 3. Back to main menu |");
                 Console.WriteLine("------------------------");
                 Console.Write("Can you please select a case (1-3): ");
-                int calcChoice = Convert.ToInt32(Console.ReadLine());
+                string calcChoice = Console.ReadLine();
                 Console.WriteLine("------------------------");
                 double result = 0;
 
-                if (calcChoice == 1)
+                if (calcChoice == "1")
                 {
                     result = shape.Area();
                     Console.WriteLine($"The area is: {result:F2}");
                 }
-                else if (calcChoice == 2)
+                else if (calcChoice == "2")
                 {
                     result = shape.Perimeter();
                     Console.WriteLine($"The perimeter is: {result:F2}");
                 }
-                else if (calcChoice == 3)
+                else if (calcChoice == "3")
                 {
                     backMenu = true;
                     break;
@@ -117,7 +139,9 @@
                 if (!backMenu)
                 {
                     Console.WriteLine("------------------------");
-                    Console.WriteLine("Would you like to calculate another property? (Press Y for Yes, or any other key to exit):");
+                    Console.WriteLine(
+                        "Would you like to calculate another property? (Press Y for Yes, or any other key to exit):"
+                    );
                     string response = Console.ReadLine().ToLower();
                     if (response != "y")
                     {
