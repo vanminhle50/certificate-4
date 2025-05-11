@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản đồ Google với Marker đỏ</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        function initMap() {
+            var location = {lat: -37.9080749, lng: 144.9902319}; // Tọa độ Local Café
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+            });
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #map {
+            width: 600px;
+            height: 450px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body onload="initMap()">
+    <h1>Local Café - Moorabbin</h1>
+    <p>Địa chỉ: 01 Cochranes Rd, Moorabbin VIC 3189</p>
+    <div id="map"></div>
+</body>
+</html>

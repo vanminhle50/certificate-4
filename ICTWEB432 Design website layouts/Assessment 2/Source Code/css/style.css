@@ -1,21 +1,100 @@
+/*---------------------------------------------------------
+ GLOBAL VARIABLES & BASE RESET
+---------------------------------------------------------*/
+
+/* Root-level CSS variables for consistent theming */
 :root {
-    --primary-colour:#212529;
+    --primary-colour: #212529;
     --secondary-colour: #A66D3C;
     --tertiary-colour: #ff1500;
     --light-colour: #fff;
     --font-main: "Roboto", sans-serif;
     --font-size-base: 16px;
-    --border-radius: 8px;
+    --border-radius-card: 15px;
+    --border-radius-img: 10px;
 }
 
+/* Box-sizing reset for layout consistency */
 * {
     box-sizing: border-box;
 }
-body{
-/* background-color: #8C7158; */
-/* background-color: #212529; */
-    
+
+/*---------------------------------------------------------
+ NAVBAR STYLES
+---------------------------------------------------------*/
+/* Nav link hover effect for interaction feedback */
+.nav-link:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease;
 }
+
+/*---------------------------------------------------------
+ OPENING HOURS SECTION BUTTONS
+---------------------------------------------------------*/
+
+/* Button style across the section */
+.opening-hours-section .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+/* Secondary-style button (About) */
+.opening-hours-section .btn-about {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.opening-hours-section .btn-about:hover {
+    border: 2px solid #ffaa5f;
+    transform: scale(1.05);
+}
+
+/* Primary-style button (Contact) */
+.opening-hours-section .btn-contact {
+    background-color: #A66D3C;
+    color: white;
+}
+
+.opening-hours-section .btn-contact:hover {
+    border: 2px solid white;
+    transform: scale(1.05);
+}
+
+/* Heading level 2 styles */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+/* Highlighted span inside h2 */
+h2 span {
+    color: var(--secondary-colour);
+}
+
+/*---------------------------------------------------------
+ CARD COMPONENT STYLES
+---------------------------------------------------------*/
+
+/* Card container styles */
+.card {
+    background-color: var(--light-colour);
+    border-radius: var(--border-radius-card);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
 .container {
     font-family: var(--font-main);
     font-size: var(--font-size-base);
@@ -23,8 +102,190 @@ body{
     max-width: 1440px;
 }
 
-
-footer {
-    margin: auto;
-    max-width: 1440px;
+/* Card hover effect */
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    scale: 1.02;
+    transition: all 0.3s ease-in-out;
 }
+
+/* Card link/button styles */
+.card a {
+    margin-top: 1rem;
+    background-color: var(--light-colour);
+    border: 1px solid var(--secondary-colour);
+    border-radius: var(--border-radius-card);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--secondary-colour);
+
+    &:hover {
+        background-color: var(--secondary-colour);
+        color: var(--light-colour);
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+/* Card image styling */
+.card img {
+    width: 100%;
+    border-radius: var(--border-radius-img);
+    height: auto;
+    box-shadow: 0 2px 10px rgba(77, 77, 77, 0.404);
+}
+
+.card .card-body {
+    padding: 10px;
+    min-height: 10rem;
+}
+
+/* Card paragraph - truncate after 2 lines */
+.card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Card title overflow handling */
+.card h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Rating stars styling */
+.card .card-rating i {
+    color: #ffc107;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Ensures layout consistency for text blocks */
+.card .card-body .card-title {
+    min-height: 2rem;
+}
+
+.card .card-body .card-text {
+    min-height: 4rem;
+}
+
+.card .card-body .card-link {
+    min-height: 1rem;
+}
+
+
+
+/*---------------------------------------------------------
+ FOOTER STYLES
+---------------------------------------------------------*/
+/* Footer general text color */
+
+.information-wrap {
+    color: rgb(255, 255, 255);
+}
+
+/* Footer tab styling */
+.footer-container .footer-content .quick-link {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Footer section headings */
+.footer-header-text {
+    font-size: 20px;
+    color: seagreen;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Decorative underline for footer headings */
+.footer-header-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+/* Footer navigation links */
+.footer-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: seagreen;
+}
+
+/* Social media icons container */
+.social-media-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Social media icon size and spacing */
+.social-media img {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover scale effect for social icons */
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+/*---------------------------------------------------------
+ CONTACT FORM  STYLES
+---------------------------------------------------------*/
+/* Styling for contact form container */
+.contact-form{
+    background-color: var(--light-colour);
+    padding: 40px;
+    border-radius: var(--border-radius-card);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+/* Contact form heading styles */
+.contact-form-header {
+    display:  flex;
+   flex-direction: column;
+   justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Responsive layout adjustments */
+@media (min-width: 1024px) {
+    .follow-us-wrap {
+        padding-left: 5px;
+    }
+
+    .information-wrap {
+        padding-left: 50px;
+    }
+}
+
+
