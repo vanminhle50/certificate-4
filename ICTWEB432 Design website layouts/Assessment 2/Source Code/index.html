@@ -4,16 +4,22 @@
 <head>
     <title>Local Café </title>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Link favicon: Icon for the website -->
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Link CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Link CSS for mobile -->
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="./css/mobile.css">
+    <!-- Response for desktop -->
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 1024px)">
     <!-- Link Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <!-- Link Font Awesome: Icons for the website -->
@@ -28,8 +34,7 @@
             <!-- Navigation menubar -->
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div class="container-fluid px-md-5">
-                    <a class="navbar-brand" href="#"><img src="./assets/img/Logo.png" alt="Logo"
-                            class="img-fluid" /></a>
+                    <a class="navbar-brand" href="#"><img src="./assets/img/Logo.png" alt="Logo" class="img-fluid"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -69,30 +74,31 @@
                 <!-- ACTUAL CAROUSEL OF ITEMS - make sure to actually link an image! -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./assets/img/Hero0.jpg" class="d-block w-100" alt="restaurant bar">
+                        <img src="./assets/img/Hero0.jpg" class="d-block w-100" alt="Machine coffee">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/Hero.jpg" class="d-block w-100" alt="restaurant front">
+                        <img src="./assets/img/Hero.jpg" class="d-block w-100" alt="Inside coffee shop">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/Hero1.jpg" class="d-block w-100" alt="restaurant front">
+                        <img src="./assets/img/Hero1.jpg" class="d-block w-100"
+                            alt="A nother perspective in the coffee shop">
                     </div>
                 </div>
             </div>
             <!-- CAROUSEL END -->
             <!-- OPENING HOURS SECTION -->
-            <div class="opening-hours-section container p-5 bg-dark text-white">
+            <section class="opening-hours-section container p-5 bg-dark text-white">
                 <div class="row align-items-center">
-                    <div class="col-md-6">
+                    <div class="opening-hours-wrap col-md-6">
                         <h5><strong>Opening Hours</strong></h5>
                         <p>7:00 - 4:00 Monday to Friday<br>Closed weekends and public holidays</p>
                     </div>
-                    <div class="col-md-6 d-flex justify-content-end">
-                        <a href="#" class="btn btn-about btn-light me-2">About Us</a>
-                        <a href="#" class="btn btn-contact btn-light">Contact Us</a>
+                    <div class="opening-hours-button-wrap col-md-6 d-flex justify-content-end">
+                        <a href="menu.html" class="btn btn-view-menu btn-light me-2">View our Menu</a>
+                        <a href="contact.html" class="btn btn-contact btn-light">Contact Us</a>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- END OF OPENING HOURS SECTION -->
             <!-- CARD COMPONENT - INTRODUCES THE WEBSITE  -->
             <section class="text-center my-5">
@@ -105,7 +111,7 @@
                 <div class="row text-center">
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/Community.jpg" alt=""></div>
+                            <div class="bg-light"><img src="./assets/img/Community.jpg" alt="Community image"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h4>Rooted in Community</h4>
@@ -119,13 +125,12 @@
                                     <a href="#" class="btn btn-link">Read More</a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/Crafted.jpg" alt=""></div>
+                            <div class="bg-light"><img src="./assets/img/Crafted.jpg" alt="Crafted"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h4>Crafted with Care</h4>
@@ -144,7 +149,7 @@
 
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/Comfortable.jpg" alt=""></div>
+                            <div class="bg-light"><img src="./assets/img/Comfortable.jpg" alt="Feel Comfortable"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h4>Comfort in Every Cup</h4>
@@ -162,11 +167,10 @@
                     </div>
                 </div>
             </div>
-            </section>
             <!-- END OF THE CARD COMPONENT -INTRODUCES THE WEBSITE -->
             <!-- BEST SELLERS SECTION -->
             <section class="text-center my-5">
-                <h2><img src="./assets/img/coffeebeanBestSeller.png" alt=""> Best Sellers </h2>
+                <h2><img src="./assets/img/coffeebeanBestSeller.png" alt="Coffee been Icon"> Best Sellers </h2>
                 <p class="text-muted">Our best-selling items are a testament to our commitment to quality and flavour.
                     Each dish is crafted with care, using the freshest ingredients.</p>
             </section>
@@ -191,14 +195,14 @@
                                         <i class="fas fa-star"></i>
                                     </span></div>
                                 <div class="card-link">
-                                    <a href="#" class="btn btn-link">View in Menu</a>
+                                    <a href="menu.html" class="btn btn-link">View in Menu</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/Latte.jpg" alt=""></div>
+                            <div class="bg-light"><img src="./assets/img/Latte.jpg" alt="Latte"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h5>Latte</h5>
@@ -215,7 +219,7 @@
                                         <i class="fa-solid fa-star-half-stroke"></i>
                                     </span></div>
                                 <div class="card-link">
-                                    <a href="#" class="btn btn-link">View in Menu</a>
+                                    <a href="menu.html" class="btn btn-link">View in Menu</a>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +227,8 @@
 
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/ChocolateCroissant.jpg" alt=""></div>
+                            <div class="bg-light"><img src="./assets/img/ChocolateCroissant.jpg"
+                                    alt="Chocolate Croissant"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h5>Chocolate Croissant</h5>
@@ -240,14 +245,14 @@
                                         <i class="fa-solid fa-star-half-stroke"></i>
                                     </span></div>
                                 <div class="card-link">
-                                    <a href="#" class="btn btn-link">View in Menu</a>
+                                    <a href="menu.html" class="btn btn-link">View in Menu</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/MatchaLatte.jpg" alt=""></div>
+                            <div class="bg-light"><img src="./assets/img/MatchaLatte.jpg" alt="Matcha Latte"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h5>Matcha Latte</h5>
@@ -265,14 +270,15 @@
                                         <i class="fa-solid fa-star-half-stroke"></i>
                                     </span></div>
                                 <div class="card-link">
-                                    <a href="#" class="btn btn-link">View in Menu</a>
+                                    <a href="menu.html" class="btn btn-link">View in Menu</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/BlueberryMuffin.jpg" alt=""></div>
+                            <div class="bg-light"><img src="./assets/img/BlueberryMuffin.jpg" alt="Blueberry Muffin">
+                            </div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h5>Blueberry Muffin</h5>
@@ -289,14 +295,14 @@
                                         <i class="fa-solid fa-star-half-stroke"></i>
                                     </span></div>
                                 <div class="card-link">
-                                    <a href="#" class="btn btn-link">View in Menu</a>
+                                    <a href="menu.html" class="btn btn-link">View in Menu</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/Epresso.jpg" alt=""></div>
+                            <div class="bg-light"><img src="./assets/img/Epresso.jpg" alt="A Espresso Cup"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h5>Espresso</h5>
@@ -313,7 +319,7 @@
                                         <i class="far fa-star"></i>
                                     </span></div>
                                 <div class="card-link">
-                                    <a href="#" class="btn btn-link">View in Menu</a>
+                                    <a href="menu.html" class="btn btn-link">View in Menu</a>
                                 </div>
                             </div>
                         </div>
@@ -328,10 +334,10 @@
             <div class="container">
                 <div class="row">
                     <div class="information-wrap col-md-6">
-                        <h5><img src="./assets/img/Logo.png" alt=""></h5>
+                        <img src="./assets/img/Logo.png" alt="Local Café Logo">
                         <p><strong>Moorabbin, Victoria 3189</strong><br>Ready to come with us?</p>
-                        <p>Phone: 0123456789</p>
-                        <p>Email: info@huediscovery.com.vn</p>
+                        <p>Phone: 0444555888</p>
+                        <p>Email: info@moorabbinlocalcafe.com.au</p>
 
                     </div>
                     <div class="col-md-3">
@@ -347,13 +353,13 @@
                         <div class="social-media-container">
                             <a class="social-media footer-link" aria-label="Link to Facebook Fan Page"
                                 href="https://www.facebook.com/localcoffeemoorabbin" target="_blank"><img
-                                    src="./assets/img/Fb.svg" alt=""></a>
+                                    src="./assets/img/Fb.svg" alt="Facebook Icon"></a>
                             <a class="social-media footer-link" aria-label="Link to Instagram Page"
                                 href="https://www.instagram.com/localcoffeemoorabbin" target="_blank"><img
-                                    src="./assets/img/Ins.svg" alt=""></i></a>
+                                    src="./assets/img/Ins.svg" alt="Instagram Icon"></a>
                             <a class="social-media footer-link" aria-label="Link to Twitter Page"
                                 href="https://www.twitter.com/localcoffeemoorabbin" target="_blank"><img
-                                    src="./assets/img/X.svg" alt=""></a>
+                                    src="./assets/img/X.svg" alt="X Icon"></a>
                         </div>
                         <p class="small text-white">&copy; 2025 Local Café. All rights reserved.</p>
                     </div>

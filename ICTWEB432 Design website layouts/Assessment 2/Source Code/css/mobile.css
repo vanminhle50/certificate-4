@@ -1,0 +1,21 @@
+
+  /* NAVIGATION MENU BAR */
+  .nav-item {
+    padding: 0px !important;
+}
+/* HOMEPAGE -OPENING HOURS SECTION */
+.opening-hours-button-wrap {
+justify-content: center !important;
+}
+.opening-hours-wrap{
+    text-align: center;
+}
+/* HEADER - H2 */
+h2{
+    font-size: 2.4rem;
+}
+/* CONTACT PAGE */
+/* Header hero */
+.hero-menu h1 {
+    font-size: 50px;
+  }
