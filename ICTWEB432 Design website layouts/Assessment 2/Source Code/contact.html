@@ -62,32 +62,32 @@
             <section class="hero-contact" aria-label="A coffee cup">
                 <h1>Get in Touch</h1>
                 <p>Questions, feedback or just want to say hello? We’d love to hear from you.</p>
-                <a class="download-contact-button" href="#">Call Us</a>
+                <a class="download-contact-button"  href="tel:0444555888">Call Us</a>
             </section>
             <!-- END OF HERO SECTION -->
             <!-- CONTACT FORM -->
             <div class="container mt-5 mb-5">
-                <div class="contact-form-wrap row">
+                <div id = "contact-form" class="contact-form-wrap row">
                     <div class="contact-form-header col-md-6 mx-auto mt-4 text-center">
                         <h2>CONTACT US</h2>
                         <p>Get the info you are looking for right now!</p>
                     </div>
                     <div class="contact-form col-md-6 mx-auto">
-                        <form action="#" method="POST" class="mt-4">
+                        <form action="mailto:info@moorabbinlocalcafe.com.au" method="POST" class="mt-4">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <input type="text" class="form-control" id="name" name="name" autocomplete="off" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <input type="email" class="form-control" id="email" name="email" autocomplete="off" required>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="5" autocomplete="off" required></textarea>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-light border-black">Send Message</button>
+                                <button type="submit" class="btn">Send Message</button>
                             </div>
                         </form>
                     </div>
@@ -127,9 +127,9 @@
                     <div class="col-md-3">
                         <h3 class="footer-header-text">Quick Links</h3>
                         <ul class="list-unstyled">
-                            <li><a class="footer-link" href="#">HOME PAGE</a></li>
-                            <li><a class="footer-link" href="#">MENU</a></li>
-                            <li><a class="footer-link" href="#">CONTACT US</a></li>
+                            <li><a class="footer-link" href="index.html">HOME PAGE</a></li>
+                            <li><a class="footer-link" href="menu.html">MENU</a></li>
+                            <li><a class="footer-link" href="contact.html">CONTACT US</a></li>
                         </ul>
                     </div>
                     <div class="follow-us-wrap col-md-3">
