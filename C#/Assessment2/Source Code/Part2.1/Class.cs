@@ -31,6 +31,12 @@ public class Circle : Shape
 {
     // Radius of the circle
     private double radius;
+    // Constructor to initialize the name
+    public Circle() : base("Circle")
+    {
+        radius = 1.0;
+    }
+
     // Constructor to initialize the radius and name
     public Circle(double radius) : base("Circle")
     {
@@ -46,13 +52,19 @@ public class Circle : Shape
     {
         return 2 * Math.PI * radius; // Perimeter = 2 * PI * r
     }
-} 
+}
 // Derived class for Rectangle
 public class Rectangle : Shape
 {
     // Length and width of the rectangle
     private double length;
     private double width;
+    // Constructor to initialize the name
+    public Rectangle() : base("Rectangle")
+    {
+        length = 1.0;
+        width = 1.0;
+    }
     // Constructor to initialize the length, width, and name
     public Rectangle(double length, double width) : base("Rectangle")
     {
@@ -73,8 +85,13 @@ public class Rectangle : Shape
 // Derived class for Square
 public class Square : Rectangle
 {
+    // Constructor to initialize the name
+    public Square() : base(1.0, 1.0)
+    {
+        name = "Square";
+    }
     // Constructor to initialize the side length and name
-    public Square(double side) : base(side, side) // Calls the Rectangle constructor with equal length and width
+    public Square(double side) : base(side, side) 
     {
         name = "Square"; // Set the name to "Square"
     }
@@ -92,7 +109,7 @@ public class Square : Rectangle
 // Derived class for Trapezoid
 public class Trapezoid : Shape
 {
-   
+
     // Base lengths and side lengths
     private double base1;
     private double base2;
@@ -100,6 +117,15 @@ public class Trapezoid : Shape
     private double side2;
     // Height of the trapezoid
     private double height;
+    // Constructor to initialize the name
+    public Trapezoid() : base("Trapezoid")
+    {
+        base1 = 1.0;
+        base2 = 1.0;
+        side1 = 1.0;
+        side2 = 1.0;
+        height = 1.0;
+    }
     // Constructor to initialize the base lengths, side lengths, height and name
     public Trapezoid(double base1, double base2, double side1, double side2, double height) : base("Trapezoid")
     {

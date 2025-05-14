@@ -5,13 +5,52 @@
         // Creat a method to check positive input.
         static double positiveInputCheck(string message)
         {
+            Shape shape1 = new Shape();
             double value;
             do
             {
                 Console.Write(message);
                 if (double.TryParse(Console.ReadLine(), out value) && value > 0)
                     return value;
-                Console.WriteLine("The demention must be a non-negative number. Please try again");
+                
+                if (message == "Enter Radius:")
+                {
+                    shape1 = new Circle();
+                    Console.WriteLine("------------------------------------------------");
+                    Console.WriteLine("| The orginal radius of the circle is 1.0      |");
+                    Console.WriteLine($"| The area is: {shape1.Area():F2}                            |");
+                    Console.WriteLine($"| The perimeter is: {shape1.Perimeter():F2}                       |");
+                    Console.WriteLine("------------------------------------------------");
+                }
+                else if (message == "Enter Square Side Length:")
+                {
+                    shape1 = new Square();
+                    Console.WriteLine("------------------------------------------------");
+                    Console.WriteLine("| The orginal side of the square is 1.0        |");
+                    Console.WriteLine($"| The area is: {shape1.Area():F2}                            |");
+                    Console.WriteLine($"| The perimeter is: {shape1.Perimeter():F2}                       |");
+                    Console.WriteLine("------------------------------------------------");
+                }
+                else if (message == "Enter Rectangle Length:" || message =="Enter Rectangle Width:")
+                {
+                    shape1 = new Rectangle();
+                    Console.WriteLine("------------------------------------------------");
+                    Console.WriteLine("| The orginal length of the rectangle is 1.0   |");
+                    Console.WriteLine($"| The area is: {shape1.Area():F2}                            |");
+                    Console.WriteLine($"| The perimeter is: {shape1.Perimeter():F2}                       |");
+                    Console.WriteLine("------------------------------------------------");
+                }
+                else if (message == "Enter Base 01:"|| message == "Enter Base 02:"|| message == "Enter Height:" || message == "Enter Side 01:" || message == "Enter Side 02:")
+                {
+                    shape1 = new Trapezoid();
+                    Console.WriteLine("------------------------------------------------");
+                    Console.WriteLine("| The orginal base 01 of the trapezoid is 1.0  |");
+                    Console.WriteLine($"| The area is: {shape1.Area():F2}                            |");
+                    Console.WriteLine($"| The perimeter is: {shape1.Perimeter():F2}                       |");
+                    Console.WriteLine("------------------------------------------------");
+                } 
+                Console.WriteLine("The demention must be a non-negative number. Please try again!");               
+
             } while (true);
         }
 
@@ -41,7 +80,7 @@
                 case "1":
                     Console.WriteLine("You selected | Square |");
                     Console.WriteLine("-------------------------");
-                    double squareSide = positiveInputCheck(" Enter Square Side Length: ");
+                    double squareSide = positiveInputCheck("Enter Square Side Length:");
                     shape = new Square(squareSide);
                     break;
                 case "2":
@@ -49,14 +88,14 @@
                     Console.WriteLine("-------------------------");
                     double rectLength,
                         rectWidth;
-                    rectLength = positiveInputCheck("Enter Rectangle Length: ");
-                    rectWidth = positiveInputCheck("Enter Rectangle Width: ");
+                    rectLength = positiveInputCheck("Enter Rectangle Length:");
+                    rectWidth = positiveInputCheck("Enter Rectangle Width:");
                     shape = new Rectangle(rectLength, rectWidth);
                     break;
                 case "3":
                     Console.WriteLine("You selected | Circle |");
                     Console.WriteLine("-------------------------");
-                    double radius = positiveInputCheck("Enter Radius: ");
+                    double radius = positiveInputCheck("Enter Radius:");
                     shape = new Circle(radius);
                     break;
                 case "4":
@@ -69,11 +108,11 @@
                         side2;
                     do
                     {
-                        base1 = positiveInputCheck("Enter Base 01: ");
-                        base2 = positiveInputCheck("Enter Base 02: ");
-                        height = positiveInputCheck("Enter Height: ");
-                        side1 = positiveInputCheck("Enter Side 01 ");
-                        side2 = positiveInputCheck("Enter Side 02 ");
+                        base1 = positiveInputCheck("Enter Base 01:");
+                        base2 = positiveInputCheck("Enter Base 02:");
+                        height = positiveInputCheck("Enter Height:");
+                        side1 = positiveInputCheck("Enter Side 01:");
+                        side2 = positiveInputCheck("Enter Side 02:");
                         double d1 = Math.Sqrt(base1 * base1 - height * height);
                         double d2 = Math.Sqrt(base2 * base2 - height * height);
 
