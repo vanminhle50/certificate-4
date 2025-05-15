@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "i4fu9zQVImuz2nigbYAHrkJqXWeFB0CbM7NM4JytR/RUPXE62FZZZXfkOrZ6W5HlpRJ6+qAwqIYvo+Cwh7h6dQ==",
+  "success": true,
+  "projectFilePath": "C:\\certificate-4\\certificate-4\\C#\\Week12\\Tutorial2\\Tutorial2\\Tutorial2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.data.sqlite\\9.0.5\\microsoft.data.sqlite.9.0.5.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.5\\microsoft.data.sqlite.core.9.0.5.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

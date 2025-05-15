@@ -34,8 +34,25 @@ while (true)
     {
         // read one product from the database by id
         Console.Write("Please enter the product id: ");
-        var id = int.Parse(Console.ReadLine());
-        Console.WriteLine($"Product with id {id}:");
+        int id = Int32.Parse(Console.ReadLine());
+        Product product = database.ReadOne(id);
+        if (product != null)
+        {
+            Console.WriteLine("Product:");
+            Console.WriteLine(
+                product.ProductId
+                    + " "
+                    + product.Name
+                    + " "
+                    + product.Description
+                    + " "
+                    + product.Price
+            );
+        }
+        else
+        {
+            Console.WriteLine("Product not found.");
+        }
     }
     else if (input == "3")
     {
