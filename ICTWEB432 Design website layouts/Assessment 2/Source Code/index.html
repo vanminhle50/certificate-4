@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Link favicon: Icon for the website -->
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-    <!-- Bootstrap CSS v5.2.1 -->
+    <!-- Bootstrap CSS v5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Link CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Link CSS for mobile -->
@@ -34,7 +35,7 @@
             <!-- Navigation menubar -->
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div class="container-fluid px-md-5">
-                    <a class="navbar-brand" href="#"><img src="./assets/img/Logo.png" alt="Logo" class="img-fluid"></a>
+                    <a class="navbar-brand" href="index.html"><img src="./assets/img/Logo.png" alt="Logo" class="img-fluid"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -74,13 +75,13 @@
                 <!-- ACTUAL CAROUSEL OF ITEMS - make sure to actually link an image! -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./assets/img/Hero0.jpg" class="d-block w-100" alt="Machine coffee">
+                        <img rel="preload" as="image" src="./assets/img/Hero0.webp" class="d-block w-100" alt="Machine coffee">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/Hero.jpg" class="d-block w-100" alt="Inside coffee shop">
+                        <img src="./assets/img/hero.webp" loading="lazy" class="d-block w-100" alt="Inside coffee shop">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/Hero1.jpg" class="d-block w-100"
+                        <img src="./assets/img/Hero1.webp" loading="lazy" class="d-block w-100"
                             alt="A nother perspective in the coffee shop">
                     </div>
                 </div>
@@ -111,7 +112,7 @@
                 <div class="row text-center">
                     <div class="col-sm-12 col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/Community.jpg" alt="Community image"></div>
+                            <div class="bg-light"><img src="./assets/img/Community.webp" alt="Community image"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h4>Rooted in Community</h4>
@@ -122,7 +123,8 @@
                                         coffee is brewed with love.</p>
                                 </div>
                                 <div class="card-link">
-                                    <button class="read-more-button btn btn-secondary" onclick="showAlert()">Read
+                                    <button type="button" class="read-more-button btn btn-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#article1">Read
                                         More</button>
                                 </div>
                             </div>
@@ -131,7 +133,7 @@
 
                     <div class="col-sm-12 col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/Crafted.jpg" alt="Crafted"></div>
+                            <div class="bg-light"><img src="./assets/img/Crafted.webp" alt="Crafted"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h4>Crafted with Care</h4>
@@ -142,7 +144,8 @@
                                         beans and a sprinkle of love.</p>
                                 </div>
                                 <div class="card-link">
-                                    <button class="read-more-button btn btn-secondary" onclick="showAlert()">Read
+                                    <button type="button" class="read-more-button btn btn-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#article2">Read
                                         More</button>
                                 </div>
                             </div>
@@ -151,7 +154,7 @@
 
                     <div class="col-sm-12 col-md-4 mb-4">
                         <div class="card">
-                            <div class="bg-light"><img src="./assets/img/Comfortable.jpg" alt="Feel Comfortable"></div>
+                            <div class="bg-light"><img src="./assets/img/Comfortable.webp" alt="Feel Comfortable"></div>
                             <div class="card-body">
                                 <div class="card-title">
                                     <h4>Comfort in Every Cup</h4>
@@ -162,7 +165,8 @@
                                         and at home.</p>
                                 </div>
                                 <div class="card-link">
-                                    <button class="read-more-button btn btn-secondary" onclick="showAlert()">Read
+                                    <button type="button" class="read-more-button btn btn-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#article3">Read
                                         More</button>
                                 </div>
                             </div>
@@ -173,7 +177,7 @@
             <!-- END OF THE CARD COMPONENT -INTRODUCES THE WEBSITE -->
             <!-- BEST SELLERS SECTION -->
             <section class="text-center my-5">
-                <h2><img src="./assets/img/coffeebeanBestSeller.png" alt="Coffee been Icon"> Best Sellers </h2>
+                <h2><img src="./assets/img/coffeebeanBestSeller.png" alt="Coffee bean Icon"> Best Sellers </h2>
                 <p class="text-muted">Our best-selling items are a testament to our commitment to quality and flavour.
                     Each dish is crafted with care, using the freshest ingredients.</p>
             </section>
@@ -370,12 +374,200 @@
             </div>
         </footer>
         <!-- END OF FOOTER SECTION -->
+
+        <!-- Button to trigger modal -->
+        <!-- Modal structure -->
+        <div class="modal fade" id="article1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                <div class="modal-content p-2">
+                    <!-- Modal header with close button -->
+                    <div class="modal-header">
+                        <h5 id="modalLabel1" class="modal-title"><img src="./assets/img/coffeebeanBestSeller.png"
+                                alt="Coffee bean Icon"> ROOTED IN COMMUNITY</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p class="mb-4">
+                            At Local Coffee Moorabbin, we believe a great café is built on more than just good coffee —
+                            it’s
+                            built on connection, warmth, and a genuine love for the people it serves. From the moment
+                            you
+                            walk
+                            through our doors, you're not just a customer — you're part of the family. Whether you're a
+                            local
+                            dropping in for your daily flat white, a student looking for a quiet study spot, or a
+                            visitor
+                            exploring the neighbourhood, there's always a seat waiting for you.
+                        </p>
+
+                        <figure class="text-center mb-4">
+                            <img src="./assets/img/service700.jpg" alt="Coffee Service"
+                                class="img-fluid rounded shadow">
+                            <figcaption class="mt-2 text-muted small">Source:
+                                Tim Douglas - Pexels.com</figcaption>
+                        </figure>
+
+                        <p class="mb-4">
+                            Our café is a reflection of the vibrant community that surrounds us. We celebrate the
+                            diversity
+                            of
+                            Moorabbin by offering a menu that caters to all tastes and dietary preferences. From our
+                            rich,
+                            aromatic coffees to our freshly baked pastries and wholesome meals, every item is crafted
+                            with
+                            care, using locally sourced ingredients whenever possible. We believe in supporting local
+                            businesses and farmers, and we take pride in showcasing the best of what our region has to
+                            offer.
+                        </p>
+
+                        <figure class="text-center mb-4">
+                            <img src="./assets/img/service700-1.jpg" alt="Coffee Service"
+                                class="img-fluid rounded shadow">
+                            <figcaption class="mt-2 text-muted small">Source:
+                                Kampus Production - Pexels.com</figcaption>
+                        </figure>
+
+
+                        <p class="mb-4">
+                            We take pride in being a welcoming space where conversations flow freely, where friendships
+                            are
+                            made
+                            over shared tables, and where every cup of coffee is brewed with passion and care. Our team
+                            is
+                            made
+                            up of locals who love Moorabbin just as much as you do, and we're committed to supporting
+                            the
+                            community that supports us. From sourcing ingredients from nearby producers to hosting local
+                            artists
+                            and events, everything we do is about celebrating and giving back to this amazing place we
+                            call
+                            home.
+                        </p>
+
+                        <p class="fw-semibold">
+                            So come in, take a moment, and enjoy the warmth of Local Coffee Moorabbin — where community,
+                            comfort,
+                            and coffee come together.
+                        </p>
+                    </div>
+                    <!-- Modal footer (optional) -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn back-button" data-bs-dismiss="modal">&larr; Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="article2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                <div class="modal-content p-2">
+                    <!-- Modal header with close button -->
+                    <div class="modal-header">
+                        <h5 id="modalLabel2" class="modal-title"><img src="./assets/img/coffeebeanBestSeller.png"
+                                alt="Coffee bean Icon"> CRAFTED WITH CARE</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p class="mb-4">
+                            At Local Coffee Moorabbin, every cup tells a story — a story of passion, precision, and
+                            pride. Our baristas aren’t just skilled in the art of coffee-making; they live and breathe
+                            it. Each drink is carefully handcrafted using premium, ethically sourced beans, perfectly
+                            roasted to bring out rich and balanced flavours in every sip.
+
+
+                        <figure class="text-center mb-4">
+                            <img src="./assets/img/catchcoffeebean700.jpg" alt="Barista preparing coffee with care"
+                                class="img-fluid rounded shadow">
+                            <figcaption class="mt-2 text-muted small">Source: Michael Burrows - Pexels.com</figcaption>
+                        </figure>
+
+                        <p class="mb-4">
+                            We believe that great coffee goes beyond taste — it's about the experience. That’s why we
+                            take the time to perfect every pour, every foam art design, and every interaction with our
+                            customers. Whether it’s a bold espresso to kick-start your morning or a smooth latte to help
+                            you unwind, your coffee is made just for you, with care in every detail.
+
+                        </p>
+
+                        <figure class="text-center mb-4">
+                            <img src="./assets/img/greatcoffee700.jpg" alt="Great coffee cup"
+                                class="img-fluid rounded shadow">
+                            <figcaption class="mt-2 text-muted small">Source: Mew wy. - Pexels.com</figcaption>
+                        </figure>
+
+
+                        <p class="fw-semibold">
+                            From the first grind to the final pour, quality and care are at the heart of everything we
+                            do. It’s our way of showing love — not just for coffee, but for the community we serve.
+
+                        </p>
+                    </div>
+                    <!-- Modal footer (optional) -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn back-button" data-bs-dismiss="modal">&larr; Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="article3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                <div class="modal-content p-2">
+                    <!-- Modal header with close button -->
+                    <div class="modal-header">
+                        <h5 id="modalLabel3" class="modal-title"><img src="./assets/img/coffeebeanBestSeller.png"
+                                alt="Coffee bean Icon"> COMFORT IN EVERY CUP</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p class="mb-4">
+                            At Local Coffee Moorabbin, we believe that a great café should feel like a second home. From
+                            the moment you step inside, you’re greeted not just with the inviting aroma of freshly
+                            brewed coffee, but with genuine smiles and warm service. Every element of our space — the
+                            cozy seating, the calming atmosphere, the thoughtfully chosen music — is designed to help
+                            you relax and feel right at home.
+                        <figure class="text-center mb-4">
+                            <img src="./assets/img/coupledrinkcoffee.jpg" alt="Couple Drinking Coffee"
+                                class="img-fluid rounded shadow">
+                            <figcaption class="mt-2 text-muted small">Source:Michael Burrows - Pexels.com</figcaption>
+                        </figure>
+
+                        <p class="mb-4">
+                            We understand that comfort comes in many forms. For some, it’s a quiet corner with a good
+                            book and a warm cappuccino. For others, it’s a familiar face behind the counter and a
+                            perfectly made brew waiting with your name on it. That’s why we put care into every detail —
+                            from the smoothness of your flat white to the kindness in our conversations.
+                        </p>
+
+                        <figure class="text-center mb-4">
+                            <img src="./assets/img/communication700.jpg" alt="Friends communicating over coffee"
+                                class="img-fluid rounded shadow">
+                            <figcaption class="mt-2 text-muted small">Source: Kampus Production - Pexels.com
+                            </figcaption>
+                        </figure>
+
+                        <p class="fw-semibold">
+                            Whether you’re catching up with friends, taking a quiet moment to yourself, or simply
+                            escaping the rush of the day, you’ll find comfort in every cup we serve. Because here,
+                            you’re more than just a guest — you’re part of our community, and we’re here to make every
+                            visit feel like coming home.
+                        </p>
+                    </div>
+                    <!-- Modal footer (optional) -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn back-button" data-bs-dismiss="modal">&larr; Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        function showAlert() {
-            alert("This feature is coming soon! Stay tuned for more updates.");
-        }
-    </script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -384,6 +576,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <!-- Link Js -->
+    <script src="./js/javascript.js"></script>
 </body>
 
 </html>

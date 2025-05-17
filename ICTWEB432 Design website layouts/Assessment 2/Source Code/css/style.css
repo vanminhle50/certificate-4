@@ -188,8 +188,24 @@ h2 span {
     background-color: var(--secondary-colour);
     color: var(--light-colour);
     transition: all 0.4s ease-in-out;
+}/* MODAL STYLE */
+/* Back button style*/
+.back-button {
+    background-color: var(--secondary-colour);
+    color: var(--light-colour);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
-
+.back-button:hover {
+    background-color: var(--light-colour);
+    color: var(--secondary-colour);
+    border: 1px solid var(--secondary-colour);
+    transform: scale(1.1);
+}
+/* End of back button style */
 /*---------------------------------------------------------
  FOOTER STYLES
 ---------------------------------------------------------*/
@@ -290,17 +306,20 @@ h2 span {
 }
 
 .contact-form .btn {
-    background: var(--secondary-colour);
+    background-color: var(--secondary-colour);
     color: var(--light-colour);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
-
 .contact-form .btn:hover {
-    background: seagreen;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    background-color: var(--light-colour);
+    color: var(--secondary-colour);
+    border: 1px solid var(--secondary-colour);
     transform: scale(1.1);
 }
-
 /*---------------------------------------------------------
 MENU PAGE
 ---------------------------------------------------------*/
