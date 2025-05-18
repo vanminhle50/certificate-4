@@ -23,7 +23,7 @@ class DBInterface
                               FROM Books ";
         // Executing the command and reading the data.
         var reader = command.ExecuteReader();
-        // Interating through the results.
+            
         while (reader.Read())
         {
             var bookid = reader.GetInt32(0);

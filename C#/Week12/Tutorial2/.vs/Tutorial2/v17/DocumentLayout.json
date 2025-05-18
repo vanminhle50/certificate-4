@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Week12\\Tutorial2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DC79FB11-D661-4C3C-A211-2583D8AE6213}|Tutorial2\\Tutorial2.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\week12\\tutorial2\\tutorial2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC79FB11-D661-4C3C-A211-2583D8AE6213}|Tutorial2\\Tutorial2.csproj|solutionrelative:tutorial2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC79FB11-D661-4C3C-A211-2583D8AE6213}|Tutorial2\\Tutorial2.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\week12\\tutorial2\\tutorial2\\dbinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC79FB11-D661-4C3C-A211-2583D8AE6213}|Tutorial2\\Tutorial2.csproj|solutionrelative:tutorial2\\dbinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC79FB11-D661-4C3C-A211-2583D8AE6213}|Tutorial2\\Tutorial2.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\week12\\tutorial2\\tutorial2\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC79FB11-D661-4C3C-A211-2583D8AE6213}|Tutorial2\\Tutorial2.csproj|solutionrelative:tutorial2\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Week12\\Tutorial2\\Tutorial2\\Book.cs",
+              "RelativeDocumentMoniker": "Tutorial2\\Book.cs",
+              "ToolTip": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Week12\\Tutorial2\\Tutorial2\\Book.cs",
+              "RelativeToolTip": "Tutorial2\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T05:17:51.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBInterface.cs",
+              "DocumentMoniker": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Week12\\Tutorial2\\Tutorial2\\DBInterface.cs",
+              "RelativeDocumentMoniker": "Tutorial2\\DBInterface.cs",
+              "ToolTip": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Week12\\Tutorial2\\Tutorial2\\DBInterface.cs",
+              "RelativeToolTip": "Tutorial2\\DBInterface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T05:17:51.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Week12\\Tutorial2\\Tutorial2\\Program.cs",
+              "RelativeDocumentMoniker": "Tutorial2\\Program.cs",
+              "ToolTip": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Week12\\Tutorial2\\Tutorial2\\Program.cs",
+              "RelativeToolTip": "Tutorial2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T05:17:51.762Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
