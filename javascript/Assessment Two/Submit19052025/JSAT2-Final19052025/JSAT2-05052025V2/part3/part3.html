@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 3 || Assessment 2 - JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Add CSS library of Prism.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+</head>
+
+<body>
+    <header>
+        <h1><span class="highlight-text">Assessment 2||</span> Part 3: String Manipulation and Files</h1>
+        <div class="header-content-wrap">
+            <div style="min-width: 500px;">
+                <p>// Certificate IV in Information Technology<br>
+                    // Holmesglen Institute, VIC, Australia<br>
+                    // Student Name: Van Minh Le<br>
+                    // Student ID: 100693330</p>
+            </div>
+            <div style="width: 60%;">
+                <p>In this part, you are required to design and implement a range of algorithms to manipulate strings.
+                    The
+                    following operations need to be done using JavaScript programming language and the result need to be
+                    verified
+                    using node.
+                    <br>You will then need to create an algorithm and implement this to write a string to a text file
+                    and read
+                    in a
+                    text file. Reading and writing to file can be done in either C# or JavaScript. If using JavaScript,
+                    you will
+                    need to verify the results using Node.js.
+                </p>
+            </div>
+        </div>
+    </header>
+    <table class="contentTable">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Javascript Code</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="note bold">Step 01:</span>Define the following strings: </td>
+                <td>
+                    <pre><code class="language-javascript">let myString = "This is a string";
+let anotherString = "   Another string";
+let hello = "Hello there!";
+let myName = "van minh";</code></pre>
+                </td>
+                <td id="input-strings">Not Found</td>
+            </tr>
+            <tr>
+                <td><span class="note bold">Step 02:</span> Use the utility functions length and chat to find out
+                    information
+                    <ul>
+                        <li>Find out the length of myString</li>
+                        <li>Find out the first character of myString</li>
+                        <li>Find out the 11th character of myString</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre><code class="language-javascript">// Find out the length of myString
+let myStringLength = myString.length;
+// Find out the first character of myString
+let firstCharMyString = myString[0];
+//Find out the 11th character of myString
+let eleventhCharMyString = myString[10];</code></pre>
+                </td>
+                <td>
+                    <p id="lenght-string">Not Found</p>
+                    <p id="first-character">Not Found</p>
+                    <p id="eleventh-character">Not Found</p>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="note bold">Step 03:</span> Use the slice and substring functions to create new strings.
+                    <ul>
+                        <li>Slice “is a” from myString</li>
+                        <li>Use substring to get “the” from anotherString</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre><code class="language-javascript">//Slice “is a” from myString
+let sliceString = myString.slice(5, 9);
+//Use substring to get “the” from anotherString
+let substringString = anotherString.substring(6, 9);</code></pre>
+                </td>
+                </td>
+                <td>
+                    <p id="slice-string">Not Found</p>
+                    <p id="substring-string">Not Found</p>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="note bold">Step 04</span> Change the case of the myName string
+                    <ul>
+                        <li>Print out the myName string in all upper case</li>
+                        <li>Print out the myName string in all lower case</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre><code class="language-javascript">// Use the toUpperCase
+myName.toUpperCase();
+// toLowerCase functions
+myName.toLowerCase();</code></pre>
+                </td>
+                <td>
+                    <p id="uppercase-string">Not Found</p>
+                    <p id="lowercase-string">Not Found</p>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="note bold">Step 05</span> Use concat, trim, replace and split to create new strings
+                    <ul>
+                        <li>Concat hello and myName together</li>
+                        <li>Use the trim function to remove the spaces in anotherString</li>
+                        <li>Use the replace function to change “is a” to an empty space in myString</li>
+                        <li>Split myString on the spaces.</li>
+                    </ul>
+                </td>
+                <td>
+                    <pre><code class="language-javascript">//Concat hello and myName together
+let concatString = hello.concat(" ", myName);
+//Use the trim function to remove the spaces in anotherString
+let trimString = anotherString.trim();
+//Use the replace function to change “is a” to an empty space in myString
+let replaceString = myString.replace("is a", "");
+//Split myString on the spaces.
+let splitString = myString.split(" ");</code></pre>
+                </td>
+                <td>
+                    <p id="concat-string">Not Found</p>
+                    <p id="trim-string">Not Found</p>
+                    <p id="replace-string">Not Found</p>
+                    <p id="split-string">Not Found</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="note bold">Step 06:</span> Create algorithms
+                    <ul>
+                        <li>Create algorithm for saving string to a text file</li>
+                    </ul>
+                </td>
+                <td class="img-td" style="display: flex; align-items: center; justify-content: center;">
+                    <img style="width: 900%" src="./img/Write-file-Algorithms .jpg" alt="write-file-algorithms">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <li>Create algorithm for reading in the text file</li>
+                </td>
+                <td class="img-td" style="display: flex; align-items: center; justify-content: center;">
+                    <img style="min-width: 50%" src="./img/Read file-Algorithms.jpg" alt="read-file-algorithms">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Javascript Code</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="note bold">Step 07: </span> Write a text file
+                    <ul>
+                        <li>Name the text file output.txt</li>
+                        <li>Create a string of data to save to a text file</li>
+                        <li>Write the string to the text file</li>
+                    </ul>
+                </td>
+<td><pre><code class="language-javascript">// Import the 'fs' module from Node.js to work with the file system
+const fs = require('node:fs'); 
+// Define a string that will be written to the file
+const data = "This is a string that we are going to write to file.";
+console.log("Writing to file");
+// Use the 'writeFile' function to write the data to 'output.txt'
+fs.writeFile('./file-text/output.txt', data, (err) => {
+    // Check for errors during writing
+    if (err) {
+        console.log(err); // Log the error if any occurs
+    } else {
+        console.log("File written successfully"); // Confirm successful writing
+    }
+});</code></pre></td>
+<td>
+    <img src="./img/step07-result.png" alt="step07-result">
+    <img src="./img/step07-file.png" alt="step07-file-text-result">
+</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="note bold"> Step 08:</span>Read text from a text file
+                </td>
+<td><pre><code class="language-javascript">console.log("Reading from file");
+// Import the 'fs' module from Node.js to work with the file system
+const fs = require('node:fs');     
+// Use the 'readFile' function to read the contents of 'output.txt'
+fs.readFile("./file-text/output.txt", (err, fileText) => {
+    // Check for errors during reading
+    if (err) {
+        console.error(err); // Log the error if any occurs
+        return;
+    }
+    console.log("The file content are: ");
+    console.log(fileText.toString()); // Convert the file content to string and log it
+});</code></pre></td>
+<td>
+    <img src="./img/step07-file.png" alt="step07-file-text-result">
+    <img src="./img/step08-result.png" alt="step08-result">
+</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <!-- Add JavaScript library of Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="./part3.js"></script>
+</body>
+
+</html>

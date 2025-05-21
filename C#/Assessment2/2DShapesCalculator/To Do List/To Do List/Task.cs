@@ -1,4 +1,6 @@
-﻿class Task
+﻿using System.Threading.Tasks;
+
+class Task
 {
     public int TaskId;
     public string Title;
@@ -13,4 +15,5 @@
         DueDate = duedate;
         Status = status;
     }
+
 }
