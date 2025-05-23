@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\2DShapesCalculator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{223903F7-DA05-4B30-8C8A-56B5D79F2301}|2DShapesCalculator\\2DShapesCalculator.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\assessment2\\2dshapescalculator\\2dshapescalculator\\2dshapescalculator\\shapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{223903F7-DA05-4B30-8C8A-56B5D79F2301}|2DShapesCalculator\\2DShapesCalculator.csproj|solutionrelative:2dshapescalculator\\shapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99EE64C2-2ACD-4ED9-B5A3-9C94B5302351}|ShapeTests\\ShapeTests.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\assessment2\\2dshapescalculator\\2dshapescalculator\\shapetests\\testcircle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99EE64C2-2ACD-4ED9-B5A3-9C94B5302351}|ShapeTests\\ShapeTests.csproj|solutionrelative:shapetests\\testcircle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99EE64C2-2ACD-4ED9-B5A3-9C94B5302351}|ShapeTests\\ShapeTests.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\assessment2\\2dshapescalculator\\2dshapescalculator\\shapetests\\testtrapezoid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99EE64C2-2ACD-4ED9-B5A3-9C94B5302351}|ShapeTests\\ShapeTests.csproj|solutionrelative:shapetests\\testtrapezoid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{223903F7-DA05-4B30-8C8A-56B5D79F2301}|2DShapesCalculator\\2DShapesCalculator.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\assessment2\\2dshapescalculator\\2dshapescalculator\\2dshapescalculator\\shapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{223903F7-DA05-4B30-8C8A-56B5D79F2301}|2DShapesCalculator\\2DShapesCalculator.csproj|solutionrelative:2dshapescalculator\\shapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99EE64C2-2ACD-4ED9-B5A3-9C94B5302351}|ShapeTests\\ShapeTests.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\assessment2\\2dshapescalculator\\2dshapescalculator\\shapetests\\testrectangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,36 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Shapes.cs",
               "DocumentMoniker": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\2DShapesCalculator\\2DShapesCalculator\\Shapes.cs",
               "RelativeDocumentMoniker": "2DShapesCalculator\\Shapes.cs",
               "ToolTip": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\2DShapesCalculator\\2DShapesCalculator\\Shapes.cs",
               "RelativeToolTip": "2DShapesCalculator\\Shapes.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T15:40:02.172Z"
+              "WhenOpened": "2025-05-17T15:40:02.172Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TestCircle.cs",
               "DocumentMoniker": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\2DShapesCalculator\\ShapeTests\\TestCircle.cs",
               "RelativeDocumentMoniker": "ShapeTests\\TestCircle.cs",
               "ToolTip": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\2DShapesCalculator\\ShapeTests\\TestCircle.cs",
               "RelativeToolTip": "ShapeTests\\TestCircle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-17T15:37:07.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TestTrapezoid.cs",
               "DocumentMoniker": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\2DShapesCalculator\\ShapeTests\\TestTrapezoid.cs",
               "RelativeDocumentMoniker": "ShapeTests\\TestTrapezoid.cs",
