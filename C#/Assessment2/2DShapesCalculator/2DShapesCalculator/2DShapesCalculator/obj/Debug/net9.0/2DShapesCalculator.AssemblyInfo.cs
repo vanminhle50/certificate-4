@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("2DShapesCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5da9207b8c1a9b4ffdc4ab425c5f7d37be4b0ef7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fdd82b36d20329ef740c05893edf8f6c961d9a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("2DShapesCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("2DShapesCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

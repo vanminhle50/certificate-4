@@ -3,329 +3,329 @@ using System.Data;
 using System.Data.SQLite;
 using SQLitePCL;
 class DBInterface
+{
+    // Define the database connection string
+    private string GetConnectionString()
     {
-        // Define the database connection string
-        private string GetConnectionString()
+        // Use the current directory to locate the database file
+        string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data_base/AT2_Part3_DB.db");
+        // Get the connection string from the database file path
+        return $"Data Source={dbPath}";
+    }
+    // Create a list of tasks in the database
+    public List<Task> ReadTasks()
+    {
+        // Initialize an empty list of tasks
+        List<Task> tasks = new List<Task>();
+        // Get the connection string to the database
+        string connectionString = GetConnectionString();
+        // Catch any errors that occur when reading the tasks from the database
+        try
         {
-            // Use the current directory to locate the database file
-            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "AT2_Part3_DB.db");
-            // Get the connection string from the database file path
-            return $"Data Source={dbPath}";
-        }
-        // Create a list of tasks in the database
-        public List<Task> ReadTasks()
-        {
-            // Initialize an empty list of tasks
-            List<Task> tasks = new List<Task>();
-            // Get the connection string to the database
-            string connectionString = GetConnectionString();
-            // Catch any errors that occur when reading the tasks from the database
-            try
-            {
-                // Using statement to ensure the connection is disposed of properly when done or in case of an error
-                using (var connection = new SqliteConnection(connectionString))
-                {
-                    // Open the connection to the database
-                    connection.Open();
-                    // Create a command to execute SQL queries
-                    var command = connection.CreateCommand();
-                    // SQL command to select all tasks from the Tasks table
-                    command.CommandText = "SELECT * FROM Tasks";
-                    // Execute the command and read the results
-                    using (var reader = command.ExecuteReader())
-                    {
-                        // Read each row from the database and push it into the tasks list
-                        while (reader.Read())
-                        {
-                            // Read the values from the current row
-                            int taskId = reader.GetInt32(0);
-                            string title = reader.GetString(1);
-                            string description = reader.GetString(2);
-                            string dueDate = reader.GetString(3);
-                            string status = reader.GetString(4);
-                            // Create a new Task object and add it to the list
-                            tasks.Add(new Task(taskId, title, description, dueDate, status));
-                        }
-                        return tasks;
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                // If an error occurs, display the error message and continue to the next iteration
-                Console.WriteLine($"Error loading tasks: {ex.Message}");
-                return tasks;
-            }
-        }
-
-        // Create a new task and push it into the database (To do list)
-        public bool AddTask(Task task)
-        {
-            // Check if the task has errors and handle errors if it is
-            if (task == null)
-            {
-                Console.WriteLine("Task is null");
-                return false;
-            }
-            if (task.TaskId <= 0)
-            {
-                Console.WriteLine("Invalid Task ID.");
-                return false;
-            }
-            if (string.IsNullOrEmpty(task.Title) || string.IsNullOrEmpty(task.Description)
-                || string.IsNullOrEmpty(task.DueDate) || string.IsNullOrEmpty(task.Status))
-            {
-                Console.WriteLine("Task properties cannot be null or empty.");
-                return false;
-            }
-            // If the task does not exist, handle errors if it is
-            if (TaskExists(task.TaskId))
-            {
-                Console.WriteLine($"Task with ID {task.TaskId} already exist.");
-                return false;
-            }
-
-            // Get the connection string to the database
-            string connectionString = GetConnectionString();
             // Using statement to ensure the connection is disposed of properly when done or in case of an error
-            try
+            using (var connection = new SqliteConnection(connectionString))
             {
-                using (var connection = new SqliteConnection(connectionString))
+                // Open the connection to the database
+                connection.Open();
+                // Create a command to execute SQL queries
+                var command = connection.CreateCommand();
+                // SQL command to select all tasks from the Tasks table
+                command.CommandText = "SELECT * FROM Tasks";
+                // Execute the command and read the results
+                using (var reader = command.ExecuteReader())
                 {
-                    // Open the connection to the database
-                    connection.Open();
-                    // Create a command to execute SQL queries
-                    var command = connection.CreateCommand();
-                    // SQL command to insert a new task into the Tasks table
-                    command.CommandText = @"
+                    // Read each row from the database and push it into the tasks list
+                    while (reader.Read())
+                    {
+                        // Read the values from the current row
+                        int taskId = reader.GetInt32(0);
+                        string title = reader.GetString(1);
+                        string description = reader.GetString(2);
+                        string dueDate = reader.GetString(3);
+                        string status = reader.GetString(4);
+                        // Create a new Task object and add it to the list
+                        tasks.Add(new Task(taskId, title, description, dueDate, status));
+                    }
+                    return tasks;
+                }
+
+            }
+        }
+        catch (Exception ex)
+        {
+            // If an error occurs, display the error message and continue to the next iteration
+            Console.WriteLine($"Error loading tasks: {ex.Message}");
+            return tasks;
+        }
+    }
+
+    // Create a new task and push it into the database (To do list)
+    public bool AddTask(Task task)
+    {
+        // Check if the task has errors and handle errors if it is
+        if (task == null)
+        {
+            Console.WriteLine("Task is null");
+            return false;
+        }
+        if (task.TaskId <= 0)
+        {
+            Console.WriteLine("Invalid Task ID.");
+            return false;
+        }
+        if (string.IsNullOrEmpty(task.Title) || string.IsNullOrEmpty(task.Description)
+            || string.IsNullOrEmpty(task.DueDate) || string.IsNullOrEmpty(task.Status))
+        {
+            Console.WriteLine("Task properties cannot be null or empty.");
+            return false;
+        }
+        // If the task does not exist, handle errors if it is
+        if (TaskExists(task.TaskId))
+        {
+            Console.WriteLine($"Task with ID {task.TaskId} already exist.");
+            return false;
+        }
+
+        // Get the connection string to the database
+        string connectionString = GetConnectionString();
+        // Using statement to ensure the connection is disposed of properly when done or in case of an error
+        try
+        {
+            using (var connection = new SqliteConnection(connectionString))
+            {
+                // Open the connection to the database
+                connection.Open();
+                // Create a command to execute SQL queries
+                var command = connection.CreateCommand();
+                // SQL command to insert a new task into the Tasks table
+                command.CommandText = @"
                 INSERT INTO Tasks (TaskId, Title, Description, DueDate, Status)
                 VALUES (@taskId, @title, @description, @dueDate, @status)";
-                    // Add parameters to the command to prevent SQL injection attacks
-                    command.Parameters.AddWithValue("@taskId", task.TaskId);
-                    command.Parameters.AddWithValue("@title", task.Title);
-                    command.Parameters.AddWithValue("@description", task.Description);
-                    command.Parameters.AddWithValue("@dueDate", task.DueDate);
-                    command.Parameters.AddWithValue("@status", task.Status);
-                    // Execute the command to insert the new task into the database
-                    command.ExecuteNonQuery();
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                // If an error occurs, display the error message and continue to the next iteration
-                Console.WriteLine($"Error adding task: {ex.Message}");
-                return false;
+                // Add parameters to the command to prevent SQL injection attacks
+                command.Parameters.AddWithValue("@taskId", task.TaskId);
+                command.Parameters.AddWithValue("@title", task.Title);
+                command.Parameters.AddWithValue("@description", task.Description);
+                command.Parameters.AddWithValue("@dueDate", task.DueDate);
+                command.Parameters.AddWithValue("@status", task.Status);
+                // Execute the command to insert the new task into the database
+                command.ExecuteNonQuery();
+                return true;
             }
         }
-        // Update an existing task in the database
-        public bool UpdateTask(Task task)
+        catch (Exception ex)
         {
-            // Check if the task has errors and handle errors if it is
-            if (task == null)
-            {
-                Console.WriteLine("Task is null");
-                return false;
-            }
+            // If an error occurs, display the error message and continue to the next iteration
+            Console.WriteLine($"Error adding task: {ex.Message}");
+            return false;
+        }
+    }
+    // Update an existing task in the database
+    public bool UpdateTask(Task task)
+    {
+        // Check if the task has errors and handle errors if it is
+        if (task == null)
+        {
+            Console.WriteLine("Task is null");
+            return false;
+        }
 
-            if (task.TaskId <= 0)
-            {
-                Console.WriteLine("Invalid Task ID.");
-                return false;
-            }
+        if (task.TaskId <= 0)
+        {
+            Console.WriteLine("Invalid Task ID.");
+            return false;
+        }
 
-            if (string.IsNullOrEmpty(task.Title) || string.IsNullOrEmpty(task.Description) || string.IsNullOrEmpty(task.DueDate) || string.IsNullOrEmpty(task.Status))
-            {
-                Console.WriteLine("Task properties cannot be null or empty.");
-                return false;
-            }
+        if (string.IsNullOrEmpty(task.Title) || string.IsNullOrEmpty(task.Description) || string.IsNullOrEmpty(task.DueDate) || string.IsNullOrEmpty(task.Status))
+        {
+            Console.WriteLine("Task properties cannot be null or empty.");
+            return false;
+        }
 
-            // If the task does not exist, handle errors if it is
-            if (!TaskExists(task.TaskId))
+        // If the task does not exist, handle errors if it is
+        if (!TaskExists(task.TaskId))
+        {
+            Console.WriteLine($"Task with ID {task.TaskId} does not exist.");
+            return false;
+        }
+        // Get the connection string to the database
+        string connectionString = GetConnectionString();
+        // Using statement to ensure the connection is disposed of properly when done or in case of an error
+        try
+        {
+            using (var connection = new SqliteConnection(connectionString))
             {
-                Console.WriteLine($"Task with ID {task.TaskId} does not exist.");
-                return false;
-            }
-            // Get the connection string to the database
-            string connectionString = GetConnectionString();
-            // Using statement to ensure the connection is disposed of properly when done or in case of an error
-            try
-            {
-                using (var connection = new SqliteConnection(connectionString))
-                {
-                    // Open the connection to the database
-                    connection.Open();
-                    // Create a command to execute SQL queries
-                    var updateCommand = connection.CreateCommand();
-                    // SQL command to update an existing task in the Tasks table
-                    updateCommand.CommandText = @"
+                // Open the connection to the database
+                connection.Open();
+                // Create a command to execute SQL queries
+                var updateCommand = connection.CreateCommand();
+                // SQL command to update an existing task in the Tasks table
+                updateCommand.CommandText = @"
                 UPDATE Tasks 
                 SET Title = @title, 
                     Description = @description, 
                     DueDate = @dueDate, 
                     Status = @status 
                 WHERE TaskId = @taskId";
-                    // Add parameters to the command to prevent SQL injection attacks
-                    updateCommand.Parameters.AddWithValue("@taskId", task.TaskId);
-                    updateCommand.Parameters.AddWithValue("@title", task.Title);
-                    updateCommand.Parameters.AddWithValue("@description", task.Description);
-                    updateCommand.Parameters.AddWithValue("@dueDate", task.DueDate);
-                    updateCommand.Parameters.AddWithValue("@status", task.Status);
-                    // Execute the command to update the task in the database
-                    updateCommand.ExecuteNonQuery();
-                    return true;
-                }
+                // Add parameters to the command to prevent SQL injection attacks
+                updateCommand.Parameters.AddWithValue("@taskId", task.TaskId);
+                updateCommand.Parameters.AddWithValue("@title", task.Title);
+                updateCommand.Parameters.AddWithValue("@description", task.Description);
+                updateCommand.Parameters.AddWithValue("@dueDate", task.DueDate);
+                updateCommand.Parameters.AddWithValue("@status", task.Status);
+                // Execute the command to update the task in the database
+                updateCommand.ExecuteNonQuery();
+                return true;
+            }
 
-            }
-            catch (Exception ex)
-            {
-                // If an error occurs, display the error message and continue to the next iteration
-                Console.WriteLine($"Error updating task: {ex.Message}");
-                return false;
-            }
         }
+        catch (Exception ex)
+        {
+            // If an error occurs, display the error message and continue to the next iteration
+            Console.WriteLine($"Error updating task: {ex.Message}");
+            return false;
+        }
+    }
 
-        // Delete a task from the database
-        public bool DeleteTask(int taskId)
+    // Delete a task from the database
+    public bool DeleteTask(int taskId)
+    {
+        // Get the connection string to the database
+        string connectionString = GetConnectionString();
+        // Check if the task exists before attempting to delete it
+        if (!TaskExists(taskId))
         {
-            // Get the connection string to the database
-            string connectionString = GetConnectionString();
-            // Check if the task exists before attempting to delete it
-            if (!TaskExists(taskId))
+            Console.WriteLine($"Task with ID {taskId} does not exist.");
+            return false;
+        }
+        // Using statement to ensure the connection is disposed of properly when done or in case of an error
+        try
+        {
+            using (var connection = new SqliteConnection(connectionString))
             {
-                Console.WriteLine($"Task with ID {taskId} does not exist.");
-                return false;
-            }
-            // Using statement to ensure the connection is disposed of properly when done or in case of an error
-            try
-            {
-                using (var connection = new SqliteConnection(connectionString))
-                {
-                    // Open the connection to the database
-                    connection.Open();
-                    // Create a command to execute SQL queries
-                    var command = connection.CreateCommand();
-                    // SQL command to delete a task from the Tasks table
-                    command.CommandText = "DELETE FROM Tasks WHERE TaskId = @taskId";
-                    command.Parameters.AddWithValue("@taskId", taskId);
-                    // Execute the command to delete the task from the database
-                    command.ExecuteNonQuery();
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                // If an error occurs, display the error message and continue to the next iteration
-                Console.WriteLine($"Error deleting task: {ex.Message}");
-                return false;
+                // Open the connection to the database
+                connection.Open();
+                // Create a command to execute SQL queries
+                var command = connection.CreateCommand();
+                // SQL command to delete a task from the Tasks table
+                command.CommandText = "DELETE FROM Tasks WHERE TaskId = @taskId";
+                command.Parameters.AddWithValue("@taskId", taskId);
+                // Execute the command to delete the task from the database
+                command.ExecuteNonQuery();
+                return true;
             }
         }
+        catch (Exception ex)
+        {
+            // If an error occurs, display the error message and continue to the next iteration
+            Console.WriteLine($"Error deleting task: {ex.Message}");
+            return false;
+        }
+    }
 
-        // Mark a task as completed in the database
-        public bool CompleteTask(int taskId)
+    // Mark a task as completed in the database
+    public bool CompleteTask(int taskId)
+    {
+        // Get the connection string to the database
+        string connectionString = GetConnectionString();
+        // Check if the task exists before attempting to mark it as completed
+        if (!TaskExists(taskId))
         {
-            // Get the connection string to the database
-            string connectionString = GetConnectionString();
-            // Check if the task exists before attempting to mark it as completed
-            if (!TaskExists(taskId))
+            Console.WriteLine($"Task with ID {taskId} does not exist.");
+            return false;
+        }
+        // Using statement to ensure the connection is disposed of properly when done or in case of an error
+        try
+        {
+            using (var connection = new SqliteConnection(connectionString))
             {
-                Console.WriteLine($"Task with ID {taskId} does not exist.");
-                return false;
-            }
-            // Using statement to ensure the connection is disposed of properly when done or in case of an error
-            try
-            {
-                using (var connection = new SqliteConnection(connectionString))
-                {
-                    // Open the connection to the database
-                    connection.Open();
-                    // Create a command to execute SQL queries
-                    var command = connection.CreateCommand();
-                    // SQL command to update the status of a task in the Tasks table
-                    command.CommandText = "UPDATE Tasks SET Status = 'Completed' WHERE TaskId = @taskId";
-                    command.Parameters.AddWithValue("@taskId", taskId);
-                    // Execute the command to make a task as completed in the database
-                    command.ExecuteNonQuery();
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                // If an error occurs, display the error message and continue to the next iteration
-                Console.WriteLine($"Error completing task: {ex.Message}");
-                return false;
+                // Open the connection to the database
+                connection.Open();
+                // Create a command to execute SQL queries
+                var command = connection.CreateCommand();
+                // SQL command to update the status of a task in the Tasks table
+                command.CommandText = "UPDATE Tasks SET Status = 'Completed' WHERE TaskId = @taskId";
+                command.Parameters.AddWithValue("@taskId", taskId);
+                // Execute the command to make a task as completed in the database
+                command.ExecuteNonQuery();
+                return true;
             }
         }
-        // Check if id exists in the database
-        public bool TaskExists(int taskId)
+        catch (Exception ex)
         {
-            // Get the connection string to the database
-            string connectionString = GetConnectionString();
-            // Using statement to ensure the connection is disposed of properly when done or in case of an error
-            try
+            // If an error occurs, display the error message and continue to the next iteration
+            Console.WriteLine($"Error completing task: {ex.Message}");
+            return false;
+        }
+    }
+    // Check if id exists in the database
+    public bool TaskExists(int taskId)
+    {
+        // Get the connection string to the database
+        string connectionString = GetConnectionString();
+        // Using statement to ensure the connection is disposed of properly when done or in case of an error
+        try
+        {
+            using (var connection = new SqliteConnection(connectionString))
             {
-                using (var connection = new SqliteConnection(connectionString))
-                {
-                    // Open the connection to the database
-                    connection.Open();
-                    // Create a command to execute SQL queries
-                    var command = connection.CreateCommand();
-                    // SQL command to check if a task exists in the Tasks table
-                    command.CommandText = "SELECT COUNT(1) FROM Tasks WHERE TaskId = @taskId";
-                    command.Parameters.AddWithValue("@taskId", taskId);
-                    // Execute the command and return true if the task exists, false otherwise
-                    return (long)command.ExecuteScalar() > 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                // If an error occurs, display the error message and return false
-                Console.WriteLine($"Error checking task existence: {ex.Message}");
-                return false;
+                // Open the connection to the database
+                connection.Open();
+                // Create a command to execute SQL queries
+                var command = connection.CreateCommand();
+                // SQL command to check if a task exists in the Tasks table
+                command.CommandText = "SELECT COUNT(1) FROM Tasks WHERE TaskId = @taskId";
+                command.Parameters.AddWithValue("@taskId", taskId);
+                // Execute the command and return true if the task exists, false otherwise
+                return (long)command.ExecuteScalar() > 0;
             }
         }
-        // Get a Task from the database by its ID
-        public Task GetTask(int taskId)
+        catch (Exception ex)
         {
-            // Get the connection string to the database
-            string connectionString = GetConnectionString();
-            // Using statement to ensure the connection is disposed of properly when done or in case of an error
-            try
+            // If an error occurs, display the error message and return false
+            Console.WriteLine($"Error checking task existence: {ex.Message}");
+            return false;
+        }
+    }
+    // Get a Task from the database by its ID
+    public Task GetTask(int taskId)
+    {
+        // Get the connection string to the database
+        string connectionString = GetConnectionString();
+        // Using statement to ensure the connection is disposed of properly when done or in case of an error
+        try
+        {
+            using (var connection = new SqliteConnection(connectionString))
             {
-                using (var connection = new SqliteConnection(connectionString))
+                // Open the connection to the database
+                connection.Open();
+                // Create a command to execute SQL queries
+                var command = connection.CreateCommand();
+                // SQL command to select a task from the Tasks table by its ID
+                command.CommandText = "SELECT * FROM Tasks WHERE TaskId = @taskId";
+                command.Parameters.AddWithValue("@taskId", taskId);
+                // Execute the command and read the results
+                using (var reader = command.ExecuteReader())
                 {
-                    // Open the connection to the database
-                    connection.Open();
-                    // Create a command to execute SQL queries
-                    var command = connection.CreateCommand();
-                    // SQL command to select a task from the Tasks table by its ID
-                    command.CommandText = "SELECT * FROM Tasks WHERE TaskId = @taskId";
-                    command.Parameters.AddWithValue("@taskId", taskId);
-                    // Execute the command and read the results
-                    using (var reader = command.ExecuteReader())
+                    if (reader.Read())
                     {
-                        if (reader.Read())
-                        {
-                            // Read the values from the current row and return a new Task object
-                            return new Task(reader.GetInt32(0), reader.GetString(1),
-                                reader.GetString(2), reader.GetString(3), reader.GetString(4));
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Task with ID {taskId} does not exist.");
-                            return null;
-                        }
+                        // Read the values from the current row and return a new Task object
+                        return new Task(reader.GetInt32(0), reader.GetString(1),
+                            reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Task with ID {taskId} does not exist.");
+                        return null;
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                // If an error occurs, display the error message and return null
-                Console.WriteLine($"Error getting task: {ex.Message}");
-                return null;
-            }
         }
+        catch (Exception ex)
+        {
+            // If an error occurs, display the error message and return null
+            Console.WriteLine($"Error getting task: {ex.Message}");
+            return null;
+        }
+    }
     // Delete a task from the database in disconnected mode (A CRUDE operation)
     public bool DeleteTaskDisconnected(int taskId)
     {
@@ -368,6 +368,130 @@ class DBInterface
         {
             // If an error occurs, display the error message and return false       
             Console.WriteLine($"Error deleting task in disconnected mode: {ex.Message}");
+            return false;
+        }
+    }
+    // Import task from a CSV file into the database
+    public bool ImportTasksFromCSV(string fileName)
+    {
+        // Get path to the CSV file
+        string CSVPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"data_import/{fileName}.csv");
+        // Check if the file exists
+        if (!File.Exists(CSVPath))
+        {
+            Console.WriteLine($"File not found: {CSVPath}");
+            return false;
+        }
+        // Get the connection string to the database
+        string connectionString = GetConnectionString();
+        // Using statement to ensure the connection is disposed of properly when done or in case of an error
+        try
+        {
+            // Using statement to ensure the connection is disposed of properly when done or in case of an error
+            using (var connection = new SqliteConnection(connectionString))
+            {
+                // Open the connection to the database
+                connection.Open();
+                // Read all lines from the CSV file and add each task to the database
+                var lines = File.ReadAllLines(CSVPath);
+                foreach (var line in lines.Skip(1))
+                {
+                    // Split each line by comma to get task properties
+                    var parts = line.Split(',');
+                    if (parts.Length != 5)
+                    {
+                        Console.WriteLine($"Invalid line format: {line}");
+                        continue;
+                    }
+                    // Check if the task already exists in the database
+                    // Get the task ID from the first part of the line to check if it exists
+                    int taskId = Convert.ToInt32(parts[0]);
+                    // Get properties from the CSV line
+                    string title = parts[1];
+                    string description = parts[2];
+                    string dueDate = parts[3];
+                    string status = parts[4];
+                    // Create a new Task object with the properties from the CSV file
+                    var task = new Task(taskId, title, description, dueDate, status);
+                    if (TaskExists(taskId))
+                    {
+                        // If the task already exists, prompt the user to overwrite it or skip
+                        Console.WriteLine($"Task with ID {taskId} already exists. Overwrite? (y/n): ");
+                        var Overide = Console.ReadLine();
+                        // Check if user wants to overwrite the existing task or skip it
+                        if (Overide?.ToLower() != "y")
+                        {
+                            Console.WriteLine($"Skipping task with ID {taskId}.");
+                            continue;
+                        }
+                        else
+                        {
+                            // If the user chooses to overwrite, delete the existing task first
+                            UpdateTask(task);
+                        }
+                     } else
+                     // Add the task to the database through the AddTask method
+                     AddTask(task);
+
+                }
+                Console.WriteLine("Imported successfully.");
+                return true;
+            }
+        }
+        catch (Exception ex)
+        {
+            // If an error occurs, display the error message and return false
+            Console.WriteLine($"Error importing tasks from CSV: {ex.Message}");
+            return false;
+        }
+    }
+    // Export tasks to a CSV file    
+    public bool ExportTasksToCSV(string fileName)
+    {
+        // Get path to export the CSV file
+        fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"data_export/{fileName}.csv");
+        // Get the connection string to the database
+        string connectionString = GetConnectionString();
+        // Using statement to ensure the connection is disposed of properly when done or in case of an error
+        try
+        {
+            using (var connection = new SqliteConnection(connectionString))
+            {
+                // Open the connection to the database
+                connection.Open();
+                // Create a command to execute SQL queries
+                var command = connection.CreateCommand();
+                // SQL command to select all tasks from the Tasks table
+                command.CommandText = "SELECT * FROM Tasks";
+                // Execute the command and read the results
+                using (var reader = command.ExecuteReader())
+                {
+                    // Create a list to hold the lines for the CSV file
+                    List<string> lines = new List<string>();
+                    // Add header line to the CSV file
+                    lines.Add("TaskId,Title,Description,DueDate,Status");
+                    // Read each row from the database and add it to the lines list
+                    while (reader.Read())
+                    {
+                        // Read values from the current row and format them as a CSV line
+                        int taskId = reader.GetInt32(0);
+                        string title = reader.GetString(1);
+                        string description = reader.GetString(2);
+                        string dueDate = reader.GetString(3);
+                        string status = reader.GetString(4);
+                        lines.Add($"{taskId},{title},{description},{dueDate},{status}");
+                    }
+                    // Write all lines to the specified CSV file
+                    File.WriteAllLines(fileName, lines);
+                    Console.WriteLine("Exported successfully.");
+                    return true;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // If an error occurs, display the error message and return false
+            Console.WriteLine($"Error exporting tasks to CSV: {ex.Message}");
             return false;
         }
     }

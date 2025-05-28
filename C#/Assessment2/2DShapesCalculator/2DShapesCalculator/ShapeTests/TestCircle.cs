@@ -26,7 +26,22 @@ public class TestCircle
     {
         Circle c = new Circle(0.0001);
         double expected = Math.PI * 0.0001 * 0.0001;
-        Assert.AreEqual(expected, c.Area(), 0.0001);
+        Assert.AreEqual(expected, c.Area(), 0.00000001);
+    }
+    [TestMethod]
+    public void Perimeter_BoundaryRadiusSmallPositive()
+    {
+        Circle c = new Circle(0.0001);
+        double expected = 2 * Math.PI * 0.0001;
+        Assert.AreEqual(expected, c.Perimeter(), 0.0001);
+    }
+
+    [TestMethod]
+    public void Area_BoundaryRadiusLarge()
+    {
+        Circle c = new Circle(10000);
+        double expected = Math.PI * 10000 * 10000;
+        Assert.AreEqual(expected, c.Area(), 0.01);
     }
 
     [TestMethod]
@@ -36,7 +51,7 @@ public class TestCircle
         double expected = 2 * Math.PI * 10000;
         Assert.AreEqual(expected, c.Perimeter(), 0.01);
     }
-
+    
     // Negative Testing
     [TestMethod]
     [ExpectedException(typeof(ArgumentException))]

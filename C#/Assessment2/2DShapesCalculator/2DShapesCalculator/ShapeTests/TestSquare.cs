@@ -1,7 +1,7 @@
 [TestClass]
 public class TestSquare
 {
-    // EP
+    // EP - Valid Partition
     [TestMethod]
     public void Area_ValidSide_ReturnsCorrectArea()
     {
@@ -27,6 +27,22 @@ public class TestSquare
         Square s = new Square(0.0001);
         double expected = 0.00000001;
         Assert.AreEqual(expected, s.Area(), 0.0001);
+    }
+
+    [TestMethod]
+    public void Perimeter_BoundarySmallSide()
+    {
+        Square s = new Square(0.0001);
+        double expected = 0.0004;
+        Assert.AreEqual(expected, s.Perimeter(), 0.0001);
+    }
+
+    [TestMethod]
+    public void Area_BoundaryLargeSide()
+    {
+        Square s = new Square(10000);
+        double expected = 100000000;
+        Assert.AreEqual(expected, s.Area(), 0.01);
     }
 
     [TestMethod]

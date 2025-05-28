@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3A4E0916-DF05-4AE7-AE36-540FCDD8C322}|To Do List\\To Do List.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\assessment2\\2dshapescalculator\\to do list\\to do list\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A4E0916-DF05-4AE7-AE36-540FCDD8C322}|To Do List\\To Do List.csproj|solutionrelative:to do list\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A4E0916-DF05-4AE7-AE36-540FCDD8C322}|To Do List\\To Do List.csproj|d:\\holmesglen - certificate iv\\certificate-4\\c#\\assessment2\\2dshapescalculator\\to do list\\to do list\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A4E0916-DF05-4AE7-AE36-540FCDD8C322}|To Do List\\To Do List.csproj|solutionrelative:to do list\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +28,7 @@
               "RelativeDocumentMoniker": "To Do List\\Program.cs",
               "ToolTip": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\To Do List\\To Do List\\Program.cs",
               "RelativeToolTip": "To Do List\\Program.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAI0AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACMBAAAAAAAAAAAgwFcBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T05:11:10.839Z",
               "IsPinned": true,
@@ -46,23 +42,10 @@
               "RelativeDocumentMoniker": "To Do List\\DBInterface.cs",
               "ToolTip": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\To Do List\\To Do List\\DBInterface.cs",
               "RelativeToolTip": "To Do List\\DBInterface.cs",
-              "ViewState": "AgIAAEgBAAAAAAAAAAAAAFIBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAALwBAAAAAAAAAAAIwPIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T05:11:49.05Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Task.cs",
-              "DocumentMoniker": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\To Do List\\To Do List\\Task.cs",
-              "RelativeDocumentMoniker": "To Do List\\Task.cs",
-              "ToolTip": "D:\\Holmesglen - Certificate IV\\certificate-4\\C#\\Assessment2\\2DShapesCalculator\\To Do List\\To Do List\\Task.cs",
-              "RelativeToolTip": "To Do List\\Task.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T05:55:38.903Z",
               "EditorCaption": ""
             }
           ]

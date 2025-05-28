@@ -25,8 +25,12 @@ while (true)
     Console.WriteLine("==========DISCONNECTED MODE=========");
     Console.WriteLine("5. Delete Task");
     Console.WriteLine("====================================");
-    Console.WriteLine("6. Exits");
-    Console.Write("\nSelect an option (1-6): ");
+    Console.WriteLine("=========WORK WITH CSV FILE=========");
+    Console.WriteLine("6. Import Tasks from CSV file.");
+    Console.WriteLine("7. Export Tasks to CSV file.");
+    Console.WriteLine("====================================");
+    Console.WriteLine("8. Exits");
+    Console.Write("\nSelect an option (1-8): ");
     var input = Console.ReadLine();
     // Check if the input is null or empty, if so, continue to the next iteration of the loop   
     try
@@ -209,8 +213,43 @@ while (true)
                     break;
                 }
                 break;
-            // Option 6: Exit the program
+            // Option 6: Import tasks from a CSV file
             case "6":
+                Console.Write("Enter ONLY the file name CSV file to import tasks (Example: DataInput) : ");
+                string CSVFileName = Console.ReadLine()!.Trim();
+
+                // Import tasks from the specified CSV file
+                if (database.ImportTasksFromCSV(CSVFileName))
+                {
+                    // If the tasks were imported successfully, display a message
+                    Console.WriteLine("Tasks imported successfully.");
+                }
+                else
+                {
+                    // If the tasks could not be imported, display a message
+                    Console.WriteLine("Failed to import tasks from CSV file.");
+                }
+                break;
+
+            // Option 7: Export tasks to a CSV file
+            case "7":
+                Console.Write("Enter ONLY the file name CSV file to export tasks (Example: DataExport) : ");
+                string exportCSVFileName = Console.ReadLine()!.Trim();
+                // Export tasks to the specified CSV file
+                if (database.ExportTasksToCSV(exportCSVFileName))
+                {
+                    // If the tasks were exported successfully, display a message
+                    Console.WriteLine("Tasks exported successfully.");
+                }
+                else
+                {
+                    // If the tasks could not be exported, display a message
+                    Console.WriteLine("Failed to export tasks to CSV file.");
+                }
+                break;
+
+            // Option 8: Exit the program
+            case "8":
                 Console.WriteLine("Goodbye!");
                 return;
             // If the user selects an invalid option, display a message and continue the loop

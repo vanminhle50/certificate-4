@@ -49,6 +49,7 @@
                     Console.WriteLine($"| The perimeter is: {shape1.Perimeter():F2}                       |");
                     Console.WriteLine("------------------------------------------------");
                 }
+                
                 Console.WriteLine("The demention must be a non-negative number. Please try again!");
 
             } while (true);
@@ -122,7 +123,7 @@
                             break;
                         }
                         else
-                            Console.WriteLine("It is not a Trapezoid. Please try again.");
+                        Console.WriteLine("It is not a Trapezoid. Please try again.");
                     } while (true);
 
                     // Create a new Trapezoid object with the provided dimensions
