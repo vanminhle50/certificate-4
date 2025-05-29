@@ -1,0 +1,14 @@
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\bin\Debug\net7.0\2DShapesCalculator.exe
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\bin\Debug\net7.0\2DShapesCalculator.deps.json
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\bin\Debug\net7.0\2DShapesCalculator.runtimeconfig.json
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\bin\Debug\net7.0\2DShapesCalculator.dll
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\bin\Debug\net7.0\2DShapesCalculator.pdb
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\obj\Debug\net7.0\2DShapesCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\obj\Debug\net7.0\2DShapesCalculator.AssemblyInfoInputs.cache
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\obj\Debug\net7.0\2DShapesCalculator.AssemblyInfo.cs
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\obj\Debug\net7.0\2DShapesCalculator.csproj.CoreCompileInputs.cache
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\obj\Debug\net7.0\2DShapesCalculator.dll
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\obj\Debug\net7.0\refint\2DShapesCalculator.dll
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\obj\Debug\net7.0\2DShapesCalculator.pdb
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\obj\Debug\net7.0\2DShapesCalculator.genruntimeconfig.cache
+C:\certificate-4\certificate-4\C#\Assessment2\2DShapesCalculator\2DShapesCalculator\2DShapesCalculator\obj\Debug\net7.0\ref\2DShapesCalculator.dll
