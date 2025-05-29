@@ -26,10 +26,10 @@
         }
         // Define the condition that controls the loop for menu
         bool exit = false;
-        bool backMenu = false;
         // Loop to display and handle 2D Shapes Calculator menu options.
         while (!exit)
         {
+            bool backMenu = false;
             Console.Clear();
             Console.WriteLine("------------------------");
             Console.WriteLine("| 2D Shapes Calculator |");
